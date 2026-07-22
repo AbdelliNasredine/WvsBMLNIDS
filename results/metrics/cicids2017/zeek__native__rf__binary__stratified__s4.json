@@ -1,0 +1,102 @@
+{
+  "config": {
+    "tool": "zeek",
+    "regime": "native",
+    "model": "rf",
+    "task": "binary",
+    "split": "stratified",
+    "seed": 4,
+    "include_port": false,
+    "dataset": "cicids2017",
+    "n_features": 20,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "fb166135ec2f0140",
+  "git_commit": null,
+  "n_train": 400000,
+  "n_test": 635754,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_ts",
+    "tool_id.orig_p",
+    "tool_id.resp_p",
+    "tool_duration",
+    "tool_orig_bytes",
+    "tool_resp_bytes",
+    "tool_missed_bytes",
+    "tool_orig_pkts",
+    "tool_resp_pkts",
+    "tool_s_syn",
+    "tool_s_fin",
+    "tool_s_rst",
+    "tool_s_psh",
+    "tool_s_ack",
+    "tool_s_urg",
+    "tool_r_syn",
+    "tool_r_fin",
+    "tool_r_rst",
+    "tool_r_psh",
+    "tool_r_ack"
+  ],
+  "metrics": {
+    "macro_f1": 0.9996746700566538,
+    "weighted_f1": 0.9997782158137594,
+    "balanced_accuracy": 0.9996733692143447,
+    "per_class": {
+      "0": {
+        "precision": 0.9998572037682115,
+        "recall": 0.9998592146995944,
+        "f1-score": 0.9998582092328918,
+        "support": 497211.0
+      },
+      "1": {
+        "precision": 0.9994947380577731,
+        "recall": 0.9994875237290949,
+        "f1-score": 0.9994911308804157,
+        "support": 138543.0
+      }
+    },
+    "fpr": 0.0001407853004056628,
+    "attack_recall": 0.9994875237290949,
+    "attack_precision": 0.9994947380577731,
+    "auc_pr": 0.9999860329491161,
+    "confusion_matrix": [
+      [
+        497141,
+        70
+      ],
+      [
+        71,
+        138472
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "feature_importances": {
+    "tool_s_fin": 0.20623634063503618,
+    "tool_ts": 0.12022525686976908,
+    "tool_resp_bytes": 0.10397147609271173,
+    "tool_id.resp_p": 0.1027703574807121,
+    "tool_s_rst": 0.08462276702990129,
+    "tool_orig_bytes": 0.06489070975099889,
+    "tool_s_ack": 0.05757181069951804,
+    "tool_r_ack": 0.053320157385971345,
+    "tool_orig_pkts": 0.03598178740354865,
+    "tool_resp_pkts": 0.032758795708003816,
+    "tool_r_psh": 0.030065614416082305,
+    "tool_s_psh": 0.02724579051476575,
+    "tool_r_rst": 0.026427853496345282,
+    "tool_duration": 0.01780179979510893,
+    "tool_r_fin": 0.014352817748554757,
+    "tool_r_syn": 0.007318370025950702,
+    "tool_s_syn": 0.006876755687545665,
+    "tool_id.orig_p": 0.0042046188451503284,
+    "tool_missed_bytes": 0.003356920414325067,
+    "tool_s_urg": 0.0
+  },
+  "wall_seconds": 30.2
+}

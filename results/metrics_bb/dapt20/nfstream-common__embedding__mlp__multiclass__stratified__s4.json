@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "nfstream-common",
+    "regime": "embedding",
+    "model": "mlp",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 4,
+    "dataset": "dapt20",
+    "n_features": 9,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "7dc2f44013b8e4e9",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.5501835734665678,
+    "weighted_f1": 0.8987688547072662,
+    "balanced_accuracy": 0.5572075656139579,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9282931277460001,
+        "recall": 0.9639321683739348,
+        "f1-score": 0.945777027027027,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9983753046303818,
+        "recall": 0.9303557910673732,
+        "f1-score": 0.963166144200627,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.7974624060150376,
+        "recall": 0.8917498686284814,
+        "f1-score": 0.8419746961051848,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        11198,
+        0,
+        0,
+        1,
+        418
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        82,
+        0,
+        1229,
+        0,
+        10
+      ],
+      [
+        578,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        204,
+        0,
+        2,
+        0,
+        1697
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 3.3
+}

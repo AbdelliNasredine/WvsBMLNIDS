@@ -1,0 +1,76 @@
+{
+  "config": {
+    "tool": "argus",
+    "regime": "native",
+    "model": "xgb",
+    "task": "binary",
+    "split": "temporal",
+    "seed": 1,
+    "include_port": false,
+    "dataset": "cicids2017",
+    "n_features": 7,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "fb31c7e69d19d11b",
+  "git_commit": null,
+  "n_train": 400000,
+  "n_test": 655831,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_StartTime",
+    "tool_LastTime",
+    "tool_Dur",
+    "tool_SrcPkts",
+    "tool_DstPkts",
+    "tool_SrcBytes",
+    "tool_DstBytes"
+  ],
+  "metrics": {
+    "macro_f1": 0.40516946608365506,
+    "weighted_f1": 0.5519644818813275,
+    "balanced_accuracy": 0.49999888073316456,
+    "per_class": {
+      "0": {
+        "precision": 0.6811521278380068,
+        "recall": 0.9999977614663291,
+        "f1-score": 0.8103389321673101,
+        "support": 446721.0
+      },
+      "1": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 209110.0
+      }
+    },
+    "fpr": 2.238533670904211e-06,
+    "attack_recall": 0.0,
+    "attack_precision": 0.0,
+    "auc_pr": 0.5694808201163213,
+    "confusion_matrix": [
+      [
+        446720,
+        1
+      ],
+      [
+        209110,
+        0
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "feature_importances": {
+    "tool_SrcPkts": 0.5012098550796509,
+    "tool_SrcBytes": 0.12788456678390503,
+    "tool_DstPkts": 0.12187782675027847,
+    "tool_Dur": 0.12132491916418076,
+    "tool_DstBytes": 0.10876304656267166,
+    "tool_StartTime": 0.012144364416599274,
+    "tool_LastTime": 0.006795454770326614
+  },
+  "wall_seconds": 6.2
+}

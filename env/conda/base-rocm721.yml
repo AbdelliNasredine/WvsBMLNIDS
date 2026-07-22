@@ -1,0 +1,22 @@
+# Verified base env record (plan §5.0). NOTE: the ROCm torch wheels are NOT on
+# conda/PyPI — they come from repo.radeon.com/rocm/windows/rocm-rel-7.2.1/.
+# This yml documents the non-torch surface; recreate torch per the README, then
+# `pip install` the ROCm wheels. locks/rocm721-py312.txt is the exact freeze.
+name: rocm721-py312
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      # --- installed from repo.radeon.com ROCm 7.2.1 (NOT PyPI) ---
+      # torch==2.9.1+rocm7.2.1
+      # torchvision (matching rocm7.2.1 cp312 wheel)
+      # torchaudio  (matching rocm7.2.1 cp312 wheel)
+      # rocm_sdk_core / rocm_sdk_devel / rocm_sdk_libraries_custom
+      # --- from PyPI, in the base ---
+      - numpy==1.26.4
+      # Per-model envs (cloned from this base) add what they need on top, e.g.
+      # transformers / huggingface-hub / safetensors / scikit-learn / tqdm —
+      # installed AROUND the ROCm torch wheels. See locks/rocm721-py312.txt for
+      # the authoritative freeze of the actual base (20 packages).

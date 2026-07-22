@@ -1,0 +1,106 @@
+{
+  "config": {
+    "tool": "argus",
+    "regime": "common",
+    "model": "xgb",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 2,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 9,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "5cfd2493a48f888d",
+  "git_commit": null,
+  "n_train": 33183,
+  "n_test": 14222,
+  "n_test_unseen_class": 0,
+  "features": [
+    "duration",
+    "pkts_fwd",
+    "pkts_bwd",
+    "bytes_fwd",
+    "bytes_bwd",
+    "tot_pkts",
+    "tot_bytes",
+    "is_tcp",
+    "is_udp"
+  ],
+  "metrics": {
+    "macro_f1": 0.7420093865973738,
+    "weighted_f1": 0.9127404606907332,
+    "balanced_accuracy": 0.7345608067338737,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9345716662046022,
+        "recall": 0.9696998753475885,
+        "f1-score": 0.9518117647058824,
+        "support": 10429.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9636638909916729,
+        "recall": 0.9695354150799695,
+        "f1-score": 0.9665907365223994,
+        "support": 1313.0
+      },
+      "Lateral Movement": {
+        "precision": 0.45901639344262296,
+        "recall": 0.09722222222222222,
+        "f1-score": 0.16045845272206305,
+        "support": 576.0
+      },
+      "Reconnaissance": {
+        "precision": 0.8769152196118488,
+        "recall": 0.9017857142857143,
+        "f1-score": 0.8891765924391507,
+        "support": 1904.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        10113,
+        24,
+        65,
+        227
+      ],
+      [
+        30,
+        1273,
+        1,
+        9
+      ],
+      [
+        508,
+        7,
+        56,
+        5
+      ],
+      [
+        170,
+        17,
+        0,
+        1717
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "feature_importances": {
+    "is_tcp": 0.4547122120857239,
+    "is_udp": 0.35048553347587585,
+    "bytes_fwd": 0.06610393524169922,
+    "bytes_bwd": 0.04343435540795326,
+    "tot_bytes": 0.028458403423428535,
+    "pkts_fwd": 0.016357872635126114,
+    "pkts_bwd": 0.015859175473451614,
+    "duration": 0.01481609046459198,
+    "tot_pkts": 0.009772418066859245
+  },
+  "wall_seconds": 1.7
+}

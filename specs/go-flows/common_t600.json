@@ -1,0 +1,29 @@
+{
+  "active_timeout": 1800,
+  "idle_timeout": 600,
+  "bidirectional": true,
+  "key_features": [
+    "sourceIPAddress",
+    "destinationIPAddress",
+    "protocolIdentifier",
+    "sourceTransportPort",
+    "destinationTransportPort"
+  ],
+  "features": [
+    "flowStartMilliseconds",
+    "flowEndMilliseconds",
+    "sourceIPAddress",
+    "destinationIPAddress",
+    "sourceTransportPort",
+    "destinationTransportPort",
+    "protocolIdentifier",
+    "packetTotalCount",
+    "octetTotalCount",
+    "tcpSynTotalCount",
+    "tcpFinTotalCount",
+    "tcpRstTotalCount",
+    "tcpPshTotalCount",
+    "tcpAckTotalCount",
+    "tcpUrgTotalCount"
+  ]
+}

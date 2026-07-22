@@ -1,0 +1,56 @@
+{
+  "config": {
+    "tool": "yatc",
+    "regime": "embedding",
+    "model": "logreg",
+    "task": "binary",
+    "split": "stratified",
+    "seed": 2,
+    "dataset": "cicids2017",
+    "n_features": 192,
+    "extractor_family": "nfm",
+    "cfg_name": "sample"
+  },
+  "config_hash": "7112cfc788fafc29",
+  "git_commit": null,
+  "n_train": 99665,
+  "n_test": 42714,
+  "metrics": {
+    "macro_f1": 0.9963973951127263,
+    "weighted_f1": 0.996487333132952,
+    "balanced_accuracy": 0.9961351865339484,
+    "per_class": {
+      "0": {
+        "precision": 0.9977691020635806,
+        "recall": 0.9938888888888889,
+        "f1-score": 0.995825215697189,
+        "support": 18000.0
+      },
+      "1": {
+        "precision": 0.9955616526791479,
+        "recall": 0.9983814841790078,
+        "f1-score": 0.9969695745282637,
+        "support": 24714.0
+      }
+    },
+    "fpr": 0.006111111111111111,
+    "attack_recall": 0.9983814841790078,
+    "attack_precision": 0.9955616526791479,
+    "auc_pr": 0.9995386659386849,
+    "confusion_matrix": [
+      [
+        17890,
+        110
+      ],
+      [
+        40,
+        24674
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "wall_seconds": 7.3
+}

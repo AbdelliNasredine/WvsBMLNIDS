@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "raw-cnn",
+    "regime": "embedding",
+    "model": "xgb",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 3,
+    "dataset": "dapt20",
+    "n_features": 128,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "46ceb09ed02d9daf",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.6092402195085163,
+    "weighted_f1": 0.9154404635309019,
+    "balanced_accuracy": 0.6092459756117392,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9465176268271711,
+        "recall": 0.9475768270637859,
+        "f1-score": 0.9470469307867682,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9674981103552532,
+        "recall": 0.9689629068887207,
+        "f1-score": 0.9682299546142209,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.253411306042885,
+        "recall": 0.22375215146299485,
+        "f1-score": 0.2376599634369287,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.8809402146142055,
+        "recall": 0.905937992643195,
+        "f1-score": 0.8932642487046633,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        11008,
+        0,
+        9,
+        381,
+        219
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        28,
+        0,
+        1280,
+        0,
+        13
+      ],
+      [
+        449,
+        0,
+        1,
+        130,
+        1
+      ],
+      [
+        144,
+        0,
+        33,
+        2,
+        1724
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 10.1
+}

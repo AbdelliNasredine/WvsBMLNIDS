@@ -1,0 +1,102 @@
+{
+  "config": {
+    "tool": "zeek",
+    "regime": "native",
+    "model": "rf",
+    "task": "binary",
+    "split": "stratified",
+    "seed": 2,
+    "include_port": false,
+    "dataset": "cicids2017",
+    "n_features": 20,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "815e2d523828a3c8",
+  "git_commit": null,
+  "n_train": 400000,
+  "n_test": 635754,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_ts",
+    "tool_id.orig_p",
+    "tool_id.resp_p",
+    "tool_duration",
+    "tool_orig_bytes",
+    "tool_resp_bytes",
+    "tool_missed_bytes",
+    "tool_orig_pkts",
+    "tool_resp_pkts",
+    "tool_s_syn",
+    "tool_s_fin",
+    "tool_s_rst",
+    "tool_s_psh",
+    "tool_s_ack",
+    "tool_s_urg",
+    "tool_r_syn",
+    "tool_r_fin",
+    "tool_r_rst",
+    "tool_r_psh",
+    "tool_r_ack"
+  ],
+  "metrics": {
+    "macro_f1": 0.9997069723205321,
+    "weighted_f1": 0.9998002369386343,
+    "balanced_accuracy": 0.9997056713941279,
+    "per_class": {
+      "0": {
+        "precision": 0.9998712822699372,
+        "recall": 0.9998732932296349,
+        "f1-score": 0.9998722877487749,
+        "support": 497211.0
+      },
+      "1": {
+        "precision": 0.9995452642519957,
+        "recall": 0.9995380495586208,
+        "f1-score": 0.9995416568922894,
+        "support": 138543.0
+      }
+    },
+    "fpr": 0.0001267067703650965,
+    "attack_recall": 0.9995380495586208,
+    "attack_precision": 0.9995452642519957,
+    "auc_pr": 0.999986116758065,
+    "confusion_matrix": [
+      [
+        497148,
+        63
+      ],
+      [
+        64,
+        138479
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "feature_importances": {
+    "tool_s_fin": 0.22741350586194012,
+    "tool_resp_bytes": 0.11591346884330914,
+    "tool_ts": 0.10967109782165496,
+    "tool_id.resp_p": 0.10472782220265912,
+    "tool_s_rst": 0.07948048074077926,
+    "tool_s_ack": 0.07185809526873435,
+    "tool_orig_bytes": 0.04680135741593647,
+    "tool_r_ack": 0.0433406255796423,
+    "tool_orig_pkts": 0.032776251925776864,
+    "tool_resp_pkts": 0.03058043650846815,
+    "tool_s_psh": 0.028479002685159353,
+    "tool_r_psh": 0.02713197705468635,
+    "tool_r_syn": 0.020875257179790066,
+    "tool_duration": 0.019260764994129657,
+    "tool_r_rst": 0.015666426061628,
+    "tool_s_syn": 0.008945450794568854,
+    "tool_r_fin": 0.007743091773281563,
+    "tool_id.orig_p": 0.005304283138826785,
+    "tool_missed_bytes": 0.004030604149028631,
+    "tool_s_urg": 0.0
+  },
+  "wall_seconds": 30.4
+}

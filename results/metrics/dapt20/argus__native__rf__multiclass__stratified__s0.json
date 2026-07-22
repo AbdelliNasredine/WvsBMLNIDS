@@ -1,0 +1,102 @@
+{
+  "config": {
+    "tool": "argus",
+    "regime": "native",
+    "model": "rf",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 0,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 7,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "f3866e63b37811bf",
+  "git_commit": null,
+  "n_train": 33183,
+  "n_test": 14222,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_StartTime",
+    "tool_LastTime",
+    "tool_Dur",
+    "tool_SrcPkts",
+    "tool_DstPkts",
+    "tool_SrcBytes",
+    "tool_DstBytes"
+  ],
+  "metrics": {
+    "macro_f1": 0.9406016604520528,
+    "weighted_f1": 0.9803215016891252,
+    "balanced_accuracy": 0.9367579573338954,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9850903182643601,
+        "recall": 0.9883018506088791,
+        "f1-score": 0.9866934711851426,
+        "support": 10429.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9984756097560976,
+        "recall": 0.9977151561309977,
+        "f1-score": 0.9980952380952381,
+        "support": 1313.0
+      },
+      "Lateral Movement": {
+        "precision": 0.7989228007181328,
+        "recall": 0.7725694444444444,
+        "f1-score": 0.7855251544571933,
+        "support": 576.0
+      },
+      "Reconnaissance": {
+        "precision": 0.9957671957671957,
+        "recall": 0.9884453781512605,
+        "f1-score": 0.9920927780706379,
+        "support": 1904.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        10307,
+        2,
+        112,
+        8
+      ],
+      [
+        3,
+        1310,
+        0,
+        0
+      ],
+      [
+        131,
+        0,
+        445,
+        0
+      ],
+      [
+        22,
+        0,
+        0,
+        1882
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "feature_importances": {
+    "tool_StartTime": 0.24339253445954923,
+    "tool_LastTime": 0.22362844942697524,
+    "tool_DstBytes": 0.17959462878977878,
+    "tool_SrcBytes": 0.1313734054931447,
+    "tool_SrcPkts": 0.08457384153563861,
+    "tool_Dur": 0.0830459624549211,
+    "tool_DstPkts": 0.05439117783999231
+  },
+  "wall_seconds": 1.2
+}

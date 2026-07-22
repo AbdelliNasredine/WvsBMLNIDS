@@ -1,0 +1,90 @@
+{
+  "config": {
+    "tool": "yaf",
+    "regime": "native",
+    "model": "xgb",
+    "task": "binary",
+    "split": "temporal",
+    "seed": 3,
+    "include_port": false,
+    "dataset": "cicids2017",
+    "n_features": 14,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "ac9136b815fba593",
+  "git_commit": null,
+  "n_train": 400000,
+  "n_test": 951348,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_flowDurationMicroseconds",
+    "tool_flowDurationMilliseconds",
+    "tool_reverseFlowDeltaMicroseconds",
+    "tool_reverseFlowDeltaMilliseconds",
+    "tool_protocolIdentifier",
+    "tool_sourceTransportPort",
+    "tool_packetTotalCount",
+    "tool_octetTotalCount",
+    "tool_flowAttributes",
+    "tool_destinationTransportPort",
+    "tool_reversePacketTotalCount",
+    "tool_reverseOctetTotalCount",
+    "tool_reverseFlowAttributes",
+    "tool_silkAppLabel"
+  ],
+  "metrics": {
+    "macro_f1": 0.7142229385238608,
+    "weighted_f1": 0.7934534816113856,
+    "balanced_accuracy": 0.6834801002807324,
+    "per_class": {
+      "0": {
+        "precision": 0.8053675147550976,
+        "recall": 0.9981853948255422,
+        "f1-score": 0.8914693729527526,
+        "support": 688304.0
+      },
+      "1": {
+        "precision": 0.9872879199617315,
+        "recall": 0.36877480573592253,
+        "f1-score": 0.536976504094969,
+        "support": 263044.0
+      }
+    },
+    "fpr": 0.0018146051744577978,
+    "attack_recall": 0.36877480573592253,
+    "attack_precision": 0.9872879199617315,
+    "auc_pr": 0.7676194486041441,
+    "confusion_matrix": [
+      [
+        687055,
+        1249
+      ],
+      [
+        166040,
+        97004
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "feature_importances": {
+    "tool_protocolIdentifier": 0.4671810567378998,
+    "tool_reverseFlowAttributes": 0.21377599239349365,
+    "tool_reverseFlowDeltaMilliseconds": 0.21201439201831818,
+    "tool_reverseOctetTotalCount": 0.021839436143636703,
+    "tool_reversePacketTotalCount": 0.019945023581385612,
+    "tool_reverseFlowDeltaMicroseconds": 0.018304789438843727,
+    "tool_sourceTransportPort": 0.013883701525628567,
+    "tool_octetTotalCount": 0.009150311350822449,
+    "tool_destinationTransportPort": 0.007788239978253841,
+    "tool_flowDurationMicroseconds": 0.005162940826267004,
+    "tool_silkAppLabel": 0.004359252750873566,
+    "tool_packetTotalCount": 0.0030709700658917427,
+    "tool_flowAttributes": 0.0023097984958440065,
+    "tool_flowDurationMilliseconds": 0.001214084681123495
+  },
+  "wall_seconds": 25.1
+}

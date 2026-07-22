@@ -1,0 +1,114 @@
+{
+  "config": {
+    "tool": "nfstream",
+    "regime": "native",
+    "model": "mlp",
+    "task": "binary",
+    "split": "temporal",
+    "seed": 2,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 53,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "a8732976cd042c9d",
+  "git_commit": null,
+  "n_train": 36075,
+  "n_test": 15335,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_protocol",
+    "tool_bidirectional_duration_ms",
+    "tool_bidirectional_packets",
+    "tool_bidirectional_bytes",
+    "tool_src2dst_duration_ms",
+    "tool_src2dst_packets",
+    "tool_src2dst_bytes",
+    "tool_dst2src_duration_ms",
+    "tool_dst2src_packets",
+    "tool_dst2src_bytes",
+    "tool_bidirectional_min_ps",
+    "tool_bidirectional_mean_ps",
+    "tool_bidirectional_stddev_ps",
+    "tool_bidirectional_max_ps",
+    "tool_src2dst_min_ps",
+    "tool_src2dst_mean_ps",
+    "tool_src2dst_stddev_ps",
+    "tool_src2dst_max_ps",
+    "tool_dst2src_min_ps",
+    "tool_dst2src_mean_ps",
+    "tool_dst2src_stddev_ps",
+    "tool_dst2src_max_ps",
+    "tool_bidirectional_min_piat_ms",
+    "tool_bidirectional_mean_piat_ms",
+    "tool_bidirectional_stddev_piat_ms",
+    "tool_bidirectional_max_piat_ms",
+    "tool_src2dst_min_piat_ms",
+    "tool_src2dst_mean_piat_ms",
+    "tool_src2dst_stddev_piat_ms",
+    "tool_src2dst_max_piat_ms",
+    "tool_dst2src_min_piat_ms",
+    "tool_dst2src_mean_piat_ms",
+    "tool_dst2src_stddev_piat_ms",
+    "tool_dst2src_max_piat_ms",
+    "tool_bidirectional_syn_packets",
+    "tool_bidirectional_cwr_packets",
+    "tool_bidirectional_ece_packets",
+    "tool_bidirectional_ack_packets",
+    "tool_bidirectional_psh_packets",
+    "tool_bidirectional_rst_packets",
+    "tool_bidirectional_fin_packets",
+    "tool_src2dst_syn_packets",
+    "tool_src2dst_cwr_packets",
+    "tool_src2dst_ece_packets",
+    "tool_src2dst_ack_packets",
+    "tool_src2dst_psh_packets",
+    "tool_src2dst_rst_packets",
+    "tool_src2dst_fin_packets",
+    "tool_dst2src_syn_packets",
+    "tool_dst2src_ack_packets",
+    "tool_dst2src_psh_packets",
+    "tool_dst2src_rst_packets",
+    "tool_dst2src_fin_packets"
+  ],
+  "metrics": {
+    "macro_f1": 0.49599769246657804,
+    "weighted_f1": 0.8210046332435853,
+    "balanced_accuracy": 0.5129201930914388,
+    "per_class": {
+      "0": {
+        "precision": 0.8764415156507414,
+        "recall": 0.9928336816960287,
+        "f1-score": 0.9310139652094781,
+        "support": 13396.0
+      },
+      "1": {
+        "precision": 0.4,
+        "recall": 0.03300670448684889,
+        "f1-score": 0.06098141972367794,
+        "support": 1939.0
+      }
+    },
+    "fpr": 0.007166318303971335,
+    "attack_recall": 0.03300670448684889,
+    "attack_precision": 0.4,
+    "auc_pr": 0.3169624804297388,
+    "confusion_matrix": [
+      [
+        13300,
+        96
+      ],
+      [
+        1875,
+        64
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "feature_importances": null,
+  "wall_seconds": 4.8
+}

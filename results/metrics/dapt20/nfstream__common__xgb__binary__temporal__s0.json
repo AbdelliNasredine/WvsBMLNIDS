@@ -1,0 +1,80 @@
+{
+  "config": {
+    "tool": "nfstream",
+    "regime": "common",
+    "model": "xgb",
+    "task": "binary",
+    "split": "temporal",
+    "seed": 0,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 9,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "f82929129eaced06",
+  "git_commit": null,
+  "n_train": 36075,
+  "n_test": 15335,
+  "n_test_unseen_class": 0,
+  "features": [
+    "duration",
+    "pkts_fwd",
+    "pkts_bwd",
+    "bytes_fwd",
+    "bytes_bwd",
+    "tot_pkts",
+    "tot_bytes",
+    "is_tcp",
+    "is_udp"
+  ],
+  "metrics": {
+    "macro_f1": 0.49180145970672234,
+    "weighted_f1": 0.8198362196609621,
+    "balanced_accuracy": 0.5107487074802066,
+    "per_class": {
+      "0": {
+        "precision": 0.8759547010797999,
+        "recall": 0.9931322782920274,
+        "f1-score": 0.9308704170165127,
+        "support": 13396.0
+      },
+      "1": {
+        "precision": 0.3741496598639456,
+        "recall": 0.028365136668385766,
+        "f1-score": 0.052732502396931925,
+        "support": 1939.0
+      }
+    },
+    "fpr": 0.006867721707972529,
+    "attack_recall": 0.028365136668385766,
+    "attack_precision": 0.3741496598639456,
+    "auc_pr": 0.2678745821472216,
+    "confusion_matrix": [
+      [
+        13304,
+        92
+      ],
+      [
+        1884,
+        55
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "feature_importances": {
+    "bytes_bwd": 0.30289632081985474,
+    "is_tcp": 0.21041680872440338,
+    "pkts_bwd": 0.10368581861257553,
+    "tot_pkts": 0.09879562258720398,
+    "duration": 0.08955413103103638,
+    "tot_bytes": 0.08609361946582794,
+    "is_udp": 0.06021390110254288,
+    "pkts_fwd": 0.029317587614059448,
+    "bytes_fwd": 0.019026268273591995
+  },
+  "wall_seconds": 0.5
+}

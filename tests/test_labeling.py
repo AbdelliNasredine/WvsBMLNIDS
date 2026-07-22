@@ -95,3 +95,35 @@ def test_wrong_port_not_matched(rules):
     df = pd.DataFrame([_flow(dst_port=80, t_start=win + 60, t_end=win + 90, duration=30)])
     out = label_flows(C.coerce_schema(df), rules)
     assert out.loc[0, "label"] == "BENIGN"
+
+
+CIDR_SPEC = {
+    "dataset": "test", "benign_label": "BENIGN",
+    "attacks": [{
+        "name": "Infiltration - Internal Portscan", "label": "Infiltration",
+        "date": "2017-07-06", "start_local": "17:00:00", "end_local": "18:46:00",
+        "tz": "UTC",
+        "attackers": ["192.168.10.8"], "victim_cidr": ["192.168.10.0/24"],
+        "proto": [6],
+    }],
+}
+
+
+def test_victim_cidr_match_inside_subnet():
+    rules = LabelRules(CIDR_SPEC)
+    win = rules.rules[0].t_start
+    # compromised .8 scans .19 (same subnet) -> Infiltration
+    df = pd.DataFrame([_flow(src_ip="192.168.10.8", dst_ip="192.168.10.19",
+                             dst_port=445, t_start=win + 10, t_end=win + 11, duration=1)])
+    out = label_flows(C.coerce_schema(df), rules)
+    assert out.loc[0, "label"] == "Infiltration"
+
+
+def test_victim_cidr_excludes_outside_subnet():
+    rules = LabelRules(CIDR_SPEC)
+    win = rules.rules[0].t_start
+    # .8 talking to an external host is NOT the internal portscan
+    df = pd.DataFrame([_flow(src_ip="192.168.10.8", dst_ip="8.8.8.8",
+                             dst_port=443, t_start=win + 10, t_end=win + 11, duration=1)])
+    out = label_flows(C.coerce_schema(df), rules)
+    assert out.loc[0, "label"] == "BENIGN"

@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "netfound",
+    "regime": "embedding",
+    "model": "mlp",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 4,
+    "dataset": "dapt20",
+    "n_features": 1024,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "21a938f98ec0f57b",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.5815808021322189,
+    "weighted_f1": 0.9190220500598234,
+    "balanced_accuracy": 0.59284435051098,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9492600422832981,
+        "recall": 0.9662563484548506,
+        "f1-score": 0.9576827915706851,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9723880597014926,
+        "recall": 0.9863739591218774,
+        "f1-score": 0.9793310785419015,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.46808510638297873,
+        "recall": 0.0378657487091222,
+        "f1-score": 0.07006369426751592,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.838082315694256,
+        "recall": 0.9737256962690489,
+        "f1-score": 0.9008264462809917,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        11225,
+        0,
+        16,
+        22,
+        354
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        12,
+        0,
+        1303,
+        3,
+        3
+      ],
+      [
+        545,
+        0,
+        13,
+        22,
+        1
+      ],
+      [
+        42,
+        0,
+        8,
+        0,
+        1853
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 17.4
+}

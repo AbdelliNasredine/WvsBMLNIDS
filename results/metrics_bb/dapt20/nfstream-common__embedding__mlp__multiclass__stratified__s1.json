@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "nfstream-common",
+    "regime": "embedding",
+    "model": "mlp",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 1,
+    "dataset": "dapt20",
+    "n_features": 9,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "c2a120b4742f2355",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.5537499053467932,
+    "weighted_f1": 0.9023263134256314,
+    "balanced_accuracy": 0.5640496307582861,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9337062703515071,
+        "recall": 0.9626409572178704,
+        "f1-score": 0.9479528693735696,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 1.0,
+        "recall": 0.9295987887963664,
+        "f1-score": 0.9635151039623382,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.7965719440685611,
+        "recall": 0.928008407777194,
+        "f1-score": 0.8572815533980582,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        11183,
+        0,
+        0,
+        0,
+        434
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        81,
+        0,
+        1228,
+        0,
+        12
+      ],
+      [
+        576,
+        0,
+        0,
+        0,
+        5
+      ],
+      [
+        136,
+        0,
+        0,
+        1,
+        1766
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 4.7
+}

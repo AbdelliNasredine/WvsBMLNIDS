@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "yatc",
+    "regime": "embedding",
+    "model": "rf",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 4,
+    "dataset": "dapt20",
+    "n_features": 192,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "50e7ca30ed84329a",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.586895124697719,
+    "weighted_f1": 0.9045083583807932,
+    "balanced_accuracy": 0.5845622238610183,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9360738398427485,
+        "recall": 0.9428423861582164,
+        "f1-score": 0.9394459216056266,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9851446442533229,
+        "recall": 0.9538228614685844,
+        "f1-score": 0.9692307692307692,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.16255144032921812,
+        "recall": 0.1359724612736661,
+        "f1-score": 0.14807872539831302,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.8656106285130302,
+        "recall": 0.8901734104046243,
+        "f1-score": 0.877720207253886,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        10953,
+        0,
+        2,
+        407,
+        255
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        53,
+        0,
+        1260,
+        0,
+        8
+      ],
+      [
+        502,
+        0,
+        0,
+        79,
+        0
+      ],
+      [
+        192,
+        0,
+        17,
+        0,
+        1694
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 7.2
+}

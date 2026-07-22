@@ -1,0 +1,17 @@
+# Core embedding config (Phase B1): reference assembly, per-model DEFAULT
+# truncation, NO masking. One embedding table per (model, dataset).
+assembly: reference
+masking: none            # {none, anon_ip_port, mask_ip_ttl_cksum, payload_only} (B3/B4)
+truncation: default      # each model uses its own paper default (recorded in NFM_CARDS)
+datasets: [cicids2017]   # UNSW-NB15 added when the second corpus is assembled
+models:
+  - raw-cnn              # done (GPU smoke passed)
+  - netfound             # conda/GPU
+  - yatc                 # conda/GPU
+  - etbert               # conda/GPU
+  # nPrint removed from the study (see NFM_CARDS.md)
+  # NetMamba dropped: ROCm-incompatible Mamba kernels (see NFM_CARDS.md)
+batch_size: 256
+# embeddings cached at data/embeddings/<dataset>/<model>/<assembly>_<trunc>_<mask>/<capture>.npy
+# keyed by (model, checkpoint sha256, assembly cfg, truncation, masking); never
+# recompute silently with a changed key (plan §4).

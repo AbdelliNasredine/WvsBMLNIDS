@@ -15,7 +15,7 @@ import pandas as pd
 
 from nids_xstudy import canonical as C
 from nids_xstudy import config as cfg
-from nids_xstudy.labeling import LabelRules, class_distribution, label_flows
+from nids_xstudy.labeling import class_distribution, label_dataset
 
 pd.set_option("display.width", 160)
 pd.set_option("display.max_columns", 30)
@@ -32,11 +32,10 @@ def main(argv=None):
 
     canon = Path(args.canonical) if args.canonical else \
         cfg.canonical_dir(args.dataset, args.tool) / f"{args.capture}.parquet"
-    rules_path = Path(args.rules) if args.rules else cfg.rules_path(args.dataset)
+    rules_path = Path(args.rules) if args.rules else None
 
     df = C.read(canon)
-    rules = LabelRules.load(rules_path)
-    labeled = label_flows(df, rules)
+    labeled = label_dataset(df, args.dataset, cfg, capture=args.capture, rules_path=rules_path)
 
     out = cfg.labeled_dir(args.dataset, args.tool) / f"{args.capture}.parquet"
     labeled.to_parquet(out, engine="pyarrow", index=False)

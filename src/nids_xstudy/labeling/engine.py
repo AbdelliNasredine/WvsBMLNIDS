@@ -65,6 +65,7 @@ class AttackRule:
     directional: bool
     attacker_cidrs: list[str] = field(default_factory=list)
     victim_cidrs: list[str] = field(default_factory=list)
+    captures: list[str] = field(default_factory=list)  # empty = applies to every capture
     source: str = ""
     notes: str = ""
 
@@ -121,6 +122,8 @@ class LabelRules:
                 directional=bool(a.get("directional", False)),
                 attacker_cidrs=[str(x) for x in a.get("attacker_cidr", [])],
                 victim_cidrs=[str(x) for x in a.get("victim_cidr", [])],
+                captures=([a["capture"]] if a.get("capture") else
+                          [str(x) for x in a.get("captures", [])]),
                 source=a.get("source", ""),
                 notes=a.get("notes", ""),
             ))
@@ -179,11 +182,15 @@ def _rule_mask(df: pd.DataFrame, r: AttackRule, unique_ips) -> tuple[pd.Series, 
     return mask.fillna(False), (mask & inside).fillna(False)
 
 
-def label_flows(df: pd.DataFrame, rules: LabelRules) -> pd.DataFrame:
+def label_flows(df: pd.DataFrame, rules: LabelRules, capture: str | None = None) -> pd.DataFrame:
     """Add ``label``, ``binary_label``, ``label_confidence``, ``n_rule_matches``.
 
     When a flow matches multiple attack rules, the first rule (file order) wins;
     ``n_rule_matches`` records the count so overlaps can be audited.
+
+    ``capture``: when given, a rule scoped to specific captures (``capture:``/
+    ``captures:`` in the rules file) only applies while labeling one of those
+    captures. Rules without a capture scope apply everywhere (the CICIDS case).
     """
     df = df.copy()
     n = len(df)
@@ -196,6 +203,8 @@ def label_flows(df: pd.DataFrame, rules: LabelRules) -> pd.DataFrame:
     unique_ips = pd.unique(pd.concat([df["src_ip"], df["dst_ip"]], ignore_index=True))
 
     for r in rules.rules:
+        if r.captures and capture is not None and capture not in r.captures:
+            continue
         matched, inside = _rule_mask(df, r, unique_ips)
         n_matches = n_matches + matched.astype("int64")
         take = matched & (~assigned)

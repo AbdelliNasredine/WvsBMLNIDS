@@ -1,0 +1,158 @@
+{
+  "config": {
+    "tool": "nfstream",
+    "regime": "native",
+    "model": "mlp",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 2,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 53,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "bec58e149651a92c",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_protocol",
+    "tool_bidirectional_duration_ms",
+    "tool_bidirectional_packets",
+    "tool_bidirectional_bytes",
+    "tool_src2dst_duration_ms",
+    "tool_src2dst_packets",
+    "tool_src2dst_bytes",
+    "tool_dst2src_duration_ms",
+    "tool_dst2src_packets",
+    "tool_dst2src_bytes",
+    "tool_bidirectional_min_ps",
+    "tool_bidirectional_mean_ps",
+    "tool_bidirectional_stddev_ps",
+    "tool_bidirectional_max_ps",
+    "tool_src2dst_min_ps",
+    "tool_src2dst_mean_ps",
+    "tool_src2dst_stddev_ps",
+    "tool_src2dst_max_ps",
+    "tool_dst2src_min_ps",
+    "tool_dst2src_mean_ps",
+    "tool_dst2src_stddev_ps",
+    "tool_dst2src_max_ps",
+    "tool_bidirectional_min_piat_ms",
+    "tool_bidirectional_mean_piat_ms",
+    "tool_bidirectional_stddev_piat_ms",
+    "tool_bidirectional_max_piat_ms",
+    "tool_src2dst_min_piat_ms",
+    "tool_src2dst_mean_piat_ms",
+    "tool_src2dst_stddev_piat_ms",
+    "tool_src2dst_max_piat_ms",
+    "tool_dst2src_min_piat_ms",
+    "tool_dst2src_mean_piat_ms",
+    "tool_dst2src_stddev_piat_ms",
+    "tool_dst2src_max_piat_ms",
+    "tool_bidirectional_syn_packets",
+    "tool_bidirectional_cwr_packets",
+    "tool_bidirectional_ece_packets",
+    "tool_bidirectional_ack_packets",
+    "tool_bidirectional_psh_packets",
+    "tool_bidirectional_rst_packets",
+    "tool_bidirectional_fin_packets",
+    "tool_src2dst_syn_packets",
+    "tool_src2dst_cwr_packets",
+    "tool_src2dst_ece_packets",
+    "tool_src2dst_ack_packets",
+    "tool_src2dst_psh_packets",
+    "tool_src2dst_rst_packets",
+    "tool_src2dst_fin_packets",
+    "tool_dst2src_syn_packets",
+    "tool_dst2src_ack_packets",
+    "tool_dst2src_psh_packets",
+    "tool_dst2src_rst_packets",
+    "tool_dst2src_fin_packets"
+  ],
+  "metrics": {
+    "macro_f1": 0.6221039357827113,
+    "weighted_f1": 0.923862660366814,
+    "balanced_accuracy": 0.6146788498935419,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9502978723404255,
+        "recall": 0.9611775845743307,
+        "f1-score": 0.9557067659519836,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9836065573770492,
+        "recall": 0.9538228614685844,
+        "f1-score": 0.9684857801691007,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.4716981132075472,
+        "recall": 0.21514629948364888,
+        "f1-score": 0.29550827423167847,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.843911612599906,
+        "recall": 0.9432475039411455,
+        "f1-score": 0.890818858560794,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        11166,
+        0,
+        4,
+        136,
+        311
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        48,
+        0,
+        1260,
+        0,
+        13
+      ],
+      [
+        443,
+        0,
+        5,
+        125,
+        8
+      ],
+      [
+        92,
+        0,
+        12,
+        4,
+        1795
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "feature_importances": null,
+  "wall_seconds": 3.1
+}

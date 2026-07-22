@@ -1,0 +1,100 @@
+{
+  "config": {
+    "tool": "zeek",
+    "regime": "native",
+    "model": "rf",
+    "task": "binary",
+    "split": "temporal",
+    "seed": 2,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 19,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "b675b401ba84d983",
+  "git_commit": null,
+  "n_train": 36877,
+  "n_test": 16462,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_ts",
+    "tool_id.orig_p",
+    "tool_id.resp_p",
+    "tool_duration",
+    "tool_orig_bytes",
+    "tool_resp_bytes",
+    "tool_missed_bytes",
+    "tool_orig_pkts",
+    "tool_resp_pkts",
+    "tool_s_syn",
+    "tool_s_fin",
+    "tool_s_rst",
+    "tool_s_psh",
+    "tool_s_ack",
+    "tool_r_syn",
+    "tool_r_fin",
+    "tool_r_rst",
+    "tool_r_psh",
+    "tool_r_ack"
+  ],
+  "metrics": {
+    "macro_f1": 0.4903175740568801,
+    "weighted_f1": 0.8309036094425103,
+    "balanced_accuracy": 0.5086405198647891,
+    "per_class": {
+      "0": {
+        "precision": 0.8843253846625391,
+        "recall": 0.9929790748898678,
+        "f1-score": 0.9355079277585033,
+        "support": 14528.0
+      },
+      "1": {
+        "precision": 0.31543624161073824,
+        "recall": 0.024301964839710446,
+        "f1-score": 0.04512722035525684,
+        "support": 1934.0
+      }
+    },
+    "fpr": 0.0070209251101321585,
+    "attack_recall": 0.024301964839710446,
+    "attack_precision": 0.31543624161073824,
+    "auc_pr": 0.40429729064423325,
+    "confusion_matrix": [
+      [
+        14426,
+        102
+      ],
+      [
+        1887,
+        47
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "feature_importances": {
+    "tool_resp_bytes": 0.16576761769370546,
+    "tool_orig_pkts": 0.11933974784171877,
+    "tool_orig_bytes": 0.11237552839101736,
+    "tool_id.resp_p": 0.10431687076875329,
+    "tool_resp_pkts": 0.10362485323740397,
+    "tool_duration": 0.09026350044457654,
+    "tool_ts": 0.08320536626081693,
+    "tool_id.orig_p": 0.06072622254067449,
+    "tool_r_ack": 0.03818144246282696,
+    "tool_s_psh": 0.03690288200305004,
+    "tool_r_psh": 0.03488192536696319,
+    "tool_s_ack": 0.02996225230055762,
+    "tool_r_rst": 0.012801940031183658,
+    "tool_r_fin": 0.0026928571797037687,
+    "tool_s_fin": 0.002310782658280291,
+    "tool_s_rst": 0.0017792652738553014,
+    "tool_r_syn": 0.0008669455449123875,
+    "tool_missed_bytes": 0.0,
+    "tool_s_syn": 0.0
+  },
+  "wall_seconds": 1.8
+}

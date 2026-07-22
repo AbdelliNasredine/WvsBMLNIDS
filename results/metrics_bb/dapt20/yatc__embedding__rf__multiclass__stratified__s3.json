@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "yatc",
+    "regime": "embedding",
+    "model": "rf",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 3,
+    "dataset": "dapt20",
+    "n_features": 192,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "4b861a418d8a7b14",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.5902383081611708,
+    "weighted_f1": 0.9080106751180519,
+    "balanced_accuracy": 0.5884955990596116,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9383432963279249,
+        "recall": 0.9458552121890333,
+        "f1-score": 0.9420842800188622,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9778794813119756,
+        "recall": 0.9704769114307343,
+        "f1-score": 0.9741641337386018,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.16356107660455488,
+        "recall": 0.1359724612736661,
+        "f1-score": 0.14849624060150377,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.8827514330380406,
+        "recall": 0.8901734104046243,
+        "f1-score": 0.8864468864468864,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        10988,
+        0,
+        6,
+        404,
+        219
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        33,
+        0,
+        1282,
+        0,
+        6
+      ],
+      [
+        501,
+        0,
+        1,
+        79,
+        0
+      ],
+      [
+        187,
+        0,
+        22,
+        0,
+        1694
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 7.3
+}

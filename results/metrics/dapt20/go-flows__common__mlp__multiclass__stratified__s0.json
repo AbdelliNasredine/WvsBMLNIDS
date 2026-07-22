@@ -1,0 +1,114 @@
+{
+  "config": {
+    "tool": "go-flows",
+    "regime": "common",
+    "model": "mlp",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 0,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 9,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "401e0b02b10b4999",
+  "git_commit": null,
+  "n_train": 40924,
+  "n_test": 17540,
+  "n_test_unseen_class": 0,
+  "features": [
+    "duration",
+    "pkts_fwd",
+    "pkts_bwd",
+    "bytes_fwd",
+    "bytes_bwd",
+    "tot_pkts",
+    "tot_bytes",
+    "is_tcp",
+    "is_udp"
+  ],
+  "metrics": {
+    "macro_f1": 0.5216547876072559,
+    "weighted_f1": 0.8803267409076393,
+    "balanced_accuracy": 0.5083200852788559,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9020954268724338,
+        "recall": 0.9686074794770447,
+        "f1-score": 0.934169049189942,
+        "support": 13156.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 1.0,
+        "recall": 0.7686053783614759,
+        "f1-score": 0.8691654879773691,
+        "support": 1599.0
+      },
+      "Lateral Movement": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 596.0
+      },
+      "Reconnaissance": {
+        "precision": 0.8054919908466819,
+        "recall": 0.8043875685557587,
+        "f1-score": 0.8049394008689686,
+        "support": 2188.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        12743,
+        0,
+        0,
+        0,
+        413
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        359,
+        0,
+        1229,
+        0,
+        11
+      ],
+      [
+        595,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        428,
+        0,
+        0,
+        0,
+        1760
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "feature_importances": null,
+  "wall_seconds": 6.0
+}

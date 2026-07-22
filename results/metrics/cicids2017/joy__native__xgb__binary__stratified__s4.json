@@ -1,0 +1,106 @@
+{
+  "config": {
+    "tool": "joy",
+    "regime": "native",
+    "model": "xgb",
+    "task": "binary",
+    "split": "stratified",
+    "seed": 4,
+    "include_port": false,
+    "dataset": "cicids2017",
+    "n_features": 24,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "850649e0c4bc0359",
+  "git_commit": null,
+  "n_train": 400000,
+  "n_test": 867639,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_pr",
+    "tool_sp",
+    "tool_dp",
+    "tool_bytes_out",
+    "tool_num_pkts_out",
+    "tool_byte_dist_mean",
+    "tool_byte_dist_std",
+    "tool_bytes_in",
+    "tool_num_pkts_in",
+    "tool_derived_fwd_pktsize_mean",
+    "tool_derived_fwd_pktsize_std",
+    "tool_derived_fwd_pktsize_min",
+    "tool_derived_fwd_pktsize_max",
+    "tool_derived_fwd_pktsize_n",
+    "tool_derived_bwd_pktsize_mean",
+    "tool_derived_bwd_pktsize_std",
+    "tool_derived_bwd_pktsize_min",
+    "tool_derived_bwd_pktsize_max",
+    "tool_derived_bwd_pktsize_n",
+    "tool_derived_iat_ms_mean",
+    "tool_derived_iat_ms_std",
+    "tool_derived_iat_ms_min",
+    "tool_derived_iat_ms_max",
+    "tool_derived_iat_ms_n"
+  ],
+  "metrics": {
+    "macro_f1": 0.9928681569008494,
+    "weighted_f1": 0.996044279918479,
+    "balanced_accuracy": 0.989975986108218,
+    "per_class": {
+      "0": {
+        "precision": 0.996173370854715,
+        "recall": 0.999103478999549,
+        "f1-score": 0.9976362734628524,
+        "support": 722794.0
+      },
+      "1": {
+        "precision": 0.9954596094423307,
+        "recall": 0.980848493216887,
+        "f1-score": 0.9881000403388464,
+        "support": 144845.0
+      }
+    },
+    "fpr": 0.0008965210004510275,
+    "attack_recall": 0.980848493216887,
+    "attack_precision": 0.9954596094423307,
+    "auc_pr": 0.9984581150380556,
+    "confusion_matrix": [
+      [
+        722146,
+        648
+      ],
+      [
+        2774,
+        142071
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "feature_importances": {
+    "tool_derived_bwd_pktsize_mean": 0.5897741317749023,
+    "tool_bytes_out": 0.16816015541553497,
+    "tool_derived_bwd_pktsize_max": 0.03779953345656395,
+    "tool_derived_fwd_pktsize_min": 0.0345611535012722,
+    "tool_bytes_in": 0.025150202214717865,
+    "tool_derived_fwd_pktsize_n": 0.024110034108161926,
+    "tool_num_pkts_out": 0.022000053897500038,
+    "tool_dp": 0.01998094655573368,
+    "tool_derived_iat_ms_mean": 0.009928601793944836,
+    "tool_derived_iat_ms_n": 0.008922651410102844,
+    "tool_derived_bwd_pktsize_std": 0.00761609710752964,
+    "tool_pr": 0.007189619354903698,
+    "tool_byte_dist_std": 0.006542631424963474,
+    "tool_derived_iat_ms_std": 0.005917687434703112,
+    "tool_num_pkts_in": 0.004501720890402794,
+    "tool_derived_fwd_pktsize_std": 0.004459158517420292,
+    "tool_byte_dist_mean": 0.0042057340033352375,
+    "tool_derived_fwd_pktsize_max": 0.004034846555441618,
+    "tool_derived_fwd_pktsize_mean": 0.0037435810081660748,
+    "tool_derived_iat_ms_max": 0.0034437053836882114
+  },
+  "wall_seconds": 13.4
+}

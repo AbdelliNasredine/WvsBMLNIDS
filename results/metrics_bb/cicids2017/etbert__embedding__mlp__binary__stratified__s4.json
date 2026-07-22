@@ -1,0 +1,56 @@
+{
+  "config": {
+    "tool": "etbert",
+    "regime": "embedding",
+    "model": "mlp",
+    "task": "binary",
+    "split": "stratified",
+    "seed": 4,
+    "dataset": "cicids2017",
+    "n_features": 768,
+    "extractor_family": "nfm",
+    "cfg_name": "sample"
+  },
+  "config_hash": "7459a64e1aba9417",
+  "git_commit": null,
+  "n_train": 99665,
+  "n_test": 42714,
+  "metrics": {
+    "macro_f1": 0.9940685691884316,
+    "weighted_f1": 0.9942162309754691,
+    "balanced_accuracy": 0.9938784292303957,
+    "per_class": {
+      "0": {
+        "precision": 0.9945400857986517,
+        "recall": 0.9917222222222222,
+        "f1-score": 0.9931291551920777,
+        "support": 18000.0
+      },
+      "1": {
+        "precision": 0.9939834443771451,
+        "recall": 0.9960346362385692,
+        "f1-score": 0.9950079831847854,
+        "support": 24714.0
+      }
+    },
+    "fpr": 0.008277777777777778,
+    "attack_recall": 0.9960346362385692,
+    "attack_precision": 0.9939834443771451,
+    "auc_pr": 0.9997481948100064,
+    "confusion_matrix": [
+      [
+        17851,
+        149
+      ],
+      [
+        98,
+        24616
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "wall_seconds": 47.8
+}

@@ -1,0 +1,57 @@
+{
+  "config": {
+    "tool": "nfstream-native",
+    "regime": "embedding",
+    "model": "xgb",
+    "task": "binary",
+    "split": "temporal",
+    "seed": 2,
+    "dataset": "dapt20",
+    "n_features": 53,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "a6c5891747467d72",
+  "git_commit": null,
+  "n_train": 36075,
+  "n_test": 15335,
+  "metrics": {
+    "macro_f1": 0.49956503001687136,
+    "weighted_f1": 0.8219058511540653,
+    "balanced_accuracy": 0.5147218401003679,
+    "per_class": {
+      "0": {
+        "precision": 0.8768469656992084,
+        "recall": 0.9923111376530308,
+        "f1-score": 0.931012746883317,
+        "support": 13396.0
+      },
+      "1": {
+        "precision": 0.4114285714285714,
+        "recall": 0.037132542547705004,
+        "f1-score": 0.06811731315042574,
+        "support": 1939.0
+      }
+    },
+    "fpr": 0.0076888623469692444,
+    "attack_recall": 0.037132542547705004,
+    "attack_precision": 0.4114285714285714,
+    "auc_pr": 0.309734002776602,
+    "confusion_matrix": [
+      [
+        13293,
+        103
+      ],
+      [
+        1867,
+        72
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "wall_seconds": 1.0
+}

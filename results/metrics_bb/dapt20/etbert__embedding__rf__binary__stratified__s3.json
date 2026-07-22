@@ -1,0 +1,57 @@
+{
+  "config": {
+    "tool": "etbert",
+    "regime": "embedding",
+    "model": "rf",
+    "task": "binary",
+    "split": "stratified",
+    "seed": 3,
+    "dataset": "dapt20",
+    "n_features": 768,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "f9d15154a1e255f3",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.8400506117273232,
+    "weighted_f1": 0.8815649801965671,
+    "balanced_accuracy": 0.837264987243268,
+    "per_class": {
+      "0": {
+        "precision": 0.9183603757472246,
+        "recall": 0.9257123181544289,
+        "f1-score": 0.9220216916020063,
+        "support": 11617.0
+      },
+      "1": {
+        "precision": 0.7675733907891193,
+        "recall": 0.7488176563321072,
+        "f1-score": 0.75807953185264,
+        "support": 3806.0
+      }
+    },
+    "fpr": 0.07428768184557115,
+    "attack_recall": 0.7488176563321072,
+    "attack_precision": 0.7675733907891193,
+    "auc_pr": 0.7923159018328936,
+    "confusion_matrix": [
+      [
+        10754,
+        863
+      ],
+      [
+        956,
+        2850
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "wall_seconds": 16.0
+}

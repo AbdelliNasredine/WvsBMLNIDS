@@ -1,0 +1,108 @@
+{
+  "config": {
+    "tool": "cicflowmeter-fixed",
+    "regime": "common",
+    "model": "xgb",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 0,
+    "include_port": true,
+    "dataset": "dapt20",
+    "n_features": 10,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "7337059ee4176a27",
+  "git_commit": null,
+  "n_train": 40836,
+  "n_test": 17502,
+  "n_test_unseen_class": 0,
+  "features": [
+    "duration",
+    "pkts_fwd",
+    "pkts_bwd",
+    "bytes_fwd",
+    "bytes_bwd",
+    "tot_pkts",
+    "tot_bytes",
+    "is_tcp",
+    "is_udp",
+    "dst_port"
+  ],
+  "metrics": {
+    "macro_f1": 0.772288233570999,
+    "weighted_f1": 0.9701708453918814,
+    "balanced_accuracy": 0.7708140832265195,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9845655084924941,
+        "recall": 0.9816597568688076,
+        "f1-score": 0.9831104855735397,
+        "support": 14231.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9613382899628253,
+        "recall": 0.9634873323397913,
+        "f1-score": 0.9624116114625977,
+        "support": 1342.0
+      },
+      "Lateral Movement": {
+        "precision": 0.2727272727272727,
+        "recall": 0.24,
+        "f1-score": 0.2553191489361702,
+        "support": 25.0
+      },
+      "Reconnaissance": {
+        "precision": 0.8787255909558068,
+        "recall": 0.898109243697479,
+        "f1-score": 0.8883116883116883,
+        "support": 1904.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        13970,
+        32,
+        7,
+        222
+      ],
+      [
+        35,
+        1293,
+        6,
+        8
+      ],
+      [
+        3,
+        10,
+        6,
+        6
+      ],
+      [
+        181,
+        10,
+        3,
+        1710
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "feature_importances": {
+    "is_udp": 0.2525666654109955,
+    "is_tcp": 0.20107914507389069,
+    "bytes_bwd": 0.16967135667800903,
+    "dst_port": 0.128985196352005,
+    "pkts_fwd": 0.11139840632677078,
+    "pkts_bwd": 0.04856518283486366,
+    "duration": 0.034468792378902435,
+    "bytes_fwd": 0.025995351374149323,
+    "tot_pkts": 0.014318463392555714,
+    "tot_bytes": 0.012951445765793324
+  },
+  "wall_seconds": 2.3
+}

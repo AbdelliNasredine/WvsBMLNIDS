@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "nfstream-common",
+    "regime": "embedding",
+    "model": "logreg",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 0,
+    "dataset": "dapt20",
+    "n_features": 9,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "db837dbdec20d239",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.4314955679859323,
+    "weighted_f1": 0.7533772208511534,
+    "balanced_accuracy": 0.6377897646032953,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9978685612788633,
+        "recall": 0.7254024274769734,
+        "f1-score": 0.840095703319709,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.00043725404459991256,
+        "recall": 1.0,
+        "f1-score": 0.0008741258741258741,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.7896399241945673,
+        "recall": 0.9462528387585163,
+        "f1-score": 0.8608815426997245,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.06875,
+        "recall": 0.26506024096385544,
+        "f1-score": 0.10918114143920596,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.5529953917050692,
+        "recall": 0.2522333158171308,
+        "f1-score": 0.3464453265968964,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        8427,
+        1818,
+        45,
+        955,
+        372
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        21,
+        1250,
+        39,
+        8
+      ],
+      [
+        7,
+        412,
+        0,
+        154,
+        8
+      ],
+      [
+        8,
+        35,
+        288,
+        1092,
+        480
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 2.0
+}

@@ -47,18 +47,41 @@ def build_pcap(path: Path | str = PCAP_PATH) -> Path:
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     pkts = []
+    eth = Ether(src=MAC_A, dst=MAC_B)
 
-    def tcp(src, sport, dst, dport, flags, t, seq=0, ack=0, payload=0):
-        p = (Ether(src=MAC_A, dst=MAC_B) / IP(src=src, dst=dst)
-             / TCP(sport=sport, dport=dport, flags=flags, seq=seq, ack=ack))
-        if payload:
-            p = p / Raw(load=b"x" * payload)
-        p.time = t
-        pkts.append(p)
+    class Conn:
+        """A stateful TCP connection emitting realistic seq/ack numbers.
+
+        Degenerate (all-zero) seq/ack numbers confuse stateful analyzers like
+        Zeek (they split a connection or flip direction); tracking seq/ack keeps
+        the fixture a valid ground truth for both stateful (Zeek) and 5-tuple
+        (NFStream) tools. `c` = client->server (fwd), `s` = server->client (bwd).
+        """
+        def __init__(self, c_ip, c_port, s_ip, s_port, c_isn, s_isn):
+            self.cip, self.cp, self.sip, self.sp = c_ip, c_port, s_ip, s_port
+            self.cseq, self.sseq = c_isn, s_isn
+
+        def _emit(self, src, sport, dst, dport, flags, seq, ack, t, payload):
+            p = eth / IP(src=src, dst=dst) / TCP(
+                sport=sport, dport=dport, flags=flags, seq=seq,
+                ack=(ack if "A" in flags else 0))
+            if payload:
+                p = p / Raw(load=b"x" * payload)
+            p.time = t
+            pkts.append(p)
+
+        def c(self, flags, t, payload=0):  # client -> server (fwd)
+            self._emit(self.cip, self.cp, self.sip, self.sp, flags,
+                       self.cseq, self.sseq, t, payload)
+            self.cseq += payload + (1 if ("S" in flags or "F" in flags) else 0)
+
+        def s(self, flags, t, payload=0):  # server -> client (bwd)
+            self._emit(self.sip, self.sp, self.cip, self.cp, flags,
+                       self.sseq, self.cseq, t, payload)
+            self.sseq += payload + (1 if ("S" in flags or "F" in flags) else 0)
 
     def udp(src, sport, dst, dport, t, payload=0):
-        p = (Ether(src=MAC_A, dst=MAC_B) / IP(src=src, dst=dst)
-             / UDP(sport=sport, dport=dport))
+        p = eth / IP(src=src, dst=dst) / UDP(sport=sport, dport=dport)
         if payload:
             p = p / Raw(load=b"x" * payload)
         p.time = t
@@ -69,42 +92,51 @@ def build_pcap(path: Path | str = PCAP_PATH) -> Path:
     # 1) HTTP over TCP: handshake, GET, response, graceful FIN teardown.
     #    fwd = client->web ; expect syn_fwd=1 fin_fwd=1 syn_bwd=1 fin_bwd=1
     #    pkts_fwd=6 pkts_bwd=4
-    tcp(CLIENT, 40001, WEB, 80, "S", t0 + 0.00)               # 1 fwd SYN
-    tcp(WEB, 80, CLIENT, 40001, "SA", t0 + 0.01)              # 2 bwd SYN-ACK
-    tcp(CLIENT, 40001, WEB, 80, "A", t0 + 0.02)              # 3 fwd ACK
-    tcp(CLIENT, 40001, WEB, 80, "PA", t0 + 0.03, payload=100)  # 4 fwd GET
-    tcp(WEB, 80, CLIENT, 40001, "PA", t0 + 0.05, payload=500)  # 5 bwd response
-    tcp(CLIENT, 40001, WEB, 80, "A", t0 + 0.06)              # 6 fwd ACK
-    tcp(WEB, 80, CLIENT, 40001, "FA", t0 + 0.10)             # 7 bwd FIN
-    tcp(CLIENT, 40001, WEB, 80, "A", t0 + 0.11)              # 8 fwd ACK
-    tcp(CLIENT, 40001, WEB, 80, "FA", t0 + 0.12)             # 9 fwd FIN
-    tcp(WEB, 80, CLIENT, 40001, "A", t0 + 0.13)              # 10 bwd ACK
+    http = Conn(CLIENT, 40001, WEB, 80, c_isn=1000, s_isn=9000)
+    http.c("S", t0 + 0.00)                 # 1 fwd SYN
+    http.s("SA", t0 + 0.01)                # 2 bwd SYN-ACK
+    http.c("A", t0 + 0.02)                 # 3 fwd ACK
+    http.c("PA", t0 + 0.03, payload=100)   # 4 fwd GET
+    http.s("PA", t0 + 0.05, payload=500)   # 5 bwd response
+    http.c("A", t0 + 0.06)                 # 6 fwd ACK
+    http.s("FA", t0 + 0.10)                # 7 bwd FIN
+    http.c("A", t0 + 0.11)                 # 8 fwd ACK
+    http.c("FA", t0 + 0.12)                # 9 fwd FIN
+    http.s("A", t0 + 0.13)                 # 10 bwd ACK
 
     # 2) DNS over UDP: query + response (2-packet bidirectional flow).
     udp(CLIENT, 50000, DNS_SRV, 53, t0 + 0.20, payload=30)
     udp(DNS_SRV, 53, CLIENT, 50000, t0 + 0.25, payload=90)
 
     # 3) Long TCP session with a >idle-timeout gap -> 2 flows @120s idle.
-    tcp(CLIENT2, 40002, WEB, 443, "S", t0 + 1.00)
-    tcp(WEB, 443, CLIENT2, 40002, "SA", t0 + 1.01)
-    tcp(CLIENT2, 40002, WEB, 443, "A", t0 + 1.02)
-    tcp(CLIENT2, 40002, WEB, 443, "PA", t0 + 1.50, payload=200)   # segment A ends
-    gap = t0 + 1.50 + (IDLE_TIMEOUT_S + 30)                       # 150s gap
-    tcp(CLIENT2, 40002, WEB, 443, "PA", gap + 0.00, payload=200)  # segment B
-    tcp(WEB, 443, CLIENT2, 40002, "A", gap + 0.02)
-    tcp(CLIENT2, 40002, WEB, 443, "FA", gap + 0.03)
-    tcp(WEB, 443, CLIENT2, 40002, "A", gap + 0.04)
+    lng = Conn(CLIENT2, 40002, WEB, 443, c_isn=2000, s_isn=7000)
+    lng.c("S", t0 + 1.00)
+    lng.s("SA", t0 + 1.01)
+    lng.c("A", t0 + 1.02)
+    lng.c("PA", t0 + 1.50, payload=200)          # segment A ends
+    gap = t0 + 1.50 + (IDLE_TIMEOUT_S + 30)      # 150s gap
+    lng.c("PA", gap + 0.00, payload=200)         # segment B
+    lng.s("A", gap + 0.02)
+    lng.c("FA", gap + 0.03)
+    lng.s("A", gap + 0.04)
 
     # 4) SYN-scan burst: SCAN_N_PORTS unanswered single-SYN flows.
     for i, dport in enumerate(range(1, SCAN_N_PORTS + 1)):
-        tcp(SCANNER, SCAN_SRC_PORT, SCAN_VICTIM, dport, "S", t0 + 2.0 + i * 0.001)
+        p = eth / IP(src=SCANNER, dst=SCAN_VICTIM) / TCP(
+            sport=SCAN_SRC_PORT, dport=dport, flags="S", seq=3000 + i * 4096, ack=0)
+        p.time = t0 + 2.0 + i * 0.001
+        pkts.append(p)
 
-    # 5) RST-terminated TCP flow: responder sends RST.
-    tcp(CLIENT3, 40010, WEB, 8080, "S", t0 + 3.00)
-    tcp(WEB, 8080, CLIENT3, 40010, "SA", t0 + 3.01)
-    tcp(CLIENT3, 40010, WEB, 8080, "A", t0 + 3.02)
-    tcp(CLIENT3, 40010, WEB, 8080, "PA", t0 + 3.03, payload=50)
-    tcp(WEB, 8080, CLIENT3, 40010, "R", t0 + 3.05)  # bwd RST
+    # 5) RST-terminated TCP flow: responder sends RST+ACK. NFStream keeps this as
+    #    one flow; Zeek's stateful tracker splits it (orphans the SYN as S0 and
+    #    flips the remainder) on this fast synthetic connection — a quirk that
+    #    does not occur on real captures. The RST flag accounting is unaffected.
+    rst = Conn(CLIENT3, 40010, WEB, 8080, c_isn=4000, s_isn=6000)
+    rst.c("S", t0 + 3.00)
+    rst.s("SA", t0 + 3.01)
+    rst.c("A", t0 + 3.02)
+    rst.c("PA", t0 + 3.03, payload=50)
+    rst.s("RA", t0 + 3.05)                       # bwd RST+ACK (realistic reset)
 
     wrpcap(str(path), pkts)
     return path

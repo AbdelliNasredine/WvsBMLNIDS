@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 # Run CICFlowMeter's command-line flow generator on a pcap.
-#   cfm <pcap> <outdir>
+#   cfm-run <pcap> <outdir>   ->   <outdir>/<name>_Flow.csv
 set -euo pipefail
 PCAP="$1"; OUT="$2"
-cd /opt/CICFlowMeter
-
-JNETPCAP_DIR="$(dirname "$(find . -name 'libjnetpcap.so' | head -n1)")"
-JAR="$(find build -name '*.jar' | grep -viE 'sources|javadoc' | head -n1)"
-CP="${JAR}:$(find . -name 'jnetpcap*.jar' | head -n1):lib/*:build/libs/*"
+DIST=/opt/CICFlowMeter/build/install/CICFlowMeter
+CP="${DIST}/lib/*"
+# Large captures (e.g. DAPT2020 thursday-pvt: 89M packets) exhaust the default
+# JVM heap; give it a generous cap. Output is unchanged for smaller captures.
+XMX="${CFM_XMX:-40g}"
 
 for CLS in cic.cs.unb.ca.ifm.Cmd cic.cs.unb.ca.ifm.CICFlowMeter; do
-  if java -Djava.library.path="${JNETPCAP_DIR}" -cp "${CP}" "${CLS}" "${PCAP}" "${OUT}" 2>/tmp/err; then
+  if java -Xmx"${XMX}" -Djava.library.path=/usr/lib -cp "${CP}" "${CLS}" "${PCAP}" "${OUT}" 2>/tmp/err; then
     exit 0
   fi
 done

@@ -197,17 +197,26 @@ attacks:
     proto: [6]
     source: "CNS2022"
 
-  - name: Infiltration - Internal Portscan (2nd stage)
-    label: Infiltration
-    date: 2017-07-06
-    start_local: "17:00:31.706"
-    end_local:   "18:46:04.331"
-    tz: UTC        # ADT 14:00:31-15:46:04
-    attackers: [192.168.10.8, 172.16.0.1]
-    victim_cidr: [192.168.10.0/24]
-    proto: [6]
-    source: "CNS2022"
-    notes: "Compromised .8 scans the internal subnet; victim is any 192.168.10.x."
+  # ---------------------------------------------------------------------------
+  # DISABLED BY DEFAULT — the Infiltration 2nd-stage internal Nmap portscan.
+  # The compromised host .8 scans the whole 192.168.10.0/24 subnet, generating
+  # ~63k flows. The corrected reference ground truth (Engelen/Liu) counts
+  # Infiltration = 32 (only the direct Meterpreter/Dropbox + Cool-Disk flows
+  # to/from the external attacker 205.174.165.73); it does NOT label the
+  # internal scan as Infiltration. Including it inflates the class ~2000x and
+  # breaks comparability with prior work, so it is OFF by default. Re-enable
+  # (optionally under a distinct label) only for an explicit sensitivity study.
+  # - name: Infiltration - Internal Portscan (2nd stage)
+  #   label: Infiltration-Portscan
+  #   date: 2017-07-06
+  #   start_local: "17:00:31.706"
+  #   end_local:   "18:46:04.331"
+  #   tz: UTC        # ADT 14:00:31-15:46:04
+  #   attackers: [192.168.10.8]
+  #   victim_cidr: [192.168.10.0/24]
+  #   proto: [6]
+  #   source: "CNS2022"
+  #   notes: "Compromised .8 scans the internal subnet; ~63k flows; see above."
 
   # ---------------- Friday 2017-07-07 : Botnet, PortScan, DDoS ----------------
   - name: Botnet ARES

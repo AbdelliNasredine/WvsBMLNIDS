@@ -1,0 +1,126 @@
+{
+  "config": {
+    "tool": "zeek",
+    "regime": "native",
+    "model": "rf",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 2,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 19,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "9f0bdfd0693469bd",
+  "git_commit": null,
+  "n_train": 37337,
+  "n_test": 16002,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_ts",
+    "tool_id.orig_p",
+    "tool_id.resp_p",
+    "tool_duration",
+    "tool_orig_bytes",
+    "tool_resp_bytes",
+    "tool_missed_bytes",
+    "tool_orig_pkts",
+    "tool_resp_pkts",
+    "tool_s_syn",
+    "tool_s_fin",
+    "tool_s_rst",
+    "tool_s_psh",
+    "tool_s_ack",
+    "tool_r_syn",
+    "tool_r_fin",
+    "tool_r_rst",
+    "tool_r_psh",
+    "tool_r_ack"
+  ],
+  "metrics": {
+    "macro_f1": 0.9405946101418651,
+    "weighted_f1": 0.9820894481244107,
+    "balanced_accuracy": 0.937906187115573,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9875358753587535,
+        "recall": 0.9890768725361366,
+        "f1-score": 0.9883057732550983,
+        "support": 12176.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9932985852568875,
+        "recall": 0.9940387481371088,
+        "f1-score": 0.9936685288640595,
+        "support": 1342.0
+      },
+      "Lateral Movement": {
+        "precision": 0.7978723404255319,
+        "recall": 0.7758620689655172,
+        "f1-score": 0.7867132867132867,
+        "support": 580.0
+      },
+      "Reconnaissance": {
+        "precision": 0.9947368421052631,
+        "recall": 0.9926470588235294,
+        "f1-score": 0.9936908517350158,
+        "support": 1904.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        12043,
+        9,
+        114,
+        10
+      ],
+      [
+        8,
+        1334,
+        0,
+        0
+      ],
+      [
+        130,
+        0,
+        450,
+        0
+      ],
+      [
+        14,
+        0,
+        0,
+        1890
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "feature_importances": {
+    "tool_ts": 0.21955439559746387,
+    "tool_resp_bytes": 0.1360195000200984,
+    "tool_id.resp_p": 0.12904068010356395,
+    "tool_orig_bytes": 0.11991455494099273,
+    "tool_duration": 0.07761761008821884,
+    "tool_id.orig_p": 0.055427991628251,
+    "tool_orig_pkts": 0.05188868235084161,
+    "tool_resp_pkts": 0.04535204633211889,
+    "tool_r_psh": 0.04124370095547211,
+    "tool_s_ack": 0.035251559760859474,
+    "tool_s_psh": 0.030632268478305243,
+    "tool_r_ack": 0.024637142107467747,
+    "tool_r_rst": 0.016750016993092517,
+    "tool_r_fin": 0.006961582382069064,
+    "tool_r_syn": 0.006064650814576581,
+    "tool_s_fin": 0.0015102337831961008,
+    "tool_s_rst": 0.0014555233495382202,
+    "tool_s_syn": 0.0006778603138736608,
+    "tool_missed_bytes": 0.0
+  },
+  "wall_seconds": 2.0
+}

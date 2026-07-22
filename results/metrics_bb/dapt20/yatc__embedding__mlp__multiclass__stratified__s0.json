@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "yatc",
+    "regime": "embedding",
+    "model": "mlp",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 0,
+    "dataset": "dapt20",
+    "n_features": 192,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "aec5ceb621c4d79b",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.6932112193265139,
+    "weighted_f1": 0.9438707687292919,
+    "balanced_accuracy": 0.7201326661071141,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9737748344370861,
+        "recall": 0.9492984419385383,
+        "f1-score": 0.9613808735071049,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9876638396299152,
+        "recall": 0.9697199091597275,
+        "f1-score": 0.9786096256684492,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.5122235157159488,
+        "recall": 0.7573149741824441,
+        "f1-score": 0.6111111111111112,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.9057672502574665,
+        "recall": 0.9243300052548608,
+        "f1-score": 0.9149544863459038,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        11028,
+        0,
+        4,
+        410,
+        175
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        30,
+        0,
+        1281,
+        3,
+        7
+      ],
+      [
+        135,
+        0,
+        5,
+        440,
+        1
+      ],
+      [
+        131,
+        0,
+        7,
+        6,
+        1759
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 5.1
+}

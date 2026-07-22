@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "raw-cnn",
+    "regime": "embedding",
+    "model": "logreg",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 1,
+    "dataset": "dapt20",
+    "n_features": 128,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "f646156696d3487e",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.6677257679832037,
+    "weighted_f1": 0.8775076828499117,
+    "balanced_accuracy": 0.9268799958828758,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9916343603346256,
+        "recall": 0.8367048291297237,
+        "f1-score": 0.9076053970773612,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.14285714285714285,
+        "recall": 1.0,
+        "f1-score": 0.25,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.8678321678321679,
+        "recall": 0.939439818319455,
+        "f1-score": 0.9022173754998183,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.3237753882915173,
+        "recall": 0.9328743545611016,
+        "f1-score": 0.48070953436807096,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.701593625498008,
+        "recall": 0.9253809774040987,
+        "f1-score": 0.7980965329707682,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        9720,
+        6,
+        105,
+        1091,
+        695
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        24,
+        0,
+        1241,
+        15,
+        41
+      ],
+      [
+        18,
+        0,
+        8,
+        542,
+        13
+      ],
+      [
+        40,
+        0,
+        76,
+        26,
+        1761
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 7.2
+}

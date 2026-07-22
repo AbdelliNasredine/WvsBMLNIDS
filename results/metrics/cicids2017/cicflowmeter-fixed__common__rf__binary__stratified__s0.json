@@ -1,0 +1,80 @@
+{
+  "config": {
+    "tool": "cicflowmeter-fixed",
+    "regime": "common",
+    "model": "rf",
+    "task": "binary",
+    "split": "stratified",
+    "seed": 0,
+    "include_port": false,
+    "dataset": "cicids2017",
+    "n_features": 9,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "51d283fb32a4be0d",
+  "git_commit": null,
+  "n_train": 400000,
+  "n_test": 631280,
+  "n_test_unseen_class": 0,
+  "features": [
+    "duration",
+    "pkts_fwd",
+    "pkts_bwd",
+    "bytes_fwd",
+    "bytes_bwd",
+    "tot_pkts",
+    "tot_bytes",
+    "is_tcp",
+    "is_udp"
+  ],
+  "metrics": {
+    "macro_f1": 0.9856675381938065,
+    "weighted_f1": 0.9903433698699151,
+    "balanced_accuracy": 0.9915043390760198,
+    "per_class": {
+      "0": {
+        "precision": 0.998262331155834,
+        "recall": 0.9893850320098826,
+        "f1-score": 0.9938038575331836,
+        "support": 497034.0
+      },
+      "1": {
+        "precision": 0.9619517401525969,
+        "recall": 0.9936236461421569,
+        "f1-score": 0.9775312188544293,
+        "support": 134246.0
+      }
+    },
+    "fpr": 0.010614967990117376,
+    "attack_recall": 0.9936236461421569,
+    "attack_precision": 0.9619517401525969,
+    "auc_pr": 0.9850669968313787,
+    "confusion_matrix": [
+      [
+        491758,
+        5276
+      ],
+      [
+        856,
+        133390
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "feature_importances": {
+    "bytes_bwd": 0.16011769248615662,
+    "is_tcp": 0.1585170403607896,
+    "tot_bytes": 0.1347085648861083,
+    "pkts_bwd": 0.1145318742018628,
+    "is_udp": 0.1098583421234307,
+    "bytes_fwd": 0.09609870701007898,
+    "tot_pkts": 0.09214358833829699,
+    "pkts_fwd": 0.09092067932539015,
+    "duration": 0.04310351126788592
+  },
+  "wall_seconds": 9.8
+}

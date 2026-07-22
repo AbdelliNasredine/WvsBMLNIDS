@@ -1,0 +1,75 @@
+{
+  "config": {
+    "tool": "yaf",
+    "regime": "native",
+    "model": "logreg",
+    "task": "binary",
+    "split": "stratified",
+    "seed": 1,
+    "include_port": false,
+    "dataset": "cicids2017",
+    "n_features": 14,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "d8ab20c04fb5a272",
+  "git_commit": null,
+  "n_train": 400000,
+  "n_test": 694754,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_flowDurationMicroseconds",
+    "tool_flowDurationMilliseconds",
+    "tool_reverseFlowDeltaMicroseconds",
+    "tool_reverseFlowDeltaMilliseconds",
+    "tool_protocolIdentifier",
+    "tool_sourceTransportPort",
+    "tool_packetTotalCount",
+    "tool_octetTotalCount",
+    "tool_flowAttributes",
+    "tool_destinationTransportPort",
+    "tool_reversePacketTotalCount",
+    "tool_reverseOctetTotalCount",
+    "tool_reverseFlowAttributes",
+    "tool_silkAppLabel"
+  ],
+  "metrics": {
+    "macro_f1": 0.805645843152369,
+    "weighted_f1": 0.8376060909266819,
+    "balanced_accuracy": 0.8792543673246236,
+    "per_class": {
+      "0": {
+        "precision": 0.9933362302666989,
+        "recall": 0.7739394394076673,
+        "f1-score": 0.8700194297787038,
+        "support": 519843.0
+      },
+      "1": {
+        "precision": 0.5943919814446653,
+        "recall": 0.98456929524158,
+        "f1-score": 0.7412722565260342,
+        "support": 174911.0
+      }
+    },
+    "fpr": 0.22606056059233268,
+    "attack_recall": 0.98456929524158,
+    "attack_precision": 0.5943919814446653,
+    "auc_pr": 0.7281748910130097,
+    "confusion_matrix": [
+      [
+        402327,
+        117516
+      ],
+      [
+        2699,
+        172212
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "feature_importances": null,
+  "wall_seconds": 24.7
+}

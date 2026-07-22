@@ -4,9 +4,11 @@ Argus source (s*) = flow initiator = our fwd direction. Argus reports aggregate
 TCP flag indicators (``flgs``/``state``), not per-direction flag counts, so the
 canonical flag columns are left <NA> and the native fields are retained.
 
-UNVERIFIED end-to-end (Docker daemon was down at authoring time): the field list
-and ``ra`` epoch-time flags are per the argus-clients docs; validate the CSV
-columns against a smoke pcap once the image is built.
+Uses Argus 5.0.3 built from openargus source (env/docker/argus). The older
+Ubuntu argus 3.0.8.2 package emitted count-less INT records for multi-packet
+flows in batch pcap mode; the source build fixes this (verified on the smoke
+pcap: HTTP flow reports SrcPkts=6/DstPkts=4). racluster aggregates argus'
+periodic status records into one final record per flow.
 """
 from __future__ import annotations
 
@@ -21,24 +23,52 @@ from . import _docker
 from .base import RunMeta, pcap_fingerprint, write_outputs
 
 TOOL = "argus"
-IMAGE = "nids-xstudy/argus:latest"
+IMAGE = "nids-xstudy/argus:5"
+
+
+# racluster header (from `-s stime ltime dur proto saddr sport daddr dport
+# spkts dpkts sbytes dbytes state flgs`) -> canonical core column.
+_MAP = {
+    "SrcAddr": "src_ip", "DstAddr": "dst_ip",
+    "Sport": "src_port", "Dport": "dst_port", "Proto": "proto",
+    "StartTime": "t_start", "LastTime": "t_end", "Dur": "duration",
+    "SrcPkts": "pkts_fwd", "DstPkts": "pkts_bwd",
+    "SrcBytes": "bytes_fwd", "DstBytes": "bytes_bwd",
+}
+
+# argus non-flow record types (management/status) to drop
+_NON_FLOW_PROTO = {"man", "rtp", "arp", ""}
 
 
 def to_canonical(a: pd.DataFrame, *, dataset: str, capture: str) -> pd.DataFrame:
+    a = a.copy()
+    a.columns = [c.strip() for c in a.columns]
+    # drop argus management/status records (proto=man, all-zero endpoints)
+    proto_l = a["Proto"].astype("string").str.strip().str.lower()
+    keep = ~proto_l.isin(_NON_FLOW_PROTO) & ~a["SrcAddr"].astype("string").str.strip().isin(["0", "0.0.0.0", ""])
+    a = a[keep].reset_index(drop=True)
+
     n = len(a)
     out = pd.DataFrame(index=range(n))
-    out["src_ip"] = a["saddr"].astype("string")
-    out["dst_ip"] = a["daddr"].astype("string")
-    out["src_port"] = pd.to_numeric(a["sport"], errors="coerce")
-    out["dst_port"] = pd.to_numeric(a["dport"], errors="coerce")
-    out["proto"] = a["proto"].map(C.proto_to_number)
-    out["t_start"] = pd.to_numeric(a["stime"], errors="coerce")
-    out["t_end"] = pd.to_numeric(a["ltime"], errors="coerce")
-    out["duration"] = pd.to_numeric(a["dur"], errors="coerce")
-    out["pkts_fwd"] = pd.to_numeric(a["spkts"], errors="coerce")
-    out["pkts_bwd"] = pd.to_numeric(a["dpkts"], errors="coerce")
-    out["bytes_fwd"] = pd.to_numeric(a["sbytes"], errors="coerce")
-    out["bytes_bwd"] = pd.to_numeric(a["dbytes"], errors="coerce")
+    out["src_ip"] = a["SrcAddr"].astype("string").str.strip()
+    out["dst_ip"] = a["DstAddr"].astype("string").str.strip()
+    out["src_port"] = pd.to_numeric(a["Sport"], errors="coerce")
+    out["dst_port"] = pd.to_numeric(a["Dport"], errors="coerce")
+    out["proto"] = a["Proto"].map(C.proto_to_number)
+    out["t_start"] = pd.to_numeric(a["StartTime"], errors="coerce")
+    _dur = pd.to_numeric(a["Dur"], errors="coerce").fillna(0.0)
+    # LastTime can be blank for single-record flows; fall back to start+dur.
+    lt = pd.to_numeric(a["LastTime"], errors="coerce")
+    out["t_end"] = lt.fillna(out["t_start"] + _dur)
+    # Derive duration from the authoritative timestamps: argus reports Dur, stime
+    # and ltime independently and Dur != (ltime - stime) for some flows (rounding
+    # / active-vs-wall duration), which violates the canonical invariant. The
+    # timestamps win; Dur is redundant.
+    out["duration"] = (out["t_end"] - out["t_start"]).clip(lower=0.0)
+    out["pkts_fwd"] = pd.to_numeric(a["SrcPkts"], errors="coerce")
+    out["pkts_bwd"] = pd.to_numeric(a["DstPkts"], errors="coerce")
+    out["bytes_fwd"] = pd.to_numeric(a["SrcBytes"], errors="coerce")
+    out["bytes_bwd"] = pd.to_numeric(a["DstBytes"], errors="coerce")
     # per-direction flag counts not available from argus -> <NA>
     out["tool"] = TOOL
     out["dataset"] = dataset

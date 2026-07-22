@@ -1,0 +1,343 @@
+{
+  "config": {
+    "tool": "argus",
+    "regime": "native",
+    "model": "xgb",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 3,
+    "include_port": false,
+    "dataset": "cicids2017",
+    "n_features": 7,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "b4874ee2062934b4",
+  "git_commit": null,
+  "n_train": 400000,
+  "n_test": 403110,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_StartTime",
+    "tool_LastTime",
+    "tool_Dur",
+    "tool_SrcPkts",
+    "tool_DstPkts",
+    "tool_SrcBytes",
+    "tool_DstBytes"
+  ],
+  "metrics": {
+    "macro_f1": 0.8862759029217736,
+    "weighted_f1": 0.9996099471125642,
+    "balanced_accuracy": 0.949473384976624,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9997904404940814,
+        "recall": 0.9997395607257574,
+        "f1-score": 0.9997649999625796,
+        "support": 334051.0
+      },
+      "Bot": {
+        "precision": 0.993798449612403,
+        "recall": 0.9741641337386018,
+        "f1-score": 0.9838833461243285,
+        "support": 658.0
+      },
+      "DDoS": {
+        "precision": 0.9998525508699498,
+        "recall": 1.0,
+        "f1-score": 0.9999262699992627,
+        "support": 13562.0
+      },
+      "DoS Hulk": {
+        "precision": 1.0,
+        "recall": 0.9994447529150472,
+        "f1-score": 0.9997222993612885,
+        "support": 1801.0
+      },
+      "DoS Slowhttptest": {
+        "precision": 0.9984214680347278,
+        "recall": 1.0,
+        "f1-score": 0.9992101105845181,
+        "support": 1265.0
+      },
+      "DoS slowloris": {
+        "precision": 1.0,
+        "recall": 0.9991438356164384,
+        "f1-score": 0.9995717344753747,
+        "support": 1168.0
+      },
+      "FTP-Patator": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1198.0
+      },
+      "Heartbleed": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "Infiltration": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1-score": 0.9473684210526315,
+        "support": 10.0
+      },
+      "PortScan": {
+        "precision": 1.0,
+        "recall": 0.9998747468843288,
+        "f1-score": 0.999937369519833,
+        "support": 47903.0
+      },
+      "SSH-Patator": {
+        "precision": 1.0,
+        "recall": 0.9910514541387024,
+        "f1-score": 0.9955056179775281,
+        "support": 894.0
+      },
+      "Web Attack - Brute Force": {
+        "precision": 0.8687782805429864,
+        "recall": 0.9388753056234719,
+        "f1-score": 0.9024676850763808,
+        "support": 409.0
+      },
+      "Web Attack - Sql Injection": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 5.0
+      },
+      "Web Attack - XSS": {
+        "precision": 0.8883248730964467,
+        "recall": 0.9408602150537635,
+        "f1-score": 0.9138381201044387,
+        "support": 186.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        333964,
+        4,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        58,
+        0,
+        22
+      ],
+      [
+        17,
+        641,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        13562,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1800,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1265,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1167,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1198,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        47897,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        886,
+        0,
+        0,
+        0
+      ],
+      [
+        25,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        384,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        175
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Bot",
+      "DDoS",
+      "DoS Hulk",
+      "DoS Slowhttptest",
+      "DoS slowloris",
+      "FTP-Patator",
+      "Heartbleed",
+      "Infiltration",
+      "PortScan",
+      "SSH-Patator",
+      "Web Attack - Brute Force",
+      "Web Attack - Sql Injection",
+      "Web Attack - XSS"
+    ]
+  },
+  "feature_importances": {
+    "tool_SrcBytes": 0.5046117305755615,
+    "tool_SrcPkts": 0.18722239136695862,
+    "tool_LastTime": 0.10623316466808319,
+    "tool_StartTime": 0.0855557918548584,
+    "tool_DstBytes": 0.07537916302680969,
+    "tool_DstPkts": 0.03135189786553383,
+    "tool_Dur": 0.009645859710872173
+  },
+  "wall_seconds": 26.8
+}

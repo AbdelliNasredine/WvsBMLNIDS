@@ -19,6 +19,9 @@ results/metrics/*.json
 results/figures/*
 !results/figures/.gitkeep
 
+# NFStream writes a transient temp CSV into the CWD during to_pandas()
+nfstream-*.csv
+
 # --- Python ---
 __pycache__/
 *.py[cod]
@@ -41,3 +44,4 @@ Thumbs.db
 # --- Docker build context leftovers ---
 env/docker/**/vendor/
 env/docker/**/*.jar
+vendor/

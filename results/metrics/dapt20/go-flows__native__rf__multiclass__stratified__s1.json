@@ -1,0 +1,130 @@
+{
+  "config": {
+    "tool": "go-flows",
+    "regime": "native",
+    "model": "rf",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 1,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 12,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "565ce786d7bbd2b4",
+  "git_commit": null,
+  "n_train": 40924,
+  "n_test": 17540,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_flowStartMilliseconds",
+    "tool_flowEndMilliseconds",
+    "tool_sourceTransportPort",
+    "tool_destinationTransportPort",
+    "tool_protocolIdentifier",
+    "tool_packetTotalCount",
+    "tool_octetTotalCount",
+    "tool_tcpSynTotalCount",
+    "tool_tcpFinTotalCount",
+    "tool_tcpRstTotalCount",
+    "tool_tcpPshTotalCount",
+    "tool_tcpAckTotalCount"
+  ],
+  "metrics": {
+    "macro_f1": 0.6861777120107265,
+    "weighted_f1": 0.9592293955180218,
+    "balanced_accuracy": 0.6995525487743581,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9776441566450818,
+        "recall": 0.9639708117968988,
+        "f1-score": 0.9707593386405389,
+        "support": 13156.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9987468671679198,
+        "recall": 0.9968730456535334,
+        "f1-score": 0.9978090766823161,
+        "support": 1599.0
+      },
+      "Lateral Movement": {
+        "precision": 0.4083438685208597,
+        "recall": 0.5419463087248322,
+        "f1-score": 0.4657534246575342,
+        "support": 596.0
+      },
+      "Reconnaissance": {
+        "precision": 0.9981659789087575,
+        "recall": 0.9949725776965265,
+        "f1-score": 0.9965667200732433,
+        "support": 2188.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        12682,
+        0,
+        2,
+        468,
+        4
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        0,
+        1594,
+        0,
+        0
+      ],
+      [
+        273,
+        0,
+        0,
+        323,
+        0
+      ],
+      [
+        11,
+        0,
+        0,
+        0,
+        2177
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "feature_importances": {
+    "tool_flowEndMilliseconds": 0.235983468822908,
+    "tool_flowStartMilliseconds": 0.22723000152389408,
+    "tool_destinationTransportPort": 0.14605325107178088,
+    "tool_sourceTransportPort": 0.0977162854211496,
+    "tool_octetTotalCount": 0.07784621455996142,
+    "tool_tcpAckTotalCount": 0.06703413511704111,
+    "tool_protocolIdentifier": 0.03749524549506973,
+    "tool_tcpSynTotalCount": 0.032557526447002175,
+    "tool_tcpPshTotalCount": 0.028857385159220802,
+    "tool_packetTotalCount": 0.025425914044950714,
+    "tool_tcpRstTotalCount": 0.012146246853270742,
+    "tool_tcpFinTotalCount": 0.01165432548375079
+  },
+  "wall_seconds": 1.3
+}

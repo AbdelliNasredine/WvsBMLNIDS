@@ -1,0 +1,359 @@
+{
+  "config": {
+    "tool": "nfstream-native",
+    "regime": "embedding",
+    "model": "xgb",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 3,
+    "dataset": "cicids2017",
+    "n_features": 58,
+    "extractor_family": "nfm",
+    "cfg_name": "sample"
+  },
+  "config_hash": "3fbca86188482d50",
+  "git_commit": null,
+  "n_train": 99665,
+  "n_test": 42714,
+  "metrics": {
+    "macro_f1": 0.8313457066970477,
+    "weighted_f1": 0.9930717034626136,
+    "balanced_accuracy": 0.8706662258081502,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9989997221450403,
+        "recall": 0.9987222222222222,
+        "f1-score": 0.9988609529101264,
+        "support": 18000.0
+      },
+      "Bot": {
+        "precision": 0.984984984984985,
+        "recall": 0.9939393939393939,
+        "f1-score": 0.9894419306184012,
+        "support": 660.0
+      },
+      "DDoS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 6000.0
+      },
+      "DoS GoldenEye": {
+        "precision": 0.9956540634506736,
+        "recall": 0.9973878972572922,
+        "f1-score": 0.996520226185298,
+        "support": 2297.0
+      },
+      "DoS Hulk": {
+        "precision": 0.999074502545118,
+        "recall": 0.9969983837450935,
+        "f1-score": 0.9980353634577603,
+        "support": 4331.0
+      },
+      "DoS Slowhttptest": {
+        "precision": 0.9933431952662722,
+        "recall": 0.9955522609340252,
+        "f1-score": 0.9944465012958164,
+        "support": 1349.0
+      },
+      "DoS slowloris": {
+        "precision": 0.9911894273127754,
+        "recall": 0.9970457902511078,
+        "f1-score": 0.9941089837997055,
+        "support": 1354.0
+      },
+      "FTP-Patator": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1201.0
+      },
+      "Heartbleed": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "Infiltration": {
+        "precision": 0.8333333333333334,
+        "recall": 0.45454545454545453,
+        "f1-score": 0.5882352941176471,
+        "support": 11.0
+      },
+      "PortScan": {
+        "precision": 0.9986673330001666,
+        "recall": 0.9991666666666666,
+        "f1-score": 0.9989169374323086,
+        "support": 6000.0
+      },
+      "SSH-Patator": {
+        "precision": 1.0,
+        "recall": 0.9988814317673378,
+        "f1-score": 0.9994404029099049,
+        "support": 894.0
+      },
+      "Web Attack - Brute Force": {
+        "precision": 0.7209302325581395,
+        "recall": 0.7560975609756098,
+        "f1-score": 0.7380952380952381,
+        "support": 410.0
+      },
+      "Web Attack - Sql Injection": {
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1-score": 0.75,
+        "support": 5.0
+      },
+      "Web Attack - XSS": {
+        "precision": 0.45,
+        "recall": 0.400990099009901,
+        "f1-score": 0.42408376963350786,
+        "support": 202.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        17977,
+        10,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0,
+        1,
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        656,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6000,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2291,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        9,
+        4318,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        1343,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        1350,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1201,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        5995,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        893,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        310,
+        0,
+        98
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        118,
+        0,
+        81
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Bot",
+      "DDoS",
+      "DoS GoldenEye",
+      "DoS Hulk",
+      "DoS Slowhttptest",
+      "DoS slowloris",
+      "FTP-Patator",
+      "Heartbleed",
+      "Infiltration",
+      "PortScan",
+      "SSH-Patator",
+      "Web Attack - Brute Force",
+      "Web Attack - Sql Injection",
+      "Web Attack - XSS"
+    ]
+  },
+  "wall_seconds": 24.4
+}

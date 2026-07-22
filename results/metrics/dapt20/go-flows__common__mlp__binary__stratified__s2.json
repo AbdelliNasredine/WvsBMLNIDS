@@ -1,0 +1,70 @@
+{
+  "config": {
+    "tool": "go-flows",
+    "regime": "common",
+    "model": "mlp",
+    "task": "binary",
+    "split": "stratified",
+    "seed": 2,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 9,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "af4e6b967d95ae31",
+  "git_commit": null,
+  "n_train": 40924,
+  "n_test": 17540,
+  "n_test_unseen_class": 0,
+  "features": [
+    "duration",
+    "pkts_fwd",
+    "pkts_bwd",
+    "bytes_fwd",
+    "bytes_bwd",
+    "tot_pkts",
+    "tot_bytes",
+    "is_tcp",
+    "is_udp"
+  ],
+  "metrics": {
+    "macro_f1": 0.8550903945596802,
+    "weighted_f1": 0.8943711754468138,
+    "balanced_accuracy": 0.8355824643858205,
+    "per_class": {
+      "0": {
+        "precision": 0.9089338420560075,
+        "recall": 0.9597141988446336,
+        "f1-score": 0.9336340444411579,
+        "support": 13156.0
+      },
+      "1": {
+        "precision": 0.8547547273225541,
+        "recall": 0.7114507299270073,
+        "f1-score": 0.7765467446782024,
+        "support": 4384.0
+      }
+    },
+    "fpr": 0.040285801155366376,
+    "attack_recall": 0.7114507299270073,
+    "attack_precision": 0.8547547273225541,
+    "auc_pr": 0.861242606982703,
+    "confusion_matrix": [
+      [
+        12626,
+        530
+      ],
+      [
+        1265,
+        3119
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "feature_importances": null,
+  "wall_seconds": 2.6
+}

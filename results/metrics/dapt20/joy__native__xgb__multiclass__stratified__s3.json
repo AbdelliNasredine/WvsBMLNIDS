@@ -1,0 +1,150 @@
+{
+  "config": {
+    "tool": "joy",
+    "regime": "native",
+    "model": "xgb",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 3,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 24,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "505786b3e4d3e847",
+  "git_commit": null,
+  "n_train": 67497,
+  "n_test": 28928,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_pr",
+    "tool_sp",
+    "tool_dp",
+    "tool_bytes_out",
+    "tool_num_pkts_out",
+    "tool_bytes_in",
+    "tool_num_pkts_in",
+    "tool_byte_dist_mean",
+    "tool_byte_dist_std",
+    "tool_derived_fwd_pktsize_mean",
+    "tool_derived_fwd_pktsize_std",
+    "tool_derived_fwd_pktsize_min",
+    "tool_derived_fwd_pktsize_max",
+    "tool_derived_fwd_pktsize_n",
+    "tool_derived_bwd_pktsize_mean",
+    "tool_derived_bwd_pktsize_std",
+    "tool_derived_bwd_pktsize_min",
+    "tool_derived_bwd_pktsize_max",
+    "tool_derived_bwd_pktsize_n",
+    "tool_derived_iat_ms_mean",
+    "tool_derived_iat_ms_std",
+    "tool_derived_iat_ms_min",
+    "tool_derived_iat_ms_max",
+    "tool_derived_iat_ms_n"
+  ],
+  "metrics": {
+    "macro_f1": 0.8616860116368408,
+    "weighted_f1": 0.9719783610569717,
+    "balanced_accuracy": 0.8585197102195602,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9832737385776719,
+        "recall": 0.9857017683606819,
+        "f1-score": 0.9844862564143363,
+        "support": 25108.0
+      },
+      "Data Exfiltration": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9872084273890143,
+        "recall": 0.9916855631141346,
+        "f1-score": 0.9894419306184012,
+        "support": 1323.0
+      },
+      "Lateral Movement": {
+        "precision": 0.3611111111111111,
+        "recall": 0.3293918918918919,
+        "f1-score": 0.34452296819787986,
+        "support": 592.0
+      },
+      "Reconnaissance": {
+        "precision": 0.9941737288135594,
+        "recall": 0.9858193277310925,
+        "f1-score": 0.9899789029535865,
+        "support": 1904.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        24749,
+        0,
+        9,
+        343,
+        7
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        1312,
+        1,
+        2
+      ],
+      [
+        395,
+        0,
+        0,
+        195,
+        2
+      ],
+      [
+        18,
+        0,
+        8,
+        1,
+        1877
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "feature_importances": {
+    "tool_derived_iat_ms_n": 0.22392511367797852,
+    "tool_derived_bwd_pktsize_min": 0.20633384585380554,
+    "tool_bytes_in": 0.1585446000099182,
+    "tool_pr": 0.10681003332138062,
+    "tool_derived_bwd_pktsize_max": 0.07967543601989746,
+    "tool_derived_fwd_pktsize_max": 0.04662983864545822,
+    "tool_bytes_out": 0.02339531108736992,
+    "tool_derived_fwd_pktsize_mean": 0.022675255313515663,
+    "tool_derived_fwd_pktsize_min": 0.013950170949101448,
+    "tool_derived_fwd_pktsize_n": 0.013849646784365177,
+    "tool_derived_iat_ms_min": 0.01314457505941391,
+    "tool_dp": 0.012877682223916054,
+    "tool_num_pkts_out": 0.012063759379088879,
+    "tool_derived_bwd_pktsize_mean": 0.01197021920233965,
+    "tool_sp": 0.011435339227318764,
+    "tool_byte_dist_mean": 0.007841501384973526,
+    "tool_derived_iat_ms_std": 0.006492398679256439,
+    "tool_derived_fwd_pktsize_std": 0.0056908526457846165,
+    "tool_byte_dist_std": 0.004345965571701527,
+    "tool_derived_iat_ms_max": 0.004231554456055164
+  },
+  "wall_seconds": 3.9
+}

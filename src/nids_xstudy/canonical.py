@@ -79,14 +79,29 @@ _PROTO_NUM_TO_NAME = {6: "tcp", 17: "udp", 1: "icmp", 58: "icmpv6", 2: "igmp"}
 
 
 def proto_to_number(proto: Any) -> int | None:
-    """Coerce a tool's protocol representation to an IANA protocol number."""
-    if proto is None or (isinstance(proto, float) and pd.isna(proto)):
+    """Coerce a tool's protocol representation to an IANA protocol number.
+
+    Handles Python/NumPy ints and floats (6.0 -> 6; a float is common when a
+    tool's JSON column is float-typed due to NaN in other rows), digit strings
+    ("6"), and protocol names ("tcp").
+    """
+    if proto is None:
         return None
-    if isinstance(proto, (int,)) and not isinstance(proto, bool):
-        return int(proto)
+    if isinstance(proto, bool):
+        return None
+    # numeric (int/float/numpy) — but not a bare string
+    if not isinstance(proto, str):
+        try:
+            if pd.isna(proto):
+                return None
+            return int(float(proto))
+        except (TypeError, ValueError):
+            pass
     s = str(proto).strip().lower()
-    if s.isdigit():
-        return int(s)
+    if not s or s == "nan":
+        return None
+    if s.replace(".", "", 1).isdigit():
+        return int(float(s))
     return _PROTO_NAME_TO_NUM.get(s)
 
 
@@ -148,6 +163,12 @@ def coerce_schema(df: pd.DataFrame) -> pd.DataFrame:
             f"Non-canonical, non-tool_ columns present: {other}. "
             f"Prefix tool-native columns with {TOOL_PREFIX!r}."
         )
+    # Mixed-type native columns (e.g. a port column that is int for some flows
+    # and a service string for others) break the parquet writer. Stringify any
+    # object-dtype native column so the wide native vector always serializes.
+    for c in native:
+        if df[c].dtype == object:
+            df[c] = df[c].astype("string")
     return df[CORE_COLUMNS + native]
 
 

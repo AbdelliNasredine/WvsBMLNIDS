@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "nfstream-native",
+    "regime": "embedding",
+    "model": "mlp",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 2,
+    "dataset": "dapt20",
+    "n_features": 53,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "cfa0a1967aabfb97",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.5618224118196503,
+    "weighted_f1": 0.912286278250821,
+    "balanced_accuracy": 0.5746933558999798,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.941333555870817,
+        "recall": 0.97099078936042,
+        "f1-score": 0.9559322033898305,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9665653495440729,
+        "recall": 0.9629068887206662,
+        "f1-score": 0.9647326507394767,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.8426013195098964,
+        "recall": 0.9395691014188124,
+        "f1-score": 0.8884472049689441,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        11280,
+        0,
+        20,
+        2,
+        315
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        33,
+        0,
+        1272,
+        0,
+        16
+      ],
+      [
+        569,
+        0,
+        9,
+        0,
+        3
+      ],
+      [
+        100,
+        0,
+        15,
+        0,
+        1788
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 3.2
+}

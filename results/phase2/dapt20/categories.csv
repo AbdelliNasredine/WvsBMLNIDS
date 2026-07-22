@@ -1,0 +1,1817 @@
+day,tool_a,tool_b,class,n,c_1to1,c_split,c_merge,c_unmatched
+monday-pub,nfstream,zeek,ALL,6272,4883,59,71,1259
+monday-pub,nfstream,zeek,BENIGN,6272,4883,59,71,1259
+monday-pub,nfstream,tranalyzer,ALL,6272,4863,6,210,1193
+monday-pub,nfstream,tranalyzer,BENIGN,6272,4863,6,210,1193
+monday-pub,nfstream,cicflowmeter-orig,ALL,6272,619,728,0,4925
+monday-pub,nfstream,cicflowmeter-orig,BENIGN,6272,619,728,0,4925
+monday-pub,nfstream,cicflowmeter-fixed,ALL,6272,4696,262,0,1314
+monday-pub,nfstream,cicflowmeter-fixed,BENIGN,6272,4696,262,0,1314
+monday-pub,nfstream,argus,ALL,6272,4351,0,784,1137
+monday-pub,nfstream,argus,BENIGN,6272,4351,0,784,1137
+monday-pub,nfstream,go-flows,ALL,6272,5800,464,0,8
+monday-pub,nfstream,go-flows,BENIGN,6272,5800,464,0,8
+monday-pub,nfstream,yaf,ALL,6272,5390,417,41,424
+monday-pub,nfstream,yaf,BENIGN,6272,5390,417,41,424
+monday-pub,nfstream,joy,ALL,6272,2181,624,0,3467
+monday-pub,nfstream,joy,BENIGN,6272,2181,624,0,3467
+monday-pub,zeek,nfstream,ALL,6473,4883,9,246,1335
+monday-pub,zeek,nfstream,BENIGN,6473,4883,9,246,1335
+monday-pub,zeek,tranalyzer,ALL,6473,6063,2,382,26
+monday-pub,zeek,tranalyzer,BENIGN,6473,6063,2,382,26
+monday-pub,zeek,cicflowmeter-orig,ALL,6473,591,668,118,5096
+monday-pub,zeek,cicflowmeter-orig,BENIGN,6473,591,668,118,5096
+monday-pub,zeek,cicflowmeter-fixed,ALL,6473,5827,203,146,297
+monday-pub,zeek,cicflowmeter-fixed,BENIGN,6473,5827,203,146,297
+monday-pub,zeek,argus,ALL,6473,5448,0,1016,9
+monday-pub,zeek,argus,BENIGN,6473,5448,0,1016,9
+monday-pub,zeek,go-flows,ALL,6473,4711,195,219,1348
+monday-pub,zeek,go-flows,BENIGN,6473,4711,195,219,1348
+monday-pub,zeek,yaf,ALL,6473,4671,192,154,1456
+monday-pub,zeek,yaf,BENIGN,6473,4671,192,154,1456
+monday-pub,zeek,joy,ALL,6473,5746,555,121,51
+monday-pub,zeek,joy,BENIGN,6473,5746,555,121,51
+monday-pub,tranalyzer,nfstream,ALL,6133,4863,18,28,1224
+monday-pub,tranalyzer,nfstream,BENIGN,6133,4863,18,28,1224
+monday-pub,tranalyzer,zeek,ALL,6133,6063,30,4,36
+monday-pub,tranalyzer,zeek,BENIGN,6133,6063,30,4,36
+monday-pub,tranalyzer,cicflowmeter-orig,ALL,6133,601,672,0,4860
+monday-pub,tranalyzer,cicflowmeter-orig,BENIGN,6133,601,672,0,4860
+monday-pub,tranalyzer,cicflowmeter-fixed,ALL,6133,5635,210,0,288
+monday-pub,tranalyzer,cicflowmeter-fixed,BENIGN,6133,5635,210,0,288
+monday-pub,tranalyzer,argus,ALL,6133,5458,0,638,37
+monday-pub,tranalyzer,argus,BENIGN,6133,5458,0,638,37
+monday-pub,tranalyzer,go-flows,ALL,6133,4680,216,0,1237
+monday-pub,tranalyzer,go-flows,BENIGN,6133,4680,216,0,1237
+monday-pub,tranalyzer,yaf,ALL,6133,4681,206,8,1238
+monday-pub,tranalyzer,yaf,BENIGN,6133,4681,206,8,1238
+monday-pub,tranalyzer,joy,ALL,6133,1822,539,23,3749
+monday-pub,tranalyzer,joy,BENIGN,6133,1822,539,23,3749
+monday-pub,cicflowmeter-orig,nfstream,ALL,8340,619,29,2415,5277
+monday-pub,cicflowmeter-orig,nfstream,BENIGN,8340,619,29,2415,5277
+monday-pub,cicflowmeter-orig,zeek,ALL,8340,591,19,2418,5312
+monday-pub,cicflowmeter-orig,zeek,BENIGN,8340,591,19,2418,5312
+monday-pub,cicflowmeter-orig,tranalyzer,ALL,8340,601,0,2431,5308
+monday-pub,cicflowmeter-orig,tranalyzer,BENIGN,8340,601,0,2431,5308
+monday-pub,cicflowmeter-orig,cicflowmeter-fixed,ALL,8340,1649,27,1266,5398
+monday-pub,cicflowmeter-orig,cicflowmeter-fixed,BENIGN,8340,1649,27,1266,5398
+monday-pub,cicflowmeter-orig,argus,ALL,8340,740,0,2335,5265
+monday-pub,cicflowmeter-orig,argus,BENIGN,8340,740,0,2335,5265
+monday-pub,cicflowmeter-orig,go-flows,ALL,8340,621,30,2388,5301
+monday-pub,cicflowmeter-orig,go-flows,BENIGN,8340,621,30,2388,5301
+monday-pub,cicflowmeter-orig,yaf,ALL,8340,615,31,2403,5291
+monday-pub,cicflowmeter-orig,yaf,BENIGN,8340,615,31,2403,5291
+monday-pub,cicflowmeter-orig,joy,ALL,8340,394,1359,922,5665
+monday-pub,cicflowmeter-orig,joy,BENIGN,8340,394,1359,922,5665
+monday-pub,cicflowmeter-fixed,nfstream,ALL,7083,4696,28,1201,1158
+monday-pub,cicflowmeter-fixed,nfstream,BENIGN,7083,4696,28,1201,1158
+monday-pub,cicflowmeter-fixed,zeek,ALL,7083,5827,28,1208,20
+monday-pub,cicflowmeter-fixed,zeek,BENIGN,7083,5827,28,1208,20
+monday-pub,cicflowmeter-fixed,tranalyzer,ALL,7083,5635,0,1229,219
+monday-pub,cicflowmeter-fixed,tranalyzer,BENIGN,7083,5635,0,1229,219
+monday-pub,cicflowmeter-fixed,cicflowmeter-orig,ALL,7083,1649,560,21,4853
+monday-pub,cicflowmeter-fixed,cicflowmeter-orig,BENIGN,7083,1649,560,21,4853
+monday-pub,cicflowmeter-fixed,argus,ALL,7083,5253,0,1591,239
+monday-pub,cicflowmeter-fixed,argus,BENIGN,7083,5253,0,1591,239
+monday-pub,cicflowmeter-fixed,go-flows,ALL,7083,4354,486,1072,1171
+monday-pub,cicflowmeter-fixed,go-flows,BENIGN,7083,4354,486,1072,1171
+monday-pub,cicflowmeter-fixed,yaf,ALL,7083,4326,487,1101,1169
+monday-pub,cicflowmeter-fixed,yaf,BENIGN,7083,4326,487,1101,1169
+monday-pub,cicflowmeter-fixed,joy,ALL,7083,5330,1510,29,214
+monday-pub,cicflowmeter-fixed,joy,BENIGN,7083,5330,1510,29,214
+monday-pub,argus,nfstream,ALL,5717,4351,259,0,1107
+monday-pub,argus,nfstream,BENIGN,5717,4351,259,0,1107
+monday-pub,argus,zeek,ALL,5717,5448,267,0,2
+monday-pub,argus,zeek,BENIGN,5717,5448,267,0,2
+monday-pub,argus,tranalyzer,ALL,5717,5458,257,0,2
+monday-pub,argus,tranalyzer,BENIGN,5717,5458,257,0,2
+monday-pub,argus,cicflowmeter-orig,ALL,5717,740,708,0,4269
+monday-pub,argus,cicflowmeter-orig,BENIGN,5717,740,708,0,4269
+monday-pub,argus,cicflowmeter-fixed,ALL,5717,5253,450,0,14
+monday-pub,argus,cicflowmeter-fixed,BENIGN,5717,5253,450,0,14
+monday-pub,argus,go-flows,ALL,5717,3888,722,0,1107
+monday-pub,argus,go-flows,BENIGN,5717,3888,722,0,1107
+monday-pub,argus,yaf,ALL,5717,3894,712,0,1111
+monday-pub,argus,yaf,BENIGN,5717,3894,712,0,1111
+monday-pub,argus,joy,ALL,5717,4905,810,0,2
+monday-pub,argus,joy,BENIGN,5717,4905,810,0,2
+monday-pub,go-flows,nfstream,ALL,6975,5800,0,1167,8
+monday-pub,go-flows,nfstream,BENIGN,6975,5800,0,1167,8
+monday-pub,go-flows,zeek,ALL,6975,4711,54,468,1742
+monday-pub,go-flows,zeek,BENIGN,6975,4711,54,468,1742
+monday-pub,go-flows,tranalyzer,ALL,6975,4680,0,650,1645
+monday-pub,go-flows,tranalyzer,BENIGN,6975,4680,0,650,1645
+monday-pub,go-flows,cicflowmeter-orig,ALL,6975,621,722,1,5631
+monday-pub,go-flows,cicflowmeter-orig,BENIGN,6975,621,722,1,5631
+monday-pub,go-flows,cicflowmeter-fixed,ALL,6975,4354,256,1034,1331
+monday-pub,go-flows,cicflowmeter-fixed,BENIGN,6975,4354,256,1034,1331
+monday-pub,go-flows,argus,ALL,6975,3888,0,1949,1138
+monday-pub,go-flows,argus,BENIGN,6975,3888,0,1949,1138
+monday-pub,go-flows,yaf,ALL,6975,5583,689,123,580
+monday-pub,go-flows,yaf,BENIGN,6975,5583,689,123,580
+monday-pub,go-flows,joy,ALL,6975,2073,621,748,3533
+monday-pub,go-flows,joy,BENIGN,6975,2073,621,748,3533
+monday-pub,yaf,nfstream,ALL,6845,5390,17,1041,397
+monday-pub,yaf,nfstream,BENIGN,6845,5390,17,1041,397
+monday-pub,yaf,zeek,ALL,6845,4671,31,452,1691
+monday-pub,yaf,zeek,BENIGN,6845,4671,31,452,1691
+monday-pub,yaf,tranalyzer,ALL,6845,4681,4,500,1660
+monday-pub,yaf,tranalyzer,BENIGN,6845,4681,4,500,1660
+monday-pub,yaf,cicflowmeter-orig,ALL,6845,615,720,1,5509
+monday-pub,yaf,cicflowmeter-orig,BENIGN,6845,615,720,1,5509
+monday-pub,yaf,cicflowmeter-fixed,ALL,6845,4326,260,1034,1225
+monday-pub,yaf,cicflowmeter-fixed,BENIGN,6845,4326,260,1034,1225
+monday-pub,yaf,argus,ALL,6845,3894,0,1768,1183
+monday-pub,yaf,argus,BENIGN,6845,3894,0,1768,1183
+monday-pub,yaf,go-flows,ALL,6845,5583,686,129,447
+monday-pub,yaf,go-flows,BENIGN,6845,5583,686,129,447
+monday-pub,yaf,joy,ALL,6845,2032,589,748,3476
+monday-pub,yaf,joy,BENIGN,6845,2032,589,748,3476
+monday-pub,joy,nfstream,ALL,11061,2181,29,5262,3589
+monday-pub,joy,nfstream,BENIGN,11061,2181,29,5262,3589
+monday-pub,joy,zeek,ALL,11061,5746,23,5242,50
+monday-pub,joy,zeek,BENIGN,11061,5746,23,5242,50
+monday-pub,joy,tranalyzer,ALL,11061,1822,5,5462,3772
+monday-pub,joy,tranalyzer,BENIGN,11061,1822,5,5462,3772
+monday-pub,joy,cicflowmeter-orig,ALL,11061,394,1020,4016,5631
+monday-pub,joy,cicflowmeter-orig,BENIGN,11061,394,1020,4016,5631
+monday-pub,joy,cicflowmeter-fixed,ALL,11061,5330,691,4538,502
+monday-pub,joy,cicflowmeter-fixed,BENIGN,11061,5330,691,4538,502
+monday-pub,joy,argus,ALL,11061,4905,0,5314,842
+monday-pub,joy,argus,BENIGN,11061,4905,0,5314,842
+monday-pub,joy,go-flows,ALL,11061,2073,447,4950,3591
+monday-pub,joy,go-flows,BENIGN,11061,2073,447,4950,3591
+monday-pub,joy,yaf,ALL,11061,2032,448,4887,3694
+monday-pub,joy,yaf,BENIGN,11061,2032,448,4887,3694
+monday-pvt,nfstream,zeek,ALL,2060,722,38,57,1243
+monday-pvt,nfstream,zeek,BENIGN,2060,722,38,57,1243
+monday-pvt,nfstream,tranalyzer,ALL,2060,704,5,170,1181
+monday-pvt,nfstream,tranalyzer,BENIGN,2060,704,5,170,1181
+monday-pvt,nfstream,cicflowmeter-orig,ALL,2060,75,540,0,1445
+monday-pvt,nfstream,cicflowmeter-orig,BENIGN,2060,75,540,0,1445
+monday-pvt,nfstream,cicflowmeter-fixed,ALL,2060,708,58,0,1294
+monday-pvt,nfstream,cicflowmeter-fixed,BENIGN,2060,708,58,0,1294
+monday-pvt,nfstream,argus,ALL,2060,698,0,231,1131
+monday-pvt,nfstream,argus,BENIGN,2060,698,0,231,1131
+monday-pvt,nfstream,go-flows,ALL,2060,2002,51,0,7
+monday-pvt,nfstream,go-flows,BENIGN,2060,2002,51,0,7
+monday-pvt,nfstream,yaf,ALL,2060,1569,44,10,437
+monday-pvt,nfstream,yaf,BENIGN,2060,1569,44,10,437
+monday-pvt,nfstream,joy,ALL,2060,610,147,0,1303
+monday-pvt,nfstream,joy,BENIGN,2060,610,147,0,1303
+monday-pvt,zeek,nfstream,ALL,2150,722,7,112,1309
+monday-pvt,zeek,nfstream,BENIGN,2150,722,7,112,1309
+monday-pvt,zeek,tranalyzer,ALL,2150,1885,6,250,9
+monday-pvt,zeek,tranalyzer,BENIGN,2150,1885,6,250,9
+monday-pvt,zeek,cicflowmeter-orig,ALL,2150,63,496,18,1573
+monday-pvt,zeek,cicflowmeter-orig,BENIGN,2150,63,496,18,1573
+monday-pvt,zeek,cicflowmeter-fixed,ALL,2150,1830,14,29,277
+monday-pvt,zeek,cicflowmeter-fixed,BENIGN,2150,1830,14,29,277
+monday-pvt,zeek,argus,ALL,2150,1786,0,354,10
+monday-pvt,zeek,argus,BENIGN,2150,1786,0,354,10
+monday-pvt,zeek,go-flows,ALL,2150,706,29,98,1317
+monday-pvt,zeek,go-flows,BENIGN,2150,706,29,98,1317
+monday-pvt,zeek,yaf,ALL,2150,685,27,21,1417
+monday-pvt,zeek,yaf,BENIGN,2150,685,27,21,1417
+monday-pvt,zeek,joy,ALL,2150,2014,95,30,11
+monday-pvt,zeek,joy,BENIGN,2150,2014,95,30,11
+monday-pvt,tranalyzer,nfstream,ALL,1973,704,9,24,1236
+monday-pvt,tranalyzer,nfstream,BENIGN,1973,704,9,24,1236
+monday-pvt,tranalyzer,zeek,ALL,1973,1885,11,17,60
+monday-pvt,tranalyzer,zeek,BENIGN,1973,1885,11,17,60
+monday-pvt,tranalyzer,cicflowmeter-orig,ALL,1973,70,491,0,1412
+monday-pvt,tranalyzer,cicflowmeter-orig,BENIGN,1973,70,491,0,1412
+monday-pvt,tranalyzer,cicflowmeter-fixed,ALL,1973,1691,10,0,272
+monday-pvt,tranalyzer,cicflowmeter-fixed,BENIGN,1973,1691,10,0,272
+monday-pvt,tranalyzer,argus,ALL,1973,1794,0,118,61
+monday-pvt,tranalyzer,argus,BENIGN,1973,1794,0,118,61
+monday-pvt,tranalyzer,go-flows,ALL,1973,687,26,0,1260
+monday-pvt,tranalyzer,go-flows,BENIGN,1973,687,26,0,1260
+monday-pvt,tranalyzer,yaf,ALL,1973,690,22,0,1261
+monday-pvt,tranalyzer,yaf,BENIGN,1973,690,22,0,1261
+monday-pvt,tranalyzer,joy,ALL,1973,1705,106,19,143
+monday-pvt,tranalyzer,joy,BENIGN,1973,1705,106,19,143
+monday-pvt,cicflowmeter-orig,nfstream,ALL,3369,75,21,1643,1630
+monday-pvt,cicflowmeter-orig,nfstream,BENIGN,3369,75,21,1643,1630
+monday-pvt,cicflowmeter-orig,zeek,ALL,3369,63,6,1656,1644
+monday-pvt,cicflowmeter-orig,zeek,BENIGN,3369,63,6,1656,1644
+monday-pvt,cicflowmeter-orig,tranalyzer,ALL,3369,70,0,1645,1654
+monday-pvt,cicflowmeter-orig,tranalyzer,BENIGN,3369,70,0,1645,1654
+monday-pvt,cicflowmeter-orig,cicflowmeter-fixed,ALL,3369,777,101,1018,1473
+monday-pvt,cicflowmeter-orig,cicflowmeter-fixed,BENIGN,3369,777,101,1018,1473
+monday-pvt,cicflowmeter-orig,argus,ALL,3369,62,0,1463,1844
+monday-pvt,cicflowmeter-orig,argus,BENIGN,3369,62,0,1463,1844
+monday-pvt,cicflowmeter-orig,go-flows,ALL,3369,75,21,1619,1654
+monday-pvt,cicflowmeter-orig,go-flows,BENIGN,3369,75,21,1619,1654
+monday-pvt,cicflowmeter-orig,yaf,ALL,3369,72,21,1622,1654
+monday-pvt,cicflowmeter-orig,yaf,BENIGN,3369,72,21,1622,1654
+monday-pvt,cicflowmeter-orig,joy,ALL,3369,117,713,855,1684
+monday-pvt,cicflowmeter-orig,joy,BENIGN,3369,117,713,855,1684
+monday-pvt,cicflowmeter-fixed,nfstream,ALL,2724,708,23,675,1318
+monday-pvt,cicflowmeter-fixed,nfstream,BENIGN,2724,708,23,675,1318
+monday-pvt,cicflowmeter-fixed,zeek,ALL,2724,1830,9,695,190
+monday-pvt,cicflowmeter-fixed,zeek,BENIGN,2724,1830,9,695,190
+monday-pvt,cicflowmeter-fixed,tranalyzer,ALL,2724,1691,0,682,351
+monday-pvt,cicflowmeter-fixed,tranalyzer,BENIGN,2724,1691,0,682,351
+monday-pvt,cicflowmeter-fixed,cicflowmeter-orig,ALL,2724,777,598,23,1326
+monday-pvt,cicflowmeter-fixed,cicflowmeter-orig,BENIGN,2724,777,598,23,1326
+monday-pvt,cicflowmeter-fixed,argus,ALL,2724,1782,0,550,392
+monday-pvt,cicflowmeter-fixed,argus,BENIGN,2724,1782,0,550,392
+monday-pvt,cicflowmeter-fixed,go-flows,ALL,2724,667,69,651,1337
+monday-pvt,cicflowmeter-fixed,go-flows,BENIGN,2724,667,69,651,1337
+monday-pvt,cicflowmeter-fixed,yaf,ALL,2724,663,69,657,1335
+monday-pvt,cicflowmeter-fixed,yaf,BENIGN,2724,663,69,657,1335
+monday-pvt,cicflowmeter-fixed,joy,ALL,2724,1548,797,24,355
+monday-pvt,cicflowmeter-fixed,joy,BENIGN,2724,1548,797,24,355
+monday-pvt,argus,nfstream,ALL,1815,698,16,0,1101
+monday-pvt,argus,nfstream,BENIGN,1815,698,16,0,1101
+monday-pvt,argus,zeek,ALL,1815,1786,26,0,3
+monday-pvt,argus,zeek,BENIGN,1815,1786,26,0,3
+monday-pvt,argus,tranalyzer,ALL,1815,1794,18,0,3
+monday-pvt,argus,tranalyzer,BENIGN,1815,1794,18,0,3
+monday-pvt,argus,cicflowmeter-orig,ALL,1815,62,496,0,1257
+monday-pvt,argus,cicflowmeter-orig,BENIGN,1815,62,496,0,1257
+monday-pvt,argus,cicflowmeter-fixed,ALL,1815,1782,19,0,14
+monday-pvt,argus,cicflowmeter-fixed,BENIGN,1815,1782,19,0,14
+monday-pvt,argus,go-flows,ALL,1815,647,67,0,1101
+monday-pvt,argus,go-flows,BENIGN,1815,647,67,0,1101
+monday-pvt,argus,yaf,ALL,1815,647,63,0,1105
+monday-pvt,argus,yaf,BENIGN,1815,647,63,0,1105
+monday-pvt,argus,joy,ALL,1815,1661,152,0,2
+monday-pvt,argus,joy,BENIGN,1815,1661,152,0,2
+monday-pvt,go-flows,nfstream,ALL,2139,2002,0,128,9
+monday-pvt,go-flows,nfstream,BENIGN,2139,2002,0,128,9
+monday-pvt,go-flows,zeek,ALL,2139,706,34,106,1293
+monday-pvt,go-flows,zeek,BENIGN,2139,706,34,106,1293
+monday-pvt,go-flows,tranalyzer,ALL,2139,687,0,206,1246
+monday-pvt,go-flows,tranalyzer,BENIGN,2139,687,0,206,1246
+monday-pvt,go-flows,cicflowmeter-orig,ALL,2139,75,535,0,1529
+monday-pvt,go-flows,cicflowmeter-orig,BENIGN,2139,75,535,0,1529
+monday-pvt,go-flows,cicflowmeter-fixed,ALL,2139,667,53,99,1320
+monday-pvt,go-flows,cicflowmeter-fixed,BENIGN,2139,667,53,99,1320
+monday-pvt,go-flows,argus,ALL,2139,647,0,354,1138
+monday-pvt,go-flows,argus,BENIGN,2139,647,0,354,1138
+monday-pvt,go-flows,yaf,ALL,2139,1638,26,14,461
+monday-pvt,go-flows,yaf,BENIGN,2139,1638,26,14,461
+monday-pvt,go-flows,joy,ALL,2139,591,145,56,1347
+monday-pvt,go-flows,joy,BENIGN,2139,591,145,56,1347
+monday-pvt,yaf,nfstream,ALL,2034,1569,4,111,350
+monday-pvt,yaf,nfstream,BENIGN,2034,1569,4,111,350
+monday-pvt,yaf,zeek,ALL,2034,685,6,100,1243
+monday-pvt,yaf,zeek,BENIGN,2034,685,6,100,1243
+monday-pvt,yaf,tranalyzer,ALL,2034,690,0,86,1258
+monday-pvt,yaf,tranalyzer,BENIGN,2034,690,0,86,1258
+monday-pvt,yaf,cicflowmeter-orig,ALL,2034,72,534,0,1428
+monday-pvt,yaf,cicflowmeter-orig,BENIGN,2034,72,534,0,1428
+monday-pvt,yaf,cicflowmeter-fixed,ALL,2034,663,53,99,1219
+monday-pvt,yaf,cicflowmeter-fixed,BENIGN,2034,663,53,99,1219
+monday-pvt,yaf,argus,ALL,2034,647,0,209,1178
+monday-pvt,yaf,argus,BENIGN,2034,647,0,209,1178
+monday-pvt,yaf,go-flows,ALL,2034,1638,31,2,363
+monday-pvt,yaf,go-flows,BENIGN,2034,1638,31,2,363
+monday-pvt,yaf,joy,ALL,2034,565,114,56,1299
+monday-pvt,yaf,joy,BENIGN,2034,565,114,56,1299
+monday-pvt,joy,nfstream,ALL,4862,610,15,2802,1435
+monday-pvt,joy,nfstream,BENIGN,4862,610,15,2802,1435
+monday-pvt,joy,zeek,ALL,4862,2014,10,2784,54
+monday-pvt,joy,zeek,BENIGN,4862,2014,10,2784,54
+monday-pvt,joy,tranalyzer,ALL,4862,1705,5,3026,126
+monday-pvt,joy,tranalyzer,BENIGN,4862,1705,5,3026,126
+monday-pvt,joy,cicflowmeter-orig,ALL,4862,117,701,2168,1876
+monday-pvt,joy,cicflowmeter-orig,BENIGN,4862,117,701,2168,1876
+monday-pvt,joy,cicflowmeter-fixed,ALL,4862,1548,294,2564,456
+monday-pvt,joy,cicflowmeter-fixed,BENIGN,4862,1548,294,2564,456
+monday-pvt,joy,argus,ALL,4862,1661,0,2460,741
+monday-pvt,joy,argus,BENIGN,4862,1661,0,2460,741
+monday-pvt,joy,go-flows,ALL,4862,591,39,2795,1437
+monday-pvt,joy,go-flows,BENIGN,4862,591,39,2795,1437
+monday-pvt,joy,yaf,ALL,4862,565,39,2719,1539
+monday-pvt,joy,yaf,BENIGN,4862,565,39,2719,1539
+tuesday-pub,nfstream,zeek,ALL,16089,15669,52,137,231
+tuesday-pub,nfstream,zeek,BENIGN,9769,9350,52,137,230
+tuesday-pub,nfstream,zeek,Reconnaissance,6320,6319,0,0,1
+tuesday-pub,nfstream,tranalyzer,ALL,16089,15627,6,304,152
+tuesday-pub,nfstream,tranalyzer,BENIGN,9769,9308,6,304,151
+tuesday-pub,nfstream,tranalyzer,Reconnaissance,6320,6319,0,0,1
+tuesday-pub,nfstream,cicflowmeter-orig,ALL,16089,2408,2399,0,11282
+tuesday-pub,nfstream,cicflowmeter-orig,BENIGN,9769,1041,1597,0,7131
+tuesday-pub,nfstream,cicflowmeter-orig,Reconnaissance,6320,1367,802,0,4151
+tuesday-pub,nfstream,cicflowmeter-fixed,ALL,16089,15212,574,0,303
+tuesday-pub,nfstream,cicflowmeter-fixed,BENIGN,9769,8893,574,0,302
+tuesday-pub,nfstream,cicflowmeter-fixed,Reconnaissance,6320,6319,0,0,1
+tuesday-pub,nfstream,argus,ALL,16089,14485,0,1529,75
+tuesday-pub,nfstream,argus,BENIGN,9769,8166,0,1529,74
+tuesday-pub,nfstream,argus,Reconnaissance,6320,6319,0,0,1
+tuesday-pub,nfstream,go-flows,ALL,16089,13925,2155,0,9
+tuesday-pub,nfstream,go-flows,BENIGN,9769,8579,1181,0,9
+tuesday-pub,nfstream,go-flows,Reconnaissance,6320,5346,974,0,0
+tuesday-pub,nfstream,yaf,ALL,16089,13820,1943,95,231
+tuesday-pub,nfstream,yaf,BENIGN,9769,8386,1057,95,231
+tuesday-pub,nfstream,yaf,Reconnaissance,6320,5434,886,0,0
+tuesday-pub,nfstream,joy,ALL,16089,11425,1205,0,3459
+tuesday-pub,nfstream,joy,BENIGN,9769,5118,1193,0,3458
+tuesday-pub,nfstream,joy,Reconnaissance,6320,6307,12,0,1
+tuesday-pub,zeek,nfstream,ALL,16192,15669,5,204,314
+tuesday-pub,zeek,nfstream,BENIGN,9872,9350,5,204,313
+tuesday-pub,zeek,nfstream,Reconnaissance,6320,6319,0,0,1
+tuesday-pub,zeek,tranalyzer,ALL,16192,15774,0,399,19
+tuesday-pub,zeek,tranalyzer,BENIGN,9872,9454,0,399,19
+tuesday-pub,zeek,tranalyzer,Reconnaissance,6320,6320,0,0,0
+tuesday-pub,zeek,cicflowmeter-orig,ALL,16192,2393,2272,80,11447
+tuesday-pub,zeek,cicflowmeter-orig,BENIGN,9872,1023,1475,80,7294
+tuesday-pub,zeek,cicflowmeter-orig,Reconnaissance,6320,1370,797,0,4153
+tuesday-pub,zeek,cicflowmeter-fixed,ALL,16192,15268,451,108,365
+tuesday-pub,zeek,cicflowmeter-fixed,BENIGN,9872,8948,451,108,365
+tuesday-pub,zeek,cicflowmeter-fixed,Reconnaissance,6320,6320,0,0,0
+tuesday-pub,zeek,argus,ALL,16192,14512,0,1670,10
+tuesday-pub,zeek,argus,BENIGN,9872,8192,0,1670,10
+tuesday-pub,zeek,argus,Reconnaissance,6320,6320,0,0,0
+tuesday-pub,zeek,go-flows,ALL,16192,14602,1090,183,317
+tuesday-pub,zeek,go-flows,BENIGN,9872,8991,382,183,316
+tuesday-pub,zeek,go-flows,Reconnaissance,6320,5611,708,0,1
+tuesday-pub,zeek,yaf,ALL,16192,14539,1090,113,450
+tuesday-pub,zeek,yaf,BENIGN,9872,8928,382,113,449
+tuesday-pub,zeek,yaf,Reconnaissance,6320,5611,708,0,1
+tuesday-pub,zeek,joy,ALL,16192,14883,1141,82,86
+tuesday-pub,zeek,joy,BENIGN,9872,8586,1118,82,86
+tuesday-pub,zeek,joy,Reconnaissance,6320,6297,23,0,0
+tuesday-pub,tranalyzer,nfstream,ALL,15858,15627,15,20,196
+tuesday-pub,tranalyzer,nfstream,BENIGN,9538,9308,15,20,195
+tuesday-pub,tranalyzer,nfstream,Reconnaissance,6320,6319,0,0,1
+tuesday-pub,tranalyzer,zeek,ALL,15858,15774,29,0,55
+tuesday-pub,tranalyzer,zeek,BENIGN,9538,9454,29,0,55
+tuesday-pub,tranalyzer,zeek,Reconnaissance,6320,6320,0,0,0
+tuesday-pub,tranalyzer,cicflowmeter-orig,ALL,15858,2400,2279,0,11179
+tuesday-pub,tranalyzer,cicflowmeter-orig,BENIGN,9538,1030,1482,0,7026
+tuesday-pub,tranalyzer,cicflowmeter-orig,Reconnaissance,6320,1370,797,0,4153
+tuesday-pub,tranalyzer,cicflowmeter-fixed,ALL,15858,15171,462,11,214
+tuesday-pub,tranalyzer,cicflowmeter-fixed,BENIGN,9538,8851,462,11,214
+tuesday-pub,tranalyzer,cicflowmeter-fixed,Reconnaissance,6320,6320,0,0,0
+tuesday-pub,tranalyzer,argus,ALL,15858,14521,0,1288,49
+tuesday-pub,tranalyzer,argus,BENIGN,9538,8201,0,1288,49
+tuesday-pub,tranalyzer,argus,Reconnaissance,6320,6320,0,0,0
+tuesday-pub,tranalyzer,go-flows,ALL,15858,14184,1474,0,200
+tuesday-pub,tranalyzer,go-flows,BENIGN,9538,8839,500,0,199
+tuesday-pub,tranalyzer,go-flows,Reconnaissance,6320,5345,974,0,1
+tuesday-pub,tranalyzer,yaf,ALL,15858,14176,1469,12,201
+tuesday-pub,tranalyzer,yaf,BENIGN,9538,8831,495,12,200
+tuesday-pub,tranalyzer,yaf,Reconnaissance,6320,5345,974,0,1
+tuesday-pub,tranalyzer,joy,ALL,15858,8731,1128,20,5979
+tuesday-pub,tranalyzer,joy,BENIGN,9538,2435,1104,20,5979
+tuesday-pub,tranalyzer,joy,Reconnaissance,6320,6296,24,0,0
+tuesday-pub,cicflowmeter-orig,nfstream,ALL,25923,2408,42,6467,17006
+tuesday-pub,cicflowmeter-orig,nfstream,BENIGN,14602,1042,42,4873,8645
+tuesday-pub,cicflowmeter-orig,nfstream,Reconnaissance,11321,1366,0,1594,8361
+tuesday-pub,cicflowmeter-orig,zeek,ALL,25923,2393,14,6490,17026
+tuesday-pub,cicflowmeter-orig,zeek,BENIGN,14602,1024,14,4906,8658
+tuesday-pub,cicflowmeter-orig,zeek,Reconnaissance,11321,1369,0,1584,8368
+tuesday-pub,cicflowmeter-orig,tranalyzer,ALL,25923,2400,0,6504,17019
+tuesday-pub,cicflowmeter-orig,tranalyzer,BENIGN,14602,1031,0,4920,8651
+tuesday-pub,cicflowmeter-orig,tranalyzer,Reconnaissance,11321,1369,0,1584,8368
+tuesday-pub,cicflowmeter-orig,cicflowmeter-fixed,ALL,25923,3896,118,4738,17171
+tuesday-pub,cicflowmeter-orig,cicflowmeter-fixed,BENIGN,14602,2527,118,3154,8803
+tuesday-pub,cicflowmeter-orig,cicflowmeter-fixed,Reconnaissance,11321,1369,0,1584,8368
+tuesday-pub,cicflowmeter-orig,argus,ALL,25923,2787,0,6422,16714
+tuesday-pub,cicflowmeter-orig,argus,BENIGN,14602,1418,0,4838,8346
+tuesday-pub,cicflowmeter-orig,argus,Reconnaissance,11321,1369,0,1584,8368
+tuesday-pub,cicflowmeter-orig,go-flows,ALL,25923,2408,47,6451,17017
+tuesday-pub,cicflowmeter-orig,go-flows,BENIGN,14602,1042,47,4857,8656
+tuesday-pub,cicflowmeter-orig,go-flows,Reconnaissance,11321,1366,0,1594,8361
+tuesday-pub,cicflowmeter-orig,yaf,ALL,25923,2413,54,6458,16998
+tuesday-pub,cicflowmeter-orig,yaf,BENIGN,14602,1047,54,4864,8637
+tuesday-pub,cicflowmeter-orig,yaf,Reconnaissance,11321,1366,0,1594,8361
+tuesday-pub,cicflowmeter-orig,joy,ALL,25923,2196,2211,3936,17580
+tuesday-pub,cicflowmeter-orig,joy,BENIGN,14602,831,2206,2353,9212
+tuesday-pub,cicflowmeter-orig,joy,Reconnaissance,11321,1365,5,1583,8368
+tuesday-pub,cicflowmeter-fixed,nfstream,ALL,17361,15212,42,1961,146
+tuesday-pub,cicflowmeter-fixed,nfstream,BENIGN,11041,8893,42,1961,145
+tuesday-pub,cicflowmeter-fixed,nfstream,Reconnaissance,6320,6319,0,0,1
+tuesday-pub,cicflowmeter-fixed,zeek,ALL,17361,15268,25,1997,71
+tuesday-pub,cicflowmeter-fixed,zeek,BENIGN,11041,8948,25,1997,71
+tuesday-pub,cicflowmeter-fixed,zeek,Reconnaissance,6320,6320,0,0,0
+tuesday-pub,cicflowmeter-fixed,tranalyzer,ALL,17361,15171,6,2017,167
+tuesday-pub,cicflowmeter-fixed,tranalyzer,BENIGN,11041,8851,6,2017,167
+tuesday-pub,cicflowmeter-fixed,tranalyzer,Reconnaissance,6320,6320,0,0,0
+tuesday-pub,cicflowmeter-fixed,cicflowmeter-orig,ALL,17361,3896,2186,81,11198
+tuesday-pub,cicflowmeter-fixed,cicflowmeter-orig,BENIGN,11041,2526,1389,81,7045
+tuesday-pub,cicflowmeter-fixed,cicflowmeter-orig,Reconnaissance,6320,1370,797,0,4153
+tuesday-pub,cicflowmeter-fixed,argus,ALL,17361,14068,0,2962,331
+tuesday-pub,cicflowmeter-fixed,argus,BENIGN,11041,7748,0,2962,331
+tuesday-pub,cicflowmeter-fixed,argus,Reconnaissance,6320,6320,0,0,0
+tuesday-pub,cicflowmeter-fixed,go-flows,ALL,17361,13376,2192,1644,149
+tuesday-pub,cicflowmeter-fixed,go-flows,BENIGN,11041,8031,1218,1644,148
+tuesday-pub,cicflowmeter-fixed,go-flows,Reconnaissance,6320,5345,974,0,1
+tuesday-pub,cicflowmeter-fixed,yaf,ALL,17361,13343,2200,1671,147
+tuesday-pub,cicflowmeter-fixed,yaf,BENIGN,11041,7998,1226,1671,146
+tuesday-pub,cicflowmeter-fixed,yaf,Reconnaissance,6320,5345,974,0,1
+tuesday-pub,cicflowmeter-fixed,joy,ALL,17361,14599,2536,53,173
+tuesday-pub,cicflowmeter-fixed,joy,BENIGN,11041,8303,2512,53,173
+tuesday-pub,cicflowmeter-fixed,joy,Reconnaissance,6320,6296,24,0,0
+tuesday-pub,argus,nfstream,ALL,15079,14485,554,0,40
+tuesday-pub,argus,nfstream,BENIGN,8759,8166,554,0,39
+tuesday-pub,argus,nfstream,Reconnaissance,6320,6319,0,0,1
+tuesday-pub,argus,zeek,ALL,15079,14512,565,0,2
+tuesday-pub,argus,zeek,BENIGN,8759,8192,565,0,2
+tuesday-pub,argus,zeek,Reconnaissance,6320,6320,0,0,0
+tuesday-pub,argus,tranalyzer,ALL,15079,14521,556,0,2
+tuesday-pub,argus,tranalyzer,BENIGN,8759,8201,556,0,2
+tuesday-pub,argus,tranalyzer,Reconnaissance,6320,6320,0,0,0
+tuesday-pub,argus,cicflowmeter-orig,ALL,15079,2787,2337,0,9955
+tuesday-pub,argus,cicflowmeter-orig,BENIGN,8759,1417,1540,0,5802
+tuesday-pub,argus,cicflowmeter-orig,Reconnaissance,6320,1370,797,0,4153
+tuesday-pub,argus,cicflowmeter-fixed,ALL,15079,14068,995,0,16
+tuesday-pub,argus,cicflowmeter-fixed,BENIGN,8759,7748,995,0,16
+tuesday-pub,argus,cicflowmeter-fixed,Reconnaissance,6320,6320,0,0,0
+tuesday-pub,argus,go-flows,ALL,15079,12333,2706,0,40
+tuesday-pub,argus,go-flows,BENIGN,8759,6988,1732,0,39
+tuesday-pub,argus,go-flows,Reconnaissance,6320,5345,974,0,1
+tuesday-pub,argus,yaf,ALL,15079,12340,2695,0,44
+tuesday-pub,argus,yaf,BENIGN,8759,6995,1721,0,43
+tuesday-pub,argus,yaf,Reconnaissance,6320,5345,974,0,1
+tuesday-pub,argus,joy,ALL,15079,13373,1704,0,2
+tuesday-pub,argus,joy,BENIGN,8759,7077,1680,0,2
+tuesday-pub,argus,joy,Reconnaissance,6320,6296,24,0,0
+tuesday-pub,go-flows,nfstream,ALL,19064,13925,0,5130,9
+tuesday-pub,go-flows,nfstream,BENIGN,11798,8579,0,3210,9
+tuesday-pub,go-flows,nfstream,Reconnaissance,7266,5346,0,1920,0
+tuesday-pub,go-flows,zeek,ALL,19064,14602,47,2545,1870
+tuesday-pub,go-flows,zeek,BENIGN,11798,8991,47,1219,1541
+tuesday-pub,go-flows,zeek,Reconnaissance,7266,5611,0,1326,329
+tuesday-pub,go-flows,tranalyzer,ALL,19064,14184,0,3535,1345
+tuesday-pub,go-flows,tranalyzer,BENIGN,11798,8839,0,1615,1344
+tuesday-pub,go-flows,tranalyzer,Reconnaissance,7266,5345,0,1920,1
+tuesday-pub,go-flows,cicflowmeter-orig,ALL,19064,2408,2398,4,14254
+tuesday-pub,go-flows,cicflowmeter-orig,BENIGN,11798,1041,1596,4,9157
+tuesday-pub,go-flows,cicflowmeter-orig,Reconnaissance,7266,1367,802,0,5097
+tuesday-pub,go-flows,cicflowmeter-fixed,ALL,19064,13376,569,4813,306
+tuesday-pub,go-flows,cicflowmeter-fixed,BENIGN,11798,8031,569,2893,305
+tuesday-pub,go-flows,cicflowmeter-fixed,Reconnaissance,7266,5345,0,1920,1
+tuesday-pub,go-flows,argus,ALL,19064,12333,0,6655,76
+tuesday-pub,go-flows,argus,BENIGN,11798,6988,0,4735,75
+tuesday-pub,go-flows,argus,Reconnaissance,7266,5345,0,1920,1
+tuesday-pub,go-flows,yaf,ALL,19064,14865,2947,533,719
+tuesday-pub,go-flows,yaf,BENIGN,11798,8999,1895,340,564
+tuesday-pub,go-flows,yaf,Reconnaissance,7266,5866,1052,193,155
+tuesday-pub,go-flows,joy,ALL,19064,10181,1199,3939,3745
+tuesday-pub,go-flows,joy,BENIGN,11798,4848,1187,2019,3744
+tuesday-pub,go-flows,joy,Reconnaissance,7266,5333,12,1920,1
+tuesday-pub,yaf,nfstream,ALL,18857,13820,30,4615,392
+tuesday-pub,yaf,nfstream,BENIGN,11591,8386,30,2880,295
+tuesday-pub,yaf,nfstream,Reconnaissance,7266,5434,0,1735,97
+tuesday-pub,yaf,zeek,ALL,18857,14539,29,2480,1809
+tuesday-pub,yaf,zeek,BENIGN,11591,8928,29,1154,1480
+tuesday-pub,yaf,zeek,Reconnaissance,7266,5611,0,1326,329
+tuesday-pub,yaf,tranalyzer,ALL,18857,14176,6,3312,1363
+tuesday-pub,yaf,tranalyzer,BENIGN,11591,8831,6,1392,1362
+tuesday-pub,yaf,tranalyzer,Reconnaissance,7266,5345,0,1920,1
+tuesday-pub,yaf,cicflowmeter-orig,ALL,18857,2413,2348,4,14092
+tuesday-pub,yaf,cicflowmeter-orig,BENIGN,11591,1046,1546,4,8995
+tuesday-pub,yaf,cicflowmeter-orig,Reconnaissance,7266,1367,802,0,5097
+tuesday-pub,yaf,cicflowmeter-fixed,ALL,18857,13343,528,4813,173
+tuesday-pub,yaf,cicflowmeter-fixed,BENIGN,11591,7998,528,2893,172
+tuesday-pub,yaf,cicflowmeter-fixed,Reconnaissance,7266,5345,0,1920,1
+tuesday-pub,yaf,argus,ALL,18857,12340,0,6387,130
+tuesday-pub,yaf,argus,BENIGN,11591,6995,0,4467,129
+tuesday-pub,yaf,argus,Reconnaissance,7266,5345,0,1920,1
+tuesday-pub,yaf,go-flows,ALL,18857,14865,2978,431,583
+tuesday-pub,yaf,go-flows,BENIGN,11591,8999,1927,243,422
+tuesday-pub,yaf,go-flows,Reconnaissance,7266,5866,1051,188,161
+tuesday-pub,yaf,joy,ALL,18857,10116,1126,3939,3676
+tuesday-pub,yaf,joy,BENIGN,11591,4783,1114,2019,3675
+tuesday-pub,yaf,joy,Reconnaissance,7266,5333,12,1920,1
+tuesday-pub,joy,nfstream,ALL,23941,11425,25,8809,3682
+tuesday-pub,joy,nfstream,BENIGN,17621,5118,25,8797,3681
+tuesday-pub,joy,nfstream,Reconnaissance,6320,6307,0,12,1
+tuesday-pub,joy,zeek,ALL,23941,14883,17,8940,101
+tuesday-pub,joy,zeek,BENIGN,17621,8586,17,8917,101
+tuesday-pub,joy,zeek,Reconnaissance,6320,6297,0,23,0
+tuesday-pub,joy,tranalyzer,ALL,23941,8731,10,9202,5998
+tuesday-pub,joy,tranalyzer,BENIGN,17621,2435,10,9178,5998
+tuesday-pub,joy,tranalyzer,Reconnaissance,6320,6296,0,24,0
+tuesday-pub,joy,cicflowmeter-orig,ALL,23941,2196,2563,6720,12462
+tuesday-pub,joy,cicflowmeter-orig,BENIGN,17621,830,1767,6715,8309
+tuesday-pub,joy,cicflowmeter-orig,Reconnaissance,6320,1366,796,5,4153
+tuesday-pub,joy,cicflowmeter-fixed,ALL,23941,14599,808,8049,485
+tuesday-pub,joy,cicflowmeter-fixed,BENIGN,17621,8303,808,8025,485
+tuesday-pub,joy,cicflowmeter-fixed,Reconnaissance,6320,6296,0,24,0
+tuesday-pub,joy,argus,ALL,23941,13373,0,9563,1005
+tuesday-pub,joy,argus,BENIGN,17621,7077,0,9539,1005
+tuesday-pub,joy,argus,Reconnaissance,6320,6296,0,24,0
+tuesday-pub,joy,go-flows,ALL,23941,10181,1986,8091,3683
+tuesday-pub,joy,go-flows,BENIGN,17621,4848,1012,8079,3682
+tuesday-pub,joy,go-flows,Reconnaissance,6320,5333,974,12,1
+tuesday-pub,joy,yaf,ALL,23941,10116,1988,8027,3810
+tuesday-pub,joy,yaf,BENIGN,17621,4783,1014,8015,3809
+tuesday-pub,joy,yaf,Reconnaissance,6320,5333,974,12,1
+tuesday-pvt,nfstream,zeek,ALL,1085,750,27,53,255
+tuesday-pvt,nfstream,zeek,BENIGN,1085,750,27,53,255
+tuesday-pvt,nfstream,tranalyzer,ALL,1085,703,1,205,176
+tuesday-pvt,nfstream,tranalyzer,BENIGN,1085,703,1,205,176
+tuesday-pvt,nfstream,cicflowmeter-orig,ALL,1085,35,645,0,405
+tuesday-pvt,nfstream,cicflowmeter-orig,BENIGN,1085,35,645,0,405
+tuesday-pvt,nfstream,cicflowmeter-fixed,ALL,1085,702,56,0,327
+tuesday-pvt,nfstream,cicflowmeter-fixed,BENIGN,1085,702,56,0,327
+tuesday-pvt,nfstream,argus,ALL,1085,695,0,290,100
+tuesday-pvt,nfstream,argus,BENIGN,1085,695,0,290,100
+tuesday-pvt,nfstream,go-flows,ALL,1085,1051,25,0,9
+tuesday-pvt,nfstream,go-flows,BENIGN,1085,1051,25,0,9
+tuesday-pvt,nfstream,yaf,ALL,1085,811,33,2,239
+tuesday-pvt,nfstream,yaf,BENIGN,1085,811,33,2,239
+tuesday-pvt,nfstream,joy,ALL,1085,625,168,0,292
+tuesday-pvt,nfstream,joy,BENIGN,1085,625,168,0,292
+tuesday-pvt,zeek,nfstream,ALL,1174,750,3,91,330
+tuesday-pvt,zeek,nfstream,BENIGN,1174,750,3,91,330
+tuesday-pvt,zeek,tranalyzer,ALL,1174,869,1,295,9
+tuesday-pvt,zeek,tranalyzer,BENIGN,1174,869,1,295,9
+tuesday-pvt,zeek,cicflowmeter-orig,ALL,1174,34,595,2,543
+tuesday-pvt,zeek,cicflowmeter-orig,BENIGN,1174,34,595,2,543
+tuesday-pvt,zeek,cicflowmeter-fixed,ALL,1174,787,6,9,372
+tuesday-pvt,zeek,cicflowmeter-fixed,BENIGN,1174,787,6,9,372
+tuesday-pvt,zeek,argus,ALL,1174,755,0,409,10
+tuesday-pvt,zeek,argus,BENIGN,1174,755,0,409,10
+tuesday-pvt,zeek,go-flows,ALL,1174,744,9,91,330
+tuesday-pvt,zeek,go-flows,BENIGN,1174,744,9,91,330
+tuesday-pvt,zeek,yaf,ALL,1174,698,9,2,465
+tuesday-pvt,zeek,yaf,BENIGN,1174,698,9,2,465
+tuesday-pvt,zeek,joy,ALL,1174,1030,126,7,11
+tuesday-pvt,zeek,joy,BENIGN,1174,1030,126,7,11
+tuesday-pvt,tranalyzer,nfstream,ALL,942,703,5,3,231
+tuesday-pvt,tranalyzer,nfstream,BENIGN,942,703,5,3,231
+tuesday-pvt,tranalyzer,zeek,ALL,942,869,6,3,64
+tuesday-pvt,tranalyzer,zeek,BENIGN,942,869,6,3,64
+tuesday-pvt,tranalyzer,cicflowmeter-orig,ALL,942,33,595,0,314
+tuesday-pvt,tranalyzer,cicflowmeter-orig,BENIGN,942,33,595,0,314
+tuesday-pvt,tranalyzer,cicflowmeter-fixed,ALL,942,788,6,0,148
+tuesday-pvt,tranalyzer,cicflowmeter-fixed,BENIGN,942,788,6,0,148
+tuesday-pvt,tranalyzer,argus,ALL,942,760,0,117,65
+tuesday-pvt,tranalyzer,argus,BENIGN,942,760,0,117,65
+tuesday-pvt,tranalyzer,go-flows,ALL,942,698,10,0,234
+tuesday-pvt,tranalyzer,go-flows,BENIGN,942,698,10,0,234
+tuesday-pvt,tranalyzer,yaf,ALL,942,697,9,0,236
+tuesday-pvt,tranalyzer,yaf,BENIGN,942,697,9,0,236
+tuesday-pvt,tranalyzer,joy,ALL,942,697,131,3,111
+tuesday-pvt,tranalyzer,joy,BENIGN,942,697,131,3,111
+tuesday-pvt,cicflowmeter-orig,nfstream,ALL,2592,35,37,1932,588
+tuesday-pvt,cicflowmeter-orig,nfstream,BENIGN,2592,35,37,1932,588
+tuesday-pvt,cicflowmeter-orig,zeek,ALL,2592,34,1,1968,589
+tuesday-pvt,cicflowmeter-orig,zeek,BENIGN,2592,34,1,1968,589
+tuesday-pvt,cicflowmeter-orig,tranalyzer,ALL,2592,33,0,1968,591
+tuesday-pvt,cicflowmeter-orig,tranalyzer,BENIGN,2592,33,0,1968,591
+tuesday-pvt,cicflowmeter-orig,cicflowmeter-fixed,ALL,2592,780,141,1265,406
+tuesday-pvt,cicflowmeter-orig,cicflowmeter-fixed,BENIGN,2592,780,141,1265,406
+tuesday-pvt,cicflowmeter-orig,argus,ALL,2592,31,0,1698,863
+tuesday-pvt,cicflowmeter-orig,argus,BENIGN,2592,31,0,1698,863
+tuesday-pvt,cicflowmeter-orig,go-flows,ALL,2592,35,37,1929,591
+tuesday-pvt,cicflowmeter-orig,go-flows,BENIGN,2592,35,37,1929,591
+tuesday-pvt,cicflowmeter-orig,yaf,ALL,2592,35,34,1932,591
+tuesday-pvt,cicflowmeter-orig,yaf,BENIGN,2592,35,34,1932,591
+tuesday-pvt,cicflowmeter-orig,joy,ALL,2592,77,864,1016,635
+tuesday-pvt,cicflowmeter-orig,joy,BENIGN,2592,77,864,1016,635
+tuesday-pvt,cicflowmeter-fixed,nfstream,ALL,1792,702,40,751,299
+tuesday-pvt,cicflowmeter-fixed,nfstream,BENIGN,1792,702,40,751,299
+tuesday-pvt,cicflowmeter-fixed,zeek,ALL,1792,787,4,792,209
+tuesday-pvt,cicflowmeter-fixed,zeek,BENIGN,1792,787,4,792,209
+tuesday-pvt,cicflowmeter-fixed,tranalyzer,ALL,1792,788,0,791,213
+tuesday-pvt,cicflowmeter-fixed,tranalyzer,BENIGN,1792,788,0,791,213
+tuesday-pvt,cicflowmeter-fixed,cicflowmeter-orig,ALL,1792,780,747,53,212
+tuesday-pvt,cicflowmeter-fixed,cicflowmeter-orig,BENIGN,1792,780,747,53,212
+tuesday-pvt,cicflowmeter-fixed,argus,ALL,1792,737,0,585,470
+tuesday-pvt,cicflowmeter-fixed,argus,BENIGN,1792,737,0,585,470
+tuesday-pvt,cicflowmeter-fixed,go-flows,ALL,1792,678,64,748,302
+tuesday-pvt,cicflowmeter-fixed,go-flows,BENIGN,1792,678,64,748,302
+tuesday-pvt,cicflowmeter-fixed,yaf,ALL,1792,678,61,752,301
+tuesday-pvt,cicflowmeter-fixed,yaf,BENIGN,1792,678,61,752,301
+tuesday-pvt,cicflowmeter-fixed,joy,ALL,1792,628,945,7,212
+tuesday-pvt,cicflowmeter-fixed,joy,BENIGN,1792,628,945,7,212
+tuesday-pvt,argus,nfstream,ALL,772,695,12,0,65
+tuesday-pvt,argus,nfstream,BENIGN,772,695,12,0,65
+tuesday-pvt,argus,zeek,ALL,772,755,15,0,2
+tuesday-pvt,argus,zeek,BENIGN,772,755,15,0,2
+tuesday-pvt,argus,tranalyzer,ALL,772,760,10,0,2
+tuesday-pvt,argus,tranalyzer,BENIGN,772,760,10,0,2
+tuesday-pvt,argus,cicflowmeter-orig,ALL,772,31,594,0,147
+tuesday-pvt,argus,cicflowmeter-orig,BENIGN,772,31,594,0,147
+tuesday-pvt,argus,cicflowmeter-fixed,ALL,772,737,10,0,25
+tuesday-pvt,argus,cicflowmeter-fixed,BENIGN,772,737,10,0,25
+tuesday-pvt,argus,go-flows,ALL,772,670,37,0,65
+tuesday-pvt,argus,go-flows,BENIGN,772,670,37,0,65
+tuesday-pvt,argus,yaf,ALL,772,670,33,0,69
+tuesday-pvt,argus,yaf,BENIGN,772,670,33,0,69
+tuesday-pvt,argus,joy,ALL,772,592,178,0,2
+tuesday-pvt,argus,joy,BENIGN,772,592,178,0,2
+tuesday-pvt,go-flows,nfstream,ALL,1113,1051,0,53,9
+tuesday-pvt,go-flows,nfstream,BENIGN,1113,1051,0,53,9
+tuesday-pvt,go-flows,zeek,ALL,1113,744,27,66,276
+tuesday-pvt,go-flows,zeek,BENIGN,1113,744,27,66,276
+tuesday-pvt,go-flows,tranalyzer,ALL,1113,698,0,216,199
+tuesday-pvt,go-flows,tranalyzer,BENIGN,1113,698,0,216,199
+tuesday-pvt,go-flows,cicflowmeter-orig,ALL,1113,35,644,0,434
+tuesday-pvt,go-flows,cicflowmeter-orig,BENIGN,1113,35,644,0,434
+tuesday-pvt,go-flows,cicflowmeter-fixed,ALL,1113,678,55,49,331
+tuesday-pvt,go-flows,cicflowmeter-fixed,BENIGN,1113,678,55,49,331
+tuesday-pvt,go-flows,argus,ALL,1113,670,0,342,101
+tuesday-pvt,go-flows,argus,BENIGN,1113,670,0,342,101
+tuesday-pvt,go-flows,yaf,ALL,1113,837,24,4,248
+tuesday-pvt,go-flows,yaf,BENIGN,1113,837,24,4,248
+tuesday-pvt,go-flows,joy,ALL,1113,619,168,15,311
+tuesday-pvt,go-flows,joy,BENIGN,1113,619,168,15,311
+tuesday-pvt,yaf,nfstream,ALL,981,811,15,39,116
+tuesday-pvt,yaf,nfstream,BENIGN,981,811,15,39,116
+tuesday-pvt,yaf,zeek,ALL,981,698,1,66,216
+tuesday-pvt,yaf,zeek,BENIGN,981,698,1,66,216
+tuesday-pvt,yaf,tranalyzer,ALL,981,697,0,66,218
+tuesday-pvt,yaf,tranalyzer,BENIGN,981,697,0,66,218
+tuesday-pvt,yaf,cicflowmeter-orig,ALL,981,35,644,0,302
+tuesday-pvt,yaf,cicflowmeter-orig,BENIGN,981,35,644,0,302
+tuesday-pvt,yaf,cicflowmeter-fixed,ALL,981,678,55,49,199
+tuesday-pvt,yaf,cicflowmeter-fixed,BENIGN,981,678,55,49,199
+tuesday-pvt,yaf,argus,ALL,981,670,0,156,155
+tuesday-pvt,yaf,argus,BENIGN,981,670,0,156,155
+tuesday-pvt,yaf,go-flows,ALL,981,837,25,2,117
+tuesday-pvt,yaf,go-flows,BENIGN,981,837,25,2,117
+tuesday-pvt,yaf,joy,ALL,981,573,142,15,251
+tuesday-pvt,yaf,joy,BENIGN,981,573,142,15,251
+tuesday-pvt,joy,nfstream,ALL,4379,625,16,3278,460
+tuesday-pvt,joy,nfstream,BENIGN,4379,625,16,3278,460
+tuesday-pvt,joy,zeek,ALL,4379,1030,3,3289,57
+tuesday-pvt,joy,zeek,BENIGN,4379,1030,3,3289,57
+tuesday-pvt,joy,tranalyzer,ALL,4379,697,1,3584,97
+tuesday-pvt,joy,tranalyzer,BENIGN,4379,697,1,3584,97
+tuesday-pvt,joy,cicflowmeter-orig,ALL,4379,77,880,2555,867
+tuesday-pvt,joy,cicflowmeter-orig,BENIGN,4379,77,880,2555,867
+tuesday-pvt,joy,cicflowmeter-fixed,ALL,4379,628,420,2942,389
+tuesday-pvt,joy,cicflowmeter-fixed,BENIGN,4379,628,420,2942,389
+tuesday-pvt,joy,argus,ALL,4379,592,0,2831,956
+tuesday-pvt,joy,argus,BENIGN,4379,592,0,2831,956
+tuesday-pvt,joy,go-flows,ALL,4379,619,23,3277,460
+tuesday-pvt,joy,go-flows,BENIGN,4379,619,23,3277,460
+tuesday-pvt,joy,yaf,ALL,4379,573,23,3189,594
+tuesday-pvt,joy,yaf,BENIGN,4379,573,23,3189,594
+wednesday-pub,nfstream,zeek,ALL,10208,9788,125,126,169
+wednesday-pub,nfstream,zeek,BENIGN,5781,5413,95,126,147
+wednesday-pub,nfstream,zeek,Establish Foothold,4402,4350,30,0,22
+wednesday-pub,nfstream,zeek,Reconnaissance,25,25,0,0,0
+wednesday-pub,nfstream,tranalyzer,ALL,10208,9826,55,209,118
+wednesday-pub,nfstream,tranalyzer,BENIGN,5781,5454,25,185,117
+wednesday-pub,nfstream,tranalyzer,Establish Foothold,4402,4347,30,24,1
+wednesday-pub,nfstream,tranalyzer,Reconnaissance,25,25,0,0,0
+wednesday-pub,nfstream,cicflowmeter-orig,ALL,10208,3001,1002,0,6205
+wednesday-pub,nfstream,cicflowmeter-orig,BENIGN,5781,447,893,0,4441
+wednesday-pub,nfstream,cicflowmeter-orig,Establish Foothold,4402,2548,90,0,1764
+wednesday-pub,nfstream,cicflowmeter-orig,Reconnaissance,25,6,19,0,0
+wednesday-pub,nfstream,cicflowmeter-fixed,ALL,10208,9665,369,0,174
+wednesday-pub,nfstream,cicflowmeter-fixed,BENIGN,5781,5291,338,0,152
+wednesday-pub,nfstream,cicflowmeter-fixed,Establish Foothold,4402,4349,31,0,22
+wednesday-pub,nfstream,cicflowmeter-fixed,Reconnaissance,25,25,0,0,0
+wednesday-pub,nfstream,argus,ALL,10208,9307,0,808,93
+wednesday-pub,nfstream,argus,BENIGN,5781,4907,0,781,93
+wednesday-pub,nfstream,argus,Establish Foothold,4402,4375,0,27,0
+wednesday-pub,nfstream,argus,Reconnaissance,25,25,0,0,0
+wednesday-pub,nfstream,go-flows,ALL,10208,8634,1557,0,17
+wednesday-pub,nfstream,go-flows,BENIGN,5781,5106,658,0,17
+wednesday-pub,nfstream,go-flows,Establish Foothold,4402,3506,896,0,0
+wednesday-pub,nfstream,go-flows,Reconnaissance,25,22,3,0,0
+wednesday-pub,nfstream,yaf,ALL,10208,8676,1363,86,83
+wednesday-pub,nfstream,yaf,BENIGN,5781,5024,593,86,78
+wednesday-pub,nfstream,yaf,Establish Foothold,4402,3629,768,0,5
+wednesday-pub,nfstream,yaf,Reconnaissance,25,23,2,0,0
+wednesday-pub,nfstream,joy,ALL,10208,6862,856,0,2490
+wednesday-pub,nfstream,joy,BENIGN,5781,2464,849,0,2468
+wednesday-pub,nfstream,joy,Establish Foothold,4402,4374,6,0,22
+wednesday-pub,nfstream,joy,Reconnaissance,25,24,1,0,0
+wednesday-pub,zeek,nfstream,ALL,10555,9788,21,440,306
+wednesday-pub,zeek,nfstream,BENIGN,6057,5413,21,379,244
+wednesday-pub,zeek,nfstream,Establish Foothold,4473,4350,0,61,62
+wednesday-pub,zeek,nfstream,Reconnaissance,25,25,0,0,0
+wednesday-pub,zeek,tranalyzer,ALL,10555,10013,25,475,42
+wednesday-pub,zeek,tranalyzer,BENIGN,6057,5540,25,450,42
+wednesday-pub,zeek,tranalyzer,Establish Foothold,4473,4448,0,25,0
+wednesday-pub,zeek,tranalyzer,Reconnaissance,25,25,0,0,0
+wednesday-pub,zeek,cicflowmeter-orig,ALL,10555,2913,923,289,6430
+wednesday-pub,zeek,cicflowmeter-orig,BENIGN,6057,372,836,289,4560
+wednesday-pub,zeek,cicflowmeter-orig,Establish Foothold,4473,2535,68,0,1870
+wednesday-pub,zeek,cicflowmeter-orig,Reconnaissance,25,6,19,0,0
+wednesday-pub,zeek,cicflowmeter-fixed,ALL,10555,9816,287,359,93
+wednesday-pub,zeek,cicflowmeter-fixed,BENIGN,6057,5319,286,359,93
+wednesday-pub,zeek,cicflowmeter-fixed,Establish Foothold,4473,4472,1,0,0
+wednesday-pub,zeek,cicflowmeter-fixed,Reconnaissance,25,25,0,0,0
+wednesday-pub,zeek,argus,ALL,10555,9241,0,1294,20
+wednesday-pub,zeek,argus,BENIGN,6057,4883,0,1154,20
+wednesday-pub,zeek,argus,Establish Foothold,4473,4333,0,140,0
+wednesday-pub,zeek,argus,Reconnaissance,25,25,0,0,0
+wednesday-pub,zeek,go-flows,ALL,10555,8774,1056,304,421
+wednesday-pub,zeek,go-flows,BENIGN,6057,5155,306,304,292
+wednesday-pub,zeek,go-flows,Establish Foothold,4473,3594,750,0,129
+wednesday-pub,zeek,go-flows,Reconnaissance,25,25,0,0,0
+wednesday-pub,zeek,yaf,ALL,10555,8777,1040,313,425
+wednesday-pub,zeek,yaf,BENIGN,6057,5158,290,313,296
+wednesday-pub,zeek,yaf,Establish Foothold,4473,3594,750,0,129
+wednesday-pub,zeek,yaf,Reconnaissance,25,25,0,0,0
+wednesday-pub,zeek,joy,ALL,10555,9266,781,429,79
+wednesday-pub,zeek,joy,BENIGN,6057,4888,774,316,79
+wednesday-pub,zeek,joy,Establish Foothold,4473,4354,6,113,0
+wednesday-pub,zeek,joy,Reconnaissance,25,24,1,0,0
+wednesday-pub,tranalyzer,nfstream,ALL,10322,9826,18,180,298
+wednesday-pub,tranalyzer,nfstream,BENIGN,5848,5454,17,119,258
+wednesday-pub,tranalyzer,nfstream,Establish Foothold,4449,4347,1,61,40
+wednesday-pub,tranalyzer,nfstream,Reconnaissance,25,25,0,0,0
+wednesday-pub,tranalyzer,zeek,ALL,10322,10013,91,70,148
+wednesday-pub,tranalyzer,zeek,BENIGN,5848,5540,90,70,148
+wednesday-pub,tranalyzer,zeek,Establish Foothold,4449,4448,1,0,0
+wednesday-pub,tranalyzer,zeek,Reconnaissance,25,25,0,0,0
+wednesday-pub,tranalyzer,cicflowmeter-orig,ALL,10322,2965,898,0,6459
+wednesday-pub,tranalyzer,cicflowmeter-orig,BENIGN,5848,424,810,0,4614
+wednesday-pub,tranalyzer,cicflowmeter-orig,Establish Foothold,4449,2535,69,0,1845
+wednesday-pub,tranalyzer,cicflowmeter-orig,Reconnaissance,25,6,19,0,0
+wednesday-pub,tranalyzer,cicflowmeter-fixed,ALL,10322,9792,262,4,264
+wednesday-pub,tranalyzer,cicflowmeter-fixed,BENIGN,5848,5336,260,4,248
+wednesday-pub,tranalyzer,cicflowmeter-fixed,Establish Foothold,4449,4431,2,0,16
+wednesday-pub,tranalyzer,cicflowmeter-fixed,Reconnaissance,25,25,0,0,0
+wednesday-pub,tranalyzer,argus,ALL,10322,9296,0,891,135
+wednesday-pub,tranalyzer,argus,BENIGN,5848,4938,0,775,135
+wednesday-pub,tranalyzer,argus,Establish Foothold,4449,4333,0,116,0
+wednesday-pub,tranalyzer,argus,Reconnaissance,25,25,0,0,0
+wednesday-pub,tranalyzer,go-flows,ALL,10322,8699,1142,0,481
+wednesday-pub,tranalyzer,go-flows,BENIGN,5848,5190,284,0,374
+wednesday-pub,tranalyzer,go-flows,Establish Foothold,4449,3487,855,0,107
+wednesday-pub,tranalyzer,go-flows,Reconnaissance,25,22,3,0,0
+wednesday-pub,tranalyzer,yaf,ALL,10322,8695,1133,6,488
+wednesday-pub,tranalyzer,yaf,BENIGN,5848,5186,275,6,381
+wednesday-pub,tranalyzer,yaf,Establish Foothold,4449,3487,855,0,107
+wednesday-pub,tranalyzer,yaf,Reconnaissance,25,22,3,0,0
+wednesday-pub,tranalyzer,joy,ALL,10322,5054,803,206,4259
+wednesday-pub,tranalyzer,joy,BENIGN,5848,701,795,93,4259
+wednesday-pub,tranalyzer,joy,Establish Foothold,4449,4329,7,113,0
+wednesday-pub,tranalyzer,joy,Reconnaissance,25,24,1,0,0
+wednesday-pub,cicflowmeter-orig,nfstream,ALL,17008,3001,27,3156,10824
+wednesday-pub,cicflowmeter-orig,nfstream,BENIGN,8351,445,27,2939,4940
+wednesday-pub,cicflowmeter-orig,nfstream,Establish Foothold,8613,2550,0,179,5884
+wednesday-pub,cicflowmeter-orig,nfstream,Reconnaissance,44,6,0,38,0
+wednesday-pub,cicflowmeter-orig,zeek,ALL,17008,2913,69,3100,10926
+wednesday-pub,cicflowmeter-orig,zeek,BENIGN,8351,370,69,2927,4985
+wednesday-pub,cicflowmeter-orig,zeek,Establish Foothold,8613,2537,0,135,5941
+wednesday-pub,cicflowmeter-orig,zeek,Reconnaissance,44,6,0,38,0
+wednesday-pub,cicflowmeter-orig,tranalyzer,ALL,17008,2965,0,3150,10893
+wednesday-pub,cicflowmeter-orig,tranalyzer,BENIGN,8351,424,0,2951,4976
+wednesday-pub,cicflowmeter-orig,tranalyzer,Establish Foothold,8613,2535,0,161,5917
+wednesday-pub,cicflowmeter-orig,tranalyzer,Reconnaissance,44,6,0,38,0
+wednesday-pub,cicflowmeter-orig,cicflowmeter-fixed,ALL,17008,4093,109,1855,10951
+wednesday-pub,cicflowmeter-orig,cicflowmeter-fixed,BENIGN,8351,1549,109,1684,5009
+wednesday-pub,cicflowmeter-orig,cicflowmeter-fixed,Establish Foothold,8613,2538,0,133,5942
+wednesday-pub,cicflowmeter-orig,cicflowmeter-fixed,Reconnaissance,44,6,0,38,0
+wednesday-pub,cicflowmeter-orig,argus,ALL,17008,3184,0,3141,10683
+wednesday-pub,cicflowmeter-orig,argus,BENIGN,8351,629,0,2902,4820
+wednesday-pub,cicflowmeter-orig,argus,Establish Foothold,8613,2549,0,201,5863
+wednesday-pub,cicflowmeter-orig,argus,Reconnaissance,44,6,0,38,0
+wednesday-pub,cicflowmeter-orig,go-flows,ALL,17008,2986,28,2997,10997
+wednesday-pub,cicflowmeter-orig,go-flows,BENIGN,8351,446,27,2818,5060
+wednesday-pub,cicflowmeter-orig,go-flows,Establish Foothold,8613,2534,1,141,5937
+wednesday-pub,cicflowmeter-orig,go-flows,Reconnaissance,44,6,0,38,0
+wednesday-pub,cicflowmeter-orig,yaf,ALL,17008,2978,31,3036,10963
+wednesday-pub,cicflowmeter-orig,yaf,BENIGN,8351,438,30,2857,5026
+wednesday-pub,cicflowmeter-orig,yaf,Establish Foothold,8613,2534,1,141,5937
+wednesday-pub,cicflowmeter-orig,yaf,Reconnaissance,44,6,0,38,0
+wednesday-pub,cicflowmeter-orig,joy,ALL,17008,2906,1654,1365,11083
+wednesday-pub,cicflowmeter-orig,joy,BENIGN,8351,350,1650,1157,5194
+wednesday-pub,cicflowmeter-orig,joy,Establish Foothold,8613,2550,4,170,5889
+wednesday-pub,cicflowmeter-orig,joy,Reconnaissance,44,6,0,38,0
+wednesday-pub,cicflowmeter-fixed,nfstream,ALL,11524,9665,31,1494,334
+wednesday-pub,cicflowmeter-fixed,nfstream,BENIGN,7024,5290,31,1431,272
+wednesday-pub,cicflowmeter-fixed,nfstream,Establish Foothold,4475,4350,0,63,62
+wednesday-pub,cicflowmeter-fixed,nfstream,Reconnaissance,25,25,0,0,0
+wednesday-pub,cicflowmeter-fixed,zeek,ALL,11524,9816,79,1466,163
+wednesday-pub,cicflowmeter-fixed,zeek,BENIGN,7024,5318,79,1464,163
+wednesday-pub,cicflowmeter-fixed,zeek,Establish Foothold,4475,4473,0,2,0
+wednesday-pub,cicflowmeter-fixed,zeek,Reconnaissance,25,25,0,0,0
+wednesday-pub,cicflowmeter-fixed,tranalyzer,ALL,11524,9792,2,1485,245
+wednesday-pub,cicflowmeter-fixed,tranalyzer,BENIGN,7024,5337,2,1456,229
+wednesday-pub,cicflowmeter-fixed,tranalyzer,Establish Foothold,4475,4430,0,29,16
+wednesday-pub,cicflowmeter-fixed,tranalyzer,Reconnaissance,25,25,0,0,0
+wednesday-pub,cicflowmeter-fixed,cicflowmeter-orig,ALL,11524,4093,882,83,6466
+wednesday-pub,cicflowmeter-fixed,cicflowmeter-orig,BENIGN,7024,1549,796,83,4596
+wednesday-pub,cicflowmeter-fixed,cicflowmeter-orig,Establish Foothold,4475,2538,67,0,1870
+wednesday-pub,cicflowmeter-fixed,cicflowmeter-orig,Reconnaissance,25,6,19,0,0
+wednesday-pub,cicflowmeter-fixed,argus,ALL,11524,9038,0,2086,400
+wednesday-pub,cicflowmeter-fixed,argus,BENIGN,7024,4681,0,1943,400
+wednesday-pub,cicflowmeter-fixed,argus,Establish Foothold,4475,4332,0,143,0
+wednesday-pub,cicflowmeter-fixed,argus,Reconnaissance,25,25,0,0,0
+wednesday-pub,cicflowmeter-fixed,go-flows,ALL,11524,8326,1521,1162,515
+wednesday-pub,cicflowmeter-fixed,go-flows,BENIGN,7024,4814,664,1160,386
+wednesday-pub,cicflowmeter-fixed,go-flows,Establish Foothold,4475,3490,854,2,129
+wednesday-pub,cicflowmeter-fixed,go-flows,Reconnaissance,25,22,3,0,0
+wednesday-pub,cicflowmeter-fixed,yaf,ALL,11524,8259,1524,1229,512
+wednesday-pub,cicflowmeter-fixed,yaf,BENIGN,7024,4747,667,1227,383
+wednesday-pub,cicflowmeter-fixed,yaf,Establish Foothold,4475,3490,854,2,129
+wednesday-pub,cicflowmeter-fixed,yaf,Reconnaissance,25,22,3,0,0
+wednesday-pub,cicflowmeter-fixed,joy,ALL,11524,9202,1839,235,248
+wednesday-pub,cicflowmeter-fixed,joy,BENIGN,7024,4823,1830,126,245
+wednesday-pub,cicflowmeter-fixed,joy,Establish Foothold,4475,4355,8,109,3
+wednesday-pub,cicflowmeter-fixed,joy,Reconnaissance,25,24,1,0,0
+wednesday-pub,argus,nfstream,ALL,9637,9307,276,0,54
+wednesday-pub,argus,nfstream,BENIGN,5236,4907,275,0,54
+wednesday-pub,argus,nfstream,Establish Foothold,4376,4375,1,0,0
+wednesday-pub,argus,nfstream,Reconnaissance,25,25,0,0,0
+wednesday-pub,argus,zeek,ALL,9637,9241,392,0,4
+wednesday-pub,argus,zeek,BENIGN,5236,4883,349,0,4
+wednesday-pub,argus,zeek,Establish Foothold,4376,4333,43,0,0
+wednesday-pub,argus,zeek,Reconnaissance,25,25,0,0,0
+wednesday-pub,argus,tranalyzer,ALL,9637,9296,337,0,4
+wednesday-pub,argus,tranalyzer,BENIGN,5236,4938,294,0,4
+wednesday-pub,argus,tranalyzer,Establish Foothold,4376,4333,43,0,0
+wednesday-pub,argus,tranalyzer,Reconnaissance,25,25,0,0,0
+wednesday-pub,argus,cicflowmeter-orig,ALL,9637,3184,954,0,5499
+wednesday-pub,argus,cicflowmeter-orig,BENIGN,5236,629,847,0,3760
+wednesday-pub,argus,cicflowmeter-orig,Establish Foothold,4376,2549,88,0,1739
+wednesday-pub,argus,cicflowmeter-orig,Reconnaissance,25,6,19,0,0
+wednesday-pub,argus,cicflowmeter-fixed,ALL,9637,9038,581,0,18
+wednesday-pub,argus,cicflowmeter-fixed,BENIGN,5236,4681,537,0,18
+wednesday-pub,argus,cicflowmeter-fixed,Establish Foothold,4376,4332,44,0,0
+wednesday-pub,argus,cicflowmeter-fixed,Reconnaissance,25,25,0,0,0
+wednesday-pub,argus,go-flows,ALL,9637,7763,1820,0,54
+wednesday-pub,argus,go-flows,BENIGN,5236,4251,931,0,54
+wednesday-pub,argus,go-flows,Establish Foothold,4376,3490,886,0,0
+wednesday-pub,argus,go-flows,Reconnaissance,25,22,3,0,0
+wednesday-pub,argus,yaf,ALL,9637,7767,1813,0,57
+wednesday-pub,argus,yaf,BENIGN,5236,4255,924,0,57
+wednesday-pub,argus,yaf,Establish Foothold,4376,3490,886,0,0
+wednesday-pub,argus,yaf,Reconnaissance,25,22,3,0,0
+wednesday-pub,argus,joy,ALL,9637,8539,1096,0,2
+wednesday-pub,argus,joy,BENIGN,5236,4145,1089,0,2
+wednesday-pub,argus,joy,Establish Foothold,4376,4370,6,0,0
+wednesday-pub,argus,joy,Reconnaissance,25,24,1,0,0
+wednesday-pub,go-flows,nfstream,ALL,12187,8634,0,3534,19
+wednesday-pub,go-flows,nfstream,BENIGN,6832,5106,0,1707,19
+wednesday-pub,go-flows,nfstream,Establish Foothold,5327,3506,0,1821,0
+wednesday-pub,go-flows,nfstream,Reconnaissance,28,22,0,6,0
+wednesday-pub,go-flows,zeek,ALL,12187,8774,74,2268,1071
+wednesday-pub,go-flows,zeek,BENIGN,6832,5155,74,768,835
+wednesday-pub,go-flows,zeek,Establish Foothold,5327,3594,0,1500,233
+wednesday-pub,go-flows,zeek,Reconnaissance,28,25,0,0,3
+wednesday-pub,go-flows,tranalyzer,ALL,12187,8699,0,2515,973
+wednesday-pub,go-flows,tranalyzer,BENIGN,6832,5190,0,777,865
+wednesday-pub,go-flows,tranalyzer,Establish Foothold,5327,3487,0,1732,108
+wednesday-pub,go-flows,tranalyzer,Reconnaissance,28,22,0,6,0
+wednesday-pub,go-flows,cicflowmeter-orig,ALL,12187,2986,958,2,8241
+wednesday-pub,go-flows,cicflowmeter-orig,BENIGN,6832,448,868,0,5516
+wednesday-pub,go-flows,cicflowmeter-orig,Establish Foothold,5327,2532,71,2,2722
+wednesday-pub,go-flows,cicflowmeter-orig,Reconnaissance,28,6,19,0,3
+wednesday-pub,go-flows,cicflowmeter-fixed,ALL,12187,8326,314,3130,417
+wednesday-pub,go-flows,cicflowmeter-fixed,BENIGN,6832,4815,313,1416,288
+wednesday-pub,go-flows,cicflowmeter-fixed,Establish Foothold,5327,3489,1,1708,129
+wednesday-pub,go-flows,cicflowmeter-fixed,Reconnaissance,28,22,0,6,0
+wednesday-pub,go-flows,argus,ALL,12187,7763,0,4267,157
+wednesday-pub,go-flows,argus,BENIGN,6832,4251,0,2463,118
+wednesday-pub,go-flows,argus,Establish Foothold,5327,3490,0,1798,39
+wednesday-pub,go-flows,argus,Reconnaissance,28,22,0,6,0
+wednesday-pub,go-flows,yaf,ALL,12187,9040,2271,426,450
+wednesday-pub,go-flows,yaf,BENIGN,6832,5324,1019,198,291
+wednesday-pub,go-flows,yaf,Establish Foothold,5327,3689,1252,228,158
+wednesday-pub,go-flows,yaf,Reconnaissance,28,27,0,0,1
+wednesday-pub,go-flows,joy,ALL,12187,5882,839,2745,2721
+wednesday-pub,go-flows,joy,BENIGN,6832,2372,832,968,2660
+wednesday-pub,go-flows,joy,Establish Foothold,5327,3489,6,1771,61
+wednesday-pub,go-flows,joy,Reconnaissance,28,21,1,6,0
+wednesday-pub,yaf,nfstream,ALL,12125,8676,29,3102,318
+wednesday-pub,yaf,nfstream,BENIGN,6770,5024,29,1538,179
+wednesday-pub,yaf,nfstream,Establish Foothold,5327,3629,0,1560,138
+wednesday-pub,yaf,nfstream,Reconnaissance,28,23,0,4,1
+wednesday-pub,yaf,zeek,ALL,12125,8777,75,2200,1073
+wednesday-pub,yaf,zeek,BENIGN,6770,5158,75,700,837
+wednesday-pub,yaf,zeek,Establish Foothold,5327,3594,0,1500,233
+wednesday-pub,yaf,zeek,Reconnaissance,28,25,0,0,3
+wednesday-pub,yaf,tranalyzer,ALL,12125,8695,3,2448,979
+wednesday-pub,yaf,tranalyzer,BENIGN,6770,5186,3,710,871
+wednesday-pub,yaf,tranalyzer,Establish Foothold,5327,3487,0,1732,108
+wednesday-pub,yaf,tranalyzer,Reconnaissance,28,22,0,6,0
+wednesday-pub,yaf,cicflowmeter-orig,ALL,12125,2978,957,2,8188
+wednesday-pub,yaf,cicflowmeter-orig,BENIGN,6770,440,867,0,5463
+wednesday-pub,yaf,cicflowmeter-orig,Establish Foothold,5327,2532,71,2,2722
+wednesday-pub,yaf,cicflowmeter-orig,Reconnaissance,28,6,19,0,3
+wednesday-pub,yaf,cicflowmeter-fixed,ALL,12125,8259,322,3130,414
+wednesday-pub,yaf,cicflowmeter-fixed,BENIGN,6770,4748,321,1416,285
+wednesday-pub,yaf,cicflowmeter-fixed,Establish Foothold,5327,3489,1,1708,129
+wednesday-pub,yaf,cicflowmeter-fixed,Reconnaissance,28,22,0,6,0
+wednesday-pub,yaf,argus,ALL,12125,7767,0,4177,181
+wednesday-pub,yaf,argus,BENIGN,6770,4255,0,2373,142
+wednesday-pub,yaf,argus,Establish Foothold,5327,3490,0,1798,39
+wednesday-pub,yaf,argus,Reconnaissance,28,22,0,6,0
+wednesday-pub,yaf,go-flows,ALL,12125,9040,2306,322,457
+wednesday-pub,yaf,go-flows,BENIGN,6770,5324,1046,110,290
+wednesday-pub,yaf,go-flows,Establish Foothold,5327,3689,1260,212,166
+wednesday-pub,yaf,go-flows,Reconnaissance,28,27,0,0,1
+wednesday-pub,yaf,joy,ALL,12125,5822,838,2745,2720
+wednesday-pub,yaf,joy,BENIGN,6770,2312,831,968,2659
+wednesday-pub,yaf,joy,Establish Foothold,5327,3489,6,1771,61
+wednesday-pub,yaf,joy,Reconnaissance,28,21,1,6,0
+wednesday-pub,joy,nfstream,ALL,15796,6862,18,6267,2649
+wednesday-pub,joy,nfstream,BENIGN,11361,2464,18,6252,2627
+wednesday-pub,joy,nfstream,Establish Foothold,4410,4374,0,14,22
+wednesday-pub,joy,nfstream,Reconnaissance,25,24,0,1,0
+wednesday-pub,joy,zeek,ALL,15796,9266,132,6307,91
+wednesday-pub,joy,zeek,BENIGN,11361,4888,90,6292,91
+wednesday-pub,joy,zeek,Establish Foothold,4410,4354,42,14,0
+wednesday-pub,joy,zeek,Reconnaissance,25,24,0,1,0
+wednesday-pub,joy,tranalyzer,ALL,15796,5054,69,6500,4173
+wednesday-pub,joy,tranalyzer,BENIGN,11361,701,27,6460,4173
+wednesday-pub,joy,tranalyzer,Establish Foothold,4410,4329,42,39,0
+wednesday-pub,joy,tranalyzer,Reconnaissance,25,24,0,1,0
+wednesday-pub,joy,cicflowmeter-orig,ALL,15796,2906,1113,4915,6862
+wednesday-pub,joy,cicflowmeter-orig,BENIGN,11361,352,1008,4907,5094
+wednesday-pub,joy,cicflowmeter-orig,Establish Foothold,4410,2548,86,8,1768
+wednesday-pub,joy,cicflowmeter-orig,Reconnaissance,25,6,19,0,0
+wednesday-pub,joy,cicflowmeter-fixed,ALL,15796,9202,614,5805,175
+wednesday-pub,joy,cicflowmeter-fixed,BENIGN,11361,4822,573,5791,175
+wednesday-pub,joy,cicflowmeter-fixed,Establish Foothold,4410,4356,41,13,0
+wednesday-pub,joy,cicflowmeter-fixed,Reconnaissance,25,24,0,1,0
+wednesday-pub,joy,argus,ALL,15796,8539,0,6389,868
+wednesday-pub,joy,argus,BENIGN,11361,4145,0,6348,868
+wednesday-pub,joy,argus,Establish Foothold,4410,4370,0,40,0
+wednesday-pub,joy,argus,Reconnaissance,25,24,0,1,0
+wednesday-pub,joy,go-flows,ALL,15796,5882,1471,5781,2662
+wednesday-pub,joy,go-flows,BENIGN,11361,2372,583,5766,2640
+wednesday-pub,joy,go-flows,Establish Foothold,4410,3489,885,14,22
+wednesday-pub,joy,go-flows,Reconnaissance,25,21,3,1,0
+wednesday-pub,joy,yaf,ALL,15796,5822,1472,5838,2664
+wednesday-pub,joy,yaf,BENIGN,11361,2312,584,5823,2642
+wednesday-pub,joy,yaf,Establish Foothold,4410,3489,885,14,22
+wednesday-pub,joy,yaf,Reconnaissance,25,21,3,1,0
+wednesday-pvt,nfstream,zeek,ALL,361,159,4,53,145
+wednesday-pvt,nfstream,zeek,BENIGN,361,159,4,53,145
+wednesday-pvt,nfstream,tranalyzer,ALL,361,164,0,57,140
+wednesday-pvt,nfstream,tranalyzer,BENIGN,361,164,0,57,140
+wednesday-pvt,nfstream,cicflowmeter-orig,ALL,361,34,98,0,229
+wednesday-pvt,nfstream,cicflowmeter-orig,BENIGN,361,34,98,0,229
+wednesday-pvt,nfstream,cicflowmeter-fixed,ALL,361,157,55,0,149
+wednesday-pvt,nfstream,cicflowmeter-fixed,BENIGN,361,157,55,0,149
+wednesday-pvt,nfstream,argus,ALL,361,143,0,102,116
+wednesday-pvt,nfstream,argus,BENIGN,361,143,0,102,116
+wednesday-pvt,nfstream,go-flows,ALL,361,334,10,0,17
+wednesday-pvt,nfstream,go-flows,BENIGN,361,334,10,0,17
+wednesday-pvt,nfstream,yaf,ALL,361,277,8,5,71
+wednesday-pvt,nfstream,yaf,BENIGN,361,277,8,5,71
+wednesday-pvt,nfstream,joy,ALL,361,110,70,0,181
+wednesday-pvt,nfstream,joy,BENIGN,361,110,70,0,181
+wednesday-pvt,zeek,nfstream,ALL,333,159,4,8,162
+wednesday-pvt,zeek,nfstream,BENIGN,333,159,4,8,162
+wednesday-pvt,zeek,tranalyzer,ALL,333,273,0,40,20
+wednesday-pvt,zeek,tranalyzer,BENIGN,333,273,0,40,20
+wednesday-pvt,zeek,cicflowmeter-orig,ALL,333,32,50,2,249
+wednesday-pvt,zeek,cicflowmeter-orig,BENIGN,333,32,50,2,249
+wednesday-pvt,zeek,cicflowmeter-fixed,ALL,333,222,7,19,85
+wednesday-pvt,zeek,cicflowmeter-fixed,BENIGN,333,222,7,19,85
+wednesday-pvt,zeek,argus,ALL,333,212,0,100,21
+wednesday-pvt,zeek,argus,BENIGN,333,212,0,100,21
+wednesday-pvt,zeek,go-flows,ALL,333,157,6,8,162
+wednesday-pvt,zeek,go-flows,BENIGN,333,157,6,8,162
+wednesday-pvt,zeek,yaf,ALL,333,155,5,7,166
+wednesday-pvt,zeek,yaf,BENIGN,333,155,5,7,166
+wednesday-pvt,zeek,joy,ALL,333,290,19,4,20
+wednesday-pvt,zeek,joy,BENIGN,333,290,19,4,20
+wednesday-pvt,tranalyzer,nfstream,ALL,368,164,6,0,198
+wednesday-pvt,tranalyzer,nfstream,BENIGN,368,164,6,0,198
+wednesday-pvt,tranalyzer,zeek,ALL,368,273,17,0,78
+wednesday-pvt,tranalyzer,zeek,BENIGN,368,273,17,0,78
+wednesday-pvt,tranalyzer,cicflowmeter-orig,ALL,368,33,50,0,285
+wednesday-pvt,tranalyzer,cicflowmeter-orig,BENIGN,368,33,50,0,285
+wednesday-pvt,tranalyzer,cicflowmeter-fixed,ALL,368,231,8,0,129
+wednesday-pvt,tranalyzer,cicflowmeter-fixed,BENIGN,368,231,8,0,129
+wednesday-pvt,tranalyzer,argus,ALL,368,217,0,72,79
+wednesday-pvt,tranalyzer,argus,BENIGN,368,217,0,72,79
+wednesday-pvt,tranalyzer,go-flows,ALL,368,162,8,0,198
+wednesday-pvt,tranalyzer,go-flows,BENIGN,368,162,8,0,198
+wednesday-pvt,tranalyzer,yaf,ALL,368,156,5,2,205
+wednesday-pvt,tranalyzer,yaf,BENIGN,368,156,5,2,205
+wednesday-pvt,tranalyzer,joy,ALL,368,209,33,0,126
+wednesday-pvt,tranalyzer,joy,BENIGN,368,209,33,0,126
+wednesday-pvt,cicflowmeter-orig,nfstream,ALL,1421,34,37,793,557
+wednesday-pvt,cicflowmeter-orig,nfstream,BENIGN,1417,34,37,793,553
+wednesday-pvt,cicflowmeter-orig,nfstream,Establish Foothold,4,0,0,0,4
+wednesday-pvt,cicflowmeter-orig,zeek,ALL,1421,32,1,831,557
+wednesday-pvt,cicflowmeter-orig,zeek,BENIGN,1417,32,1,831,553
+wednesday-pvt,cicflowmeter-orig,zeek,Establish Foothold,4,0,0,0,4
+wednesday-pvt,cicflowmeter-orig,tranalyzer,ALL,1421,33,0,831,557
+wednesday-pvt,cicflowmeter-orig,tranalyzer,BENIGN,1417,33,0,831,553
+wednesday-pvt,cicflowmeter-orig,tranalyzer,Establish Foothold,4,0,0,0,4
+wednesday-pvt,cicflowmeter-orig,cicflowmeter-fixed,ALL,1421,777,112,170,362
+wednesday-pvt,cicflowmeter-orig,cicflowmeter-fixed,BENIGN,1417,777,112,170,358
+wednesday-pvt,cicflowmeter-orig,cicflowmeter-fixed,Establish Foothold,4,0,0,0,4
+wednesday-pvt,cicflowmeter-orig,argus,ALL,1421,22,0,600,799
+wednesday-pvt,cicflowmeter-orig,argus,BENIGN,1417,22,0,600,795
+wednesday-pvt,cicflowmeter-orig,argus,Establish Foothold,4,0,0,0,4
+wednesday-pvt,cicflowmeter-orig,go-flows,ALL,1421,34,37,793,557
+wednesday-pvt,cicflowmeter-orig,go-flows,BENIGN,1417,34,37,793,553
+wednesday-pvt,cicflowmeter-orig,go-flows,Establish Foothold,4,0,0,0,4
+wednesday-pvt,cicflowmeter-orig,yaf,ALL,1421,31,37,796,557
+wednesday-pvt,cicflowmeter-orig,yaf,BENIGN,1417,31,37,796,553
+wednesday-pvt,cicflowmeter-orig,yaf,Establish Foothold,4,0,0,0,4
+wednesday-pvt,cicflowmeter-orig,joy,ALL,1421,33,752,75,561
+wednesday-pvt,cicflowmeter-orig,joy,BENIGN,1417,33,752,75,557
+wednesday-pvt,cicflowmeter-orig,joy,Establish Foothold,4,0,0,0,4
+wednesday-pvt,cicflowmeter-fixed,nfstream,ALL,1183,157,39,705,282
+wednesday-pvt,cicflowmeter-fixed,nfstream,BENIGN,1183,157,39,705,282
+wednesday-pvt,cicflowmeter-fixed,zeek,ALL,1183,222,9,746,206
+wednesday-pvt,cicflowmeter-fixed,zeek,BENIGN,1183,222,9,746,206
+wednesday-pvt,cicflowmeter-fixed,tranalyzer,ALL,1183,231,0,749,203
+wednesday-pvt,cicflowmeter-fixed,tranalyzer,BENIGN,1183,231,0,749,203
+wednesday-pvt,cicflowmeter-fixed,cicflowmeter-orig,ALL,1183,777,173,48,185
+wednesday-pvt,cicflowmeter-fixed,cicflowmeter-orig,BENIGN,1183,777,173,48,185
+wednesday-pvt,cicflowmeter-fixed,argus,ALL,1183,195,0,544,444
+wednesday-pvt,cicflowmeter-fixed,argus,BENIGN,1183,195,0,544,444
+wednesday-pvt,cicflowmeter-fixed,go-flows,ALL,1183,147,49,705,282
+wednesday-pvt,cicflowmeter-fixed,go-flows,BENIGN,1183,147,49,705,282
+wednesday-pvt,cicflowmeter-fixed,yaf,ALL,1183,144,49,710,280
+wednesday-pvt,cicflowmeter-fixed,yaf,BENIGN,1183,144,49,710,280
+wednesday-pvt,cicflowmeter-fixed,joy,ALL,1183,213,761,1,208
+wednesday-pvt,cicflowmeter-fixed,joy,BENIGN,1183,213,761,1,208
+wednesday-pvt,argus,nfstream,ALL,231,143,11,0,77
+wednesday-pvt,argus,nfstream,BENIGN,231,143,11,0,77
+wednesday-pvt,argus,zeek,ALL,231,212,14,0,5
+wednesday-pvt,argus,zeek,BENIGN,231,212,14,0,5
+wednesday-pvt,argus,tranalyzer,ALL,231,217,9,0,5
+wednesday-pvt,argus,tranalyzer,BENIGN,231,217,9,0,5
+wednesday-pvt,argus,cicflowmeter-orig,ALL,231,22,49,0,160
+wednesday-pvt,argus,cicflowmeter-orig,BENIGN,231,22,49,0,160
+wednesday-pvt,argus,cicflowmeter-fixed,ALL,231,195,9,0,27
+wednesday-pvt,argus,cicflowmeter-fixed,BENIGN,231,195,9,0,27
+wednesday-pvt,argus,go-flows,ALL,231,133,21,0,77
+wednesday-pvt,argus,go-flows,BENIGN,231,133,21,0,77
+wednesday-pvt,argus,yaf,ALL,231,133,18,0,80
+wednesday-pvt,argus,yaf,BENIGN,231,133,18,0,80
+wednesday-pvt,argus,joy,ALL,231,202,27,0,2
+wednesday-pvt,argus,joy,BENIGN,231,202,27,0,2
+wednesday-pvt,go-flows,nfstream,ALL,376,334,0,22,20
+wednesday-pvt,go-flows,nfstream,BENIGN,372,334,0,18,20
+wednesday-pvt,go-flows,nfstream,Establish Foothold,4,0,0,4,0
+wednesday-pvt,go-flows,zeek,ALL,376,157,4,59,156
+wednesday-pvt,go-flows,zeek,BENIGN,372,157,4,55,156
+wednesday-pvt,go-flows,zeek,Establish Foothold,4,0,0,4,0
+wednesday-pvt,go-flows,tranalyzer,ALL,376,162,0,63,151
+wednesday-pvt,go-flows,tranalyzer,BENIGN,372,162,0,59,151
+wednesday-pvt,go-flows,tranalyzer,Establish Foothold,4,0,0,4,0
+wednesday-pvt,go-flows,cicflowmeter-orig,ALL,376,34,98,0,244
+wednesday-pvt,go-flows,cicflowmeter-orig,BENIGN,372,34,98,0,240
+wednesday-pvt,go-flows,cicflowmeter-orig,Establish Foothold,4,0,0,0,4
+wednesday-pvt,go-flows,cicflowmeter-fixed,ALL,376,147,55,22,152
+wednesday-pvt,go-flows,cicflowmeter-fixed,BENIGN,372,147,55,18,152
+wednesday-pvt,go-flows,cicflowmeter-fixed,Establish Foothold,4,0,0,4,0
+wednesday-pvt,go-flows,argus,ALL,376,133,0,124,119
+wednesday-pvt,go-flows,argus,BENIGN,372,133,0,120,119
+wednesday-pvt,go-flows,argus,Establish Foothold,4,0,0,4,0
+wednesday-pvt,go-flows,yaf,ALL,376,287,7,5,77
+wednesday-pvt,go-flows,yaf,BENIGN,372,287,3,5,77
+wednesday-pvt,go-flows,yaf,Establish Foothold,4,0,4,0,0
+wednesday-pvt,go-flows,joy,ALL,376,108,70,7,191
+wednesday-pvt,go-flows,joy,BENIGN,372,108,70,3,191
+wednesday-pvt,go-flows,joy,Establish Foothold,4,0,0,4,0
+wednesday-pvt,yaf,nfstream,ALL,371,277,2,18,74
+wednesday-pvt,yaf,nfstream,BENIGN,367,277,2,14,74
+wednesday-pvt,yaf,nfstream,Establish Foothold,4,0,0,4,0
+wednesday-pvt,yaf,zeek,ALL,371,155,2,57,157
+wednesday-pvt,yaf,zeek,BENIGN,367,155,2,53,157
+wednesday-pvt,yaf,zeek,Establish Foothold,4,0,0,4,0
+wednesday-pvt,yaf,tranalyzer,ALL,371,156,1,57,157
+wednesday-pvt,yaf,tranalyzer,BENIGN,367,156,1,53,157
+wednesday-pvt,yaf,tranalyzer,Establish Foothold,4,0,0,4,0
+wednesday-pvt,yaf,cicflowmeter-orig,ALL,371,31,99,0,241
+wednesday-pvt,yaf,cicflowmeter-orig,BENIGN,367,31,99,0,237
+wednesday-pvt,yaf,cicflowmeter-orig,Establish Foothold,4,0,0,0,4
+wednesday-pvt,yaf,cicflowmeter-fixed,ALL,371,144,56,22,149
+wednesday-pvt,yaf,cicflowmeter-fixed,BENIGN,367,144,56,18,149
+wednesday-pvt,yaf,cicflowmeter-fixed,Establish Foothold,4,0,0,4,0
+wednesday-pvt,yaf,argus,ALL,371,133,0,95,143
+wednesday-pvt,yaf,argus,BENIGN,367,133,0,91,143
+wednesday-pvt,yaf,argus,Establish Foothold,4,0,0,4,0
+wednesday-pvt,yaf,go-flows,ALL,371,287,8,2,74
+wednesday-pvt,yaf,go-flows,BENIGN,367,287,4,2,74
+wednesday-pvt,yaf,go-flows,Establish Foothold,4,0,4,0,0
+wednesday-pvt,yaf,joy,ALL,371,100,69,7,195
+wednesday-pvt,yaf,joy,BENIGN,367,100,69,3,195
+wednesday-pvt,yaf,joy,Establish Foothold,4,0,0,4,0
+wednesday-pvt,joy,nfstream,ALL,3152,110,20,2820,202
+wednesday-pvt,joy,nfstream,BENIGN,3152,110,20,2820,202
+wednesday-pvt,joy,zeek,ALL,3152,290,2,2835,25
+wednesday-pvt,joy,zeek,BENIGN,3152,290,2,2835,25
+wednesday-pvt,joy,tranalyzer,ALL,3152,209,0,2872,71
+wednesday-pvt,joy,tranalyzer,BENIGN,3152,209,0,2872,71
+wednesday-pvt,joy,cicflowmeter-orig,ALL,3152,33,367,2278,474
+wednesday-pvt,joy,cicflowmeter-orig,BENIGN,3152,33,367,2278,474
+wednesday-pvt,joy,cicflowmeter-fixed,ALL,3152,213,373,2468,98
+wednesday-pvt,joy,cicflowmeter-fixed,BENIGN,3152,213,373,2468,98
+wednesday-pvt,joy,argus,ALL,3152,202,0,2118,832
+wednesday-pvt,joy,argus,BENIGN,3152,202,0,2118,832
+wednesday-pvt,joy,go-flows,ALL,3152,108,23,2819,202
+wednesday-pvt,joy,go-flows,BENIGN,3152,108,23,2819,202
+wednesday-pvt,joy,yaf,ALL,3152,100,23,2821,208
+wednesday-pvt,joy,yaf,BENIGN,3152,100,23,2821,208
+thursday-pub,nfstream,zeek,ALL,6680,5366,25,106,1183
+thursday-pub,nfstream,zeek,BENIGN,6599,5285,25,106,1183
+thursday-pub,nfstream,zeek,Lateral Movement,81,81,0,0,0
+thursday-pub,nfstream,tranalyzer,ALL,6680,5372,14,118,1176
+thursday-pub,nfstream,tranalyzer,BENIGN,6599,5291,14,118,1176
+thursday-pub,nfstream,tranalyzer,Lateral Movement,81,81,0,0,0
+thursday-pub,nfstream,cicflowmeter-orig,ALL,6680,345,611,0,5724
+thursday-pub,nfstream,cicflowmeter-orig,BENIGN,6599,301,575,0,5723
+thursday-pub,nfstream,cicflowmeter-orig,Lateral Movement,81,44,36,0,1
+thursday-pub,nfstream,cicflowmeter-fixed,ALL,6680,5242,248,0,1190
+thursday-pub,nfstream,cicflowmeter-fixed,BENIGN,6599,5162,247,0,1190
+thursday-pub,nfstream,cicflowmeter-fixed,Lateral Movement,81,80,1,0,0
+thursday-pub,nfstream,argus,ALL,6680,4878,0,648,1154
+thursday-pub,nfstream,argus,BENIGN,6599,4797,0,648,1154
+thursday-pub,nfstream,argus,Lateral Movement,81,81,0,0,0
+thursday-pub,nfstream,go-flows,ALL,6680,6115,545,0,20
+thursday-pub,nfstream,go-flows,BENIGN,6599,6034,545,0,20
+thursday-pub,nfstream,go-flows,Lateral Movement,81,81,0,0,0
+thursday-pub,nfstream,yaf,ALL,6680,5815,483,44,338
+thursday-pub,nfstream,yaf,BENIGN,6599,5734,483,44,338
+thursday-pub,nfstream,yaf,Lateral Movement,81,81,0,0,0
+thursday-pub,nfstream,joy,ALL,6680,2491,566,0,3623
+thursday-pub,nfstream,joy,BENIGN,6599,2412,564,0,3623
+thursday-pub,nfstream,joy,Lateral Movement,81,79,2,0,0
+thursday-pub,zeek,nfstream,ALL,6705,5366,13,110,1216
+thursday-pub,zeek,nfstream,BENIGN,6624,5285,13,110,1216
+thursday-pub,zeek,nfstream,Lateral Movement,81,81,0,0,0
+thursday-pub,zeek,tranalyzer,ALL,6705,6588,1,91,25
+thursday-pub,zeek,tranalyzer,BENIGN,6624,6507,1,91,25
+thursday-pub,zeek,tranalyzer,Lateral Movement,81,81,0,0,0
+thursday-pub,zeek,cicflowmeter-orig,ALL,6705,331,525,5,5844
+thursday-pub,zeek,cicflowmeter-orig,BENIGN,6624,287,489,5,5843
+thursday-pub,zeek,cicflowmeter-orig,Lateral Movement,81,44,36,0,1
+thursday-pub,zeek,cicflowmeter-fixed,ALL,6705,6399,165,41,100
+thursday-pub,zeek,cicflowmeter-fixed,BENIGN,6624,6319,164,41,100
+thursday-pub,zeek,cicflowmeter-fixed,Lateral Movement,81,80,1,0,0
+thursday-pub,zeek,argus,ALL,6705,5965,0,714,26
+thursday-pub,zeek,argus,BENIGN,6624,5884,0,714,26
+thursday-pub,zeek,argus,Lateral Movement,81,81,0,0,0
+thursday-pub,zeek,go-flows,ALL,6705,5198,229,27,1251
+thursday-pub,zeek,go-flows,BENIGN,6624,5117,229,27,1251
+thursday-pub,zeek,go-flows,Lateral Movement,81,81,0,0,0
+thursday-pub,zeek,yaf,ALL,6705,5195,222,27,1261
+thursday-pub,zeek,yaf,BENIGN,6624,5114,222,27,1261
+thursday-pub,zeek,yaf,Lateral Movement,81,81,0,0,0
+thursday-pub,zeek,joy,ALL,6705,6115,469,69,52
+thursday-pub,zeek,joy,BENIGN,6624,6036,467,69,52
+thursday-pub,zeek,joy,Lateral Movement,81,79,2,0,0
+thursday-pub,tranalyzer,nfstream,ALL,6798,5372,19,83,1324
+thursday-pub,tranalyzer,nfstream,BENIGN,6717,5291,19,83,1324
+thursday-pub,tranalyzer,nfstream,Lateral Movement,81,81,0,0,0
+thursday-pub,tranalyzer,zeek,ALL,6798,6588,39,4,167
+thursday-pub,tranalyzer,zeek,BENIGN,6717,6507,39,4,167
+thursday-pub,tranalyzer,zeek,Lateral Movement,81,81,0,0,0
+thursday-pub,tranalyzer,cicflowmeter-orig,ALL,6798,331,530,0,5937
+thursday-pub,tranalyzer,cicflowmeter-orig,BENIGN,6717,287,494,0,5936
+thursday-pub,tranalyzer,cicflowmeter-orig,Lateral Movement,81,44,36,0,1
+thursday-pub,tranalyzer,cicflowmeter-fixed,ALL,6798,6155,171,0,472
+thursday-pub,tranalyzer,cicflowmeter-fixed,BENIGN,6717,6075,170,0,472
+thursday-pub,tranalyzer,cicflowmeter-fixed,Lateral Movement,81,80,1,0,0
+thursday-pub,tranalyzer,argus,ALL,6798,5979,0,651,168
+thursday-pub,tranalyzer,argus,BENIGN,6717,5898,0,651,168
+thursday-pub,tranalyzer,argus,Lateral Movement,81,81,0,0,0
+thursday-pub,tranalyzer,go-flows,ALL,6798,5192,248,0,1358
+thursday-pub,tranalyzer,go-flows,BENIGN,6717,5111,248,0,1358
+thursday-pub,tranalyzer,go-flows,Lateral Movement,81,81,0,0,0
+thursday-pub,tranalyzer,yaf,ALL,6798,5182,242,4,1370
+thursday-pub,tranalyzer,yaf,BENIGN,6717,5101,242,4,1370
+thursday-pub,tranalyzer,yaf,Lateral Movement,81,81,0,0,0
+thursday-pub,tranalyzer,joy,ALL,6798,2335,497,69,3897
+thursday-pub,tranalyzer,joy,BENIGN,6717,2256,495,69,3897
+thursday-pub,tranalyzer,joy,Lateral Movement,81,79,2,0,0
+thursday-pub,cicflowmeter-orig,nfstream,ALL,9348,345,39,2300,6664
+thursday-pub,cicflowmeter-orig,nfstream,BENIGN,9232,301,39,2229,6663
+thursday-pub,cicflowmeter-orig,nfstream,Lateral Movement,116,44,0,71,1
+thursday-pub,cicflowmeter-orig,zeek,ALL,9348,331,2,2280,6735
+thursday-pub,cicflowmeter-orig,zeek,BENIGN,9232,287,2,2209,6734
+thursday-pub,cicflowmeter-orig,zeek,Lateral Movement,116,44,0,71,1
+thursday-pub,cicflowmeter-orig,tranalyzer,ALL,9348,331,0,2291,6726
+thursday-pub,cicflowmeter-orig,tranalyzer,BENIGN,9232,287,0,2220,6725
+thursday-pub,cicflowmeter-orig,tranalyzer,Lateral Movement,116,44,0,71,1
+thursday-pub,cicflowmeter-orig,cicflowmeter-fixed,ALL,9348,1508,109,1150,6581
+thursday-pub,cicflowmeter-orig,cicflowmeter-fixed,BENIGN,9232,1461,109,1082,6580
+thursday-pub,cicflowmeter-orig,cicflowmeter-fixed,Lateral Movement,116,47,0,68,1
+thursday-pub,cicflowmeter-orig,argus,ALL,9348,527,0,2106,6715
+thursday-pub,cicflowmeter-orig,argus,BENIGN,9232,483,0,2035,6714
+thursday-pub,cicflowmeter-orig,argus,Lateral Movement,116,44,0,71,1
+thursday-pub,cicflowmeter-orig,go-flows,ALL,9348,345,39,2224,6740
+thursday-pub,cicflowmeter-orig,go-flows,BENIGN,9232,301,39,2153,6739
+thursday-pub,cicflowmeter-orig,go-flows,Lateral Movement,116,44,0,71,1
+thursday-pub,cicflowmeter-orig,yaf,ALL,9348,343,40,2234,6731
+thursday-pub,cicflowmeter-orig,yaf,BENIGN,9232,299,40,2163,6730
+thursday-pub,cicflowmeter-orig,yaf,Lateral Movement,116,44,0,71,1
+thursday-pub,cicflowmeter-orig,joy,ALL,9348,305,1432,769,6842
+thursday-pub,cicflowmeter-orig,joy,BENIGN,9232,261,1429,701,6841
+thursday-pub,cicflowmeter-orig,joy,Lateral Movement,116,44,3,68,1
+thursday-pub,cicflowmeter-fixed,nfstream,ALL,7934,5242,41,1326,1325
+thursday-pub,cicflowmeter-fixed,nfstream,BENIGN,7851,5162,41,1323,1325
+thursday-pub,cicflowmeter-fixed,nfstream,Lateral Movement,83,80,0,3,0
+thursday-pub,cicflowmeter-fixed,zeek,ALL,7934,6399,18,1307,210
+thursday-pub,cicflowmeter-fixed,zeek,BENIGN,7851,6319,18,1304,210
+thursday-pub,cicflowmeter-fixed,zeek,Lateral Movement,83,80,0,3,0
+thursday-pub,cicflowmeter-fixed,tranalyzer,ALL,7934,6155,0,1321,458
+thursday-pub,cicflowmeter-fixed,tranalyzer,BENIGN,7851,6075,0,1318,458
+thursday-pub,cicflowmeter-fixed,tranalyzer,Lateral Movement,83,80,0,3,0
+thursday-pub,cicflowmeter-fixed,cicflowmeter-orig,ALL,7934,1508,571,59,5796
+thursday-pub,cicflowmeter-fixed,cicflowmeter-orig,BENIGN,7851,1461,536,59,5795
+thursday-pub,cicflowmeter-fixed,cicflowmeter-orig,Lateral Movement,83,47,35,0,1
+thursday-pub,cicflowmeter-fixed,argus,ALL,7934,5799,0,1635,500
+thursday-pub,cicflowmeter-fixed,argus,BENIGN,7851,5719,0,1632,500
+thursday-pub,cicflowmeter-fixed,argus,Lateral Movement,83,80,0,3,0
+thursday-pub,cicflowmeter-fixed,go-flows,ALL,7934,4843,570,1163,1358
+thursday-pub,cicflowmeter-fixed,go-flows,BENIGN,7851,4763,570,1160,1358
+thursday-pub,cicflowmeter-fixed,go-flows,Lateral Movement,83,80,0,3,0
+thursday-pub,cicflowmeter-fixed,yaf,ALL,7934,4818,571,1188,1357
+thursday-pub,cicflowmeter-fixed,yaf,BENIGN,7851,4738,571,1185,1357
+thursday-pub,cicflowmeter-fixed,yaf,Lateral Movement,83,80,0,3,0
+thursday-pub,cicflowmeter-fixed,joy,ALL,7934,5843,1545,83,463
+thursday-pub,cicflowmeter-fixed,joy,BENIGN,7851,5763,1542,83,463
+thursday-pub,cicflowmeter-fixed,joy,Lateral Movement,83,80,3,0,0
+thursday-pub,argus,nfstream,ALL,6244,4878,256,0,1110
+thursday-pub,argus,nfstream,BENIGN,6163,4797,256,0,1110
+thursday-pub,argus,nfstream,Lateral Movement,81,81,0,0,0
+thursday-pub,argus,zeek,ALL,6244,5965,273,0,6
+thursday-pub,argus,zeek,BENIGN,6163,5884,273,0,6
+thursday-pub,argus,zeek,Lateral Movement,81,81,0,0,0
+thursday-pub,argus,tranalyzer,ALL,6244,5979,259,0,6
+thursday-pub,argus,tranalyzer,BENIGN,6163,5898,259,0,6
+thursday-pub,argus,tranalyzer,Lateral Movement,81,81,0,0,0
+thursday-pub,argus,cicflowmeter-orig,ALL,6244,527,547,0,5170
+thursday-pub,argus,cicflowmeter-orig,BENIGN,6163,483,511,0,5169
+thursday-pub,argus,cicflowmeter-orig,Lateral Movement,81,44,36,0,1
+thursday-pub,argus,cicflowmeter-fixed,ALL,6244,5799,418,0,27
+thursday-pub,argus,cicflowmeter-fixed,BENIGN,6163,5719,417,0,27
+thursday-pub,argus,cicflowmeter-fixed,Lateral Movement,81,80,1,0,0
+thursday-pub,argus,go-flows,ALL,6244,4336,798,0,1110
+thursday-pub,argus,go-flows,BENIGN,6163,4255,798,0,1110
+thursday-pub,argus,go-flows,Lateral Movement,81,81,0,0,0
+thursday-pub,argus,yaf,ALL,6244,4341,790,0,1113
+thursday-pub,argus,yaf,BENIGN,6163,4260,790,0,1113
+thursday-pub,argus,yaf,Lateral Movement,81,81,0,0,0
+thursday-pub,argus,joy,ALL,6244,5510,732,0,2
+thursday-pub,argus,joy,BENIGN,6163,5431,730,0,2
+thursday-pub,argus,joy,Lateral Movement,81,79,2,0,0
+thursday-pub,go-flows,nfstream,ALL,7477,6115,0,1337,25
+thursday-pub,go-flows,nfstream,BENIGN,7396,6034,0,1337,25
+thursday-pub,go-flows,nfstream,Lateral Movement,81,81,0,0,0
+thursday-pub,go-flows,zeek,ALL,7477,5198,11,554,1714
+thursday-pub,go-flows,zeek,BENIGN,7396,5117,11,554,1714
+thursday-pub,go-flows,zeek,Lateral Movement,81,81,0,0,0
+thursday-pub,go-flows,tranalyzer,ALL,7477,5192,0,593,1692
+thursday-pub,go-flows,tranalyzer,BENIGN,7396,5111,0,593,1692
+thursday-pub,go-flows,tranalyzer,Lateral Movement,81,81,0,0,0
+thursday-pub,go-flows,cicflowmeter-orig,ALL,7477,345,597,0,6535
+thursday-pub,go-flows,cicflowmeter-orig,BENIGN,7396,301,561,0,6534
+thursday-pub,go-flows,cicflowmeter-orig,Lateral Movement,81,44,36,0,1
+thursday-pub,go-flows,cicflowmeter-fixed,ALL,7477,4843,234,1163,1237
+thursday-pub,go-flows,cicflowmeter-fixed,BENIGN,7396,4763,233,1163,1237
+thursday-pub,go-flows,cicflowmeter-fixed,Lateral Movement,81,80,1,0,0
+thursday-pub,go-flows,argus,ALL,7477,4336,0,1976,1165
+thursday-pub,go-flows,argus,BENIGN,7396,4255,0,1976,1165
+thursday-pub,go-flows,argus,Lateral Movement,81,81,0,0,0
+thursday-pub,go-flows,yaf,ALL,7477,6034,823,168,452
+thursday-pub,go-flows,yaf,BENIGN,7396,5953,823,168,452
+thursday-pub,go-flows,yaf,Lateral Movement,81,81,0,0,0
+thursday-pub,go-flows,joy,ALL,7477,2319,555,864,3739
+thursday-pub,go-flows,joy,BENIGN,7396,2240,553,864,3739
+thursday-pub,go-flows,joy,Lateral Movement,81,79,2,0,0
+thursday-pub,yaf,nfstream,ALL,7447,5815,17,1187,428
+thursday-pub,yaf,nfstream,BENIGN,7366,5734,17,1187,428
+thursday-pub,yaf,nfstream,Lateral Movement,81,81,0,0,0
+thursday-pub,yaf,zeek,ALL,7447,5195,12,520,1720
+thursday-pub,yaf,zeek,BENIGN,7366,5114,12,520,1720
+thursday-pub,yaf,zeek,Lateral Movement,81,81,0,0,0
+thursday-pub,yaf,tranalyzer,ALL,7447,5182,2,559,1704
+thursday-pub,yaf,tranalyzer,BENIGN,7366,5101,2,559,1704
+thursday-pub,yaf,tranalyzer,Lateral Movement,81,81,0,0,0
+thursday-pub,yaf,cicflowmeter-orig,ALL,7447,343,586,0,6518
+thursday-pub,yaf,cicflowmeter-orig,BENIGN,7366,299,550,0,6517
+thursday-pub,yaf,cicflowmeter-orig,Lateral Movement,81,44,36,0,1
+thursday-pub,yaf,cicflowmeter-fixed,ALL,7447,4818,230,1163,1236
+thursday-pub,yaf,cicflowmeter-fixed,BENIGN,7366,4738,229,1163,1236
+thursday-pub,yaf,cicflowmeter-fixed,Lateral Movement,81,80,1,0,0
+thursday-pub,yaf,argus,ALL,7447,4341,0,1912,1194
+thursday-pub,yaf,argus,BENIGN,7366,4260,0,1912,1194
+thursday-pub,yaf,argus,Lateral Movement,81,81,0,0,0
+thursday-pub,yaf,go-flows,ALL,7447,6034,844,111,458
+thursday-pub,yaf,go-flows,BENIGN,7366,5953,844,111,458
+thursday-pub,yaf,go-flows,Lateral Movement,81,81,0,0,0
+thursday-pub,yaf,joy,ALL,7447,2293,542,864,3748
+thursday-pub,yaf,joy,BENIGN,7366,2214,540,864,3748
+thursday-pub,yaf,joy,Lateral Movement,81,79,2,0,0
+thursday-pub,joy,nfstream,ALL,11753,2491,24,5551,3687
+thursday-pub,joy,nfstream,BENIGN,11665,2412,24,5542,3687
+thursday-pub,joy,nfstream,Lateral Movement,88,79,0,9,0
+thursday-pub,joy,zeek,ALL,11753,6115,14,5559,65
+thursday-pub,joy,zeek,BENIGN,11665,6036,14,5550,65
+thursday-pub,joy,zeek,Lateral Movement,88,79,0,9,0
+thursday-pub,joy,tranalyzer,ALL,11753,2335,14,5630,3774
+thursday-pub,joy,tranalyzer,BENIGN,11665,2256,14,5621,3774
+thursday-pub,joy,tranalyzer,Lateral Movement,88,79,0,9,0
+thursday-pub,joy,cicflowmeter-orig,ALL,11753,305,877,4253,6318
+thursday-pub,joy,cicflowmeter-orig,BENIGN,11665,261,842,4247,6315
+thursday-pub,joy,cicflowmeter-orig,Lateral Movement,88,44,35,6,3
+thursday-pub,joy,cicflowmeter-fixed,ALL,11753,5843,583,4946,381
+thursday-pub,joy,cicflowmeter-fixed,BENIGN,11665,5763,583,4938,381
+thursday-pub,joy,cicflowmeter-fixed,Lateral Movement,88,80,0,8,0
+thursday-pub,joy,argus,ALL,11753,5510,0,5192,1051
+thursday-pub,joy,argus,BENIGN,11665,5431,0,5183,1051
+thursday-pub,joy,argus,Lateral Movement,88,79,0,9,0
+thursday-pub,joy,go-flows,ALL,11753,2319,495,5245,3694
+thursday-pub,joy,go-flows,BENIGN,11665,2240,495,5236,3694
+thursday-pub,joy,go-flows,Lateral Movement,88,79,0,9,0
+thursday-pub,joy,yaf,ALL,11753,2293,495,5257,3708
+thursday-pub,joy,yaf,BENIGN,11665,2214,495,5248,3708
+thursday-pub,joy,yaf,Lateral Movement,88,79,0,9,0
+thursday-pvt,nfstream,zeek,ALL,2223,625,8,94,1496
+thursday-pvt,nfstream,zeek,BENIGN,367,136,7,81,143
+thursday-pvt,nfstream,zeek,Lateral Movement,1856,489,1,13,1353
+thursday-pvt,nfstream,tranalyzer,ALL,2223,633,0,95,1495
+thursday-pvt,nfstream,tranalyzer,BENIGN,367,143,0,82,142
+thursday-pvt,nfstream,tranalyzer,Lateral Movement,1856,490,0,13,1353
+thursday-pvt,nfstream,cicflowmeter-orig,ALL,2223,67,81,1,2074
+thursday-pvt,nfstream,cicflowmeter-orig,BENIGN,367,36,74,1,256
+thursday-pvt,nfstream,cicflowmeter-orig,Lateral Movement,1856,31,7,0,1818
+thursday-pvt,nfstream,argus,ALL,2223,599,0,158,1466
+thursday-pvt,nfstream,argus,BENIGN,367,118,0,135,114
+thursday-pvt,nfstream,argus,Lateral Movement,1856,481,0,23,1352
+thursday-pvt,nfstream,go-flows,ALL,2223,2123,78,2,20
+thursday-pvt,nfstream,go-flows,BENIGN,367,329,16,2,20
+thursday-pvt,nfstream,go-flows,Lateral Movement,1856,1794,62,0,0
+thursday-pvt,nfstream,yaf,ALL,2223,1716,66,22,419
+thursday-pvt,nfstream,yaf,BENIGN,367,268,15,11,73
+thursday-pvt,nfstream,yaf,Lateral Movement,1856,1448,51,11,346
+thursday-pvt,nfstream,joy,ALL,2223,526,111,0,1586
+thursday-pvt,nfstream,joy,BENIGN,367,40,95,0,232
+thursday-pvt,nfstream,joy,Lateral Movement,1856,486,16,0,1354
+thursday-pvt,zeek,nfstream,ALL,2187,625,11,26,1525
+thursday-pvt,zeek,nfstream,BENIGN,334,135,6,25,168
+thursday-pvt,zeek,nfstream,Lateral Movement,1853,490,5,1,1357
+thursday-pvt,zeek,tranalyzer,ALL,2187,2084,0,81,22
+thursday-pvt,zeek,tranalyzer,BENIGN,334,240,0,72,22
+thursday-pvt,zeek,tranalyzer,Lateral Movement,1853,1844,0,9,0
+thursday-pvt,zeek,cicflowmeter-orig,ALL,2187,55,15,11,2106
+thursday-pvt,zeek,cicflowmeter-orig,BENIGN,334,30,8,10,286
+thursday-pvt,zeek,cicflowmeter-orig,Lateral Movement,1853,25,7,1,1820
+thursday-pvt,zeek,argus,ALL,2187,2012,0,153,22
+thursday-pvt,zeek,argus,BENIGN,334,178,0,134,22
+thursday-pvt,zeek,argus,Lateral Movement,1853,1834,0,19,0
+thursday-pvt,zeek,go-flows,ALL,2187,572,64,26,1525
+thursday-pvt,zeek,go-flows,BENIGN,334,135,6,25,168
+thursday-pvt,zeek,go-flows,Lateral Movement,1853,437,58,1,1357
+thursday-pvt,zeek,yaf,ALL,2187,570,57,22,1538
+thursday-pvt,zeek,yaf,BENIGN,334,128,4,21,181
+thursday-pvt,zeek,yaf,Lateral Movement,1853,442,53,1,1357
+thursday-pvt,zeek,joy,ALL,2187,2117,35,6,29
+thursday-pvt,zeek,joy,BENIGN,334,275,24,6,29
+thursday-pvt,zeek,joy,Lateral Movement,1853,1842,11,0,0
+thursday-pvt,tranalyzer,nfstream,ALL,2199,633,11,0,1555
+thursday-pvt,tranalyzer,nfstream,BENIGN,350,142,6,0,202
+thursday-pvt,tranalyzer,nfstream,Lateral Movement,1849,491,5,0,1353
+thursday-pvt,tranalyzer,zeek,ALL,2199,2084,33,0,82
+thursday-pvt,tranalyzer,zeek,BENIGN,350,240,28,0,82
+thursday-pvt,tranalyzer,zeek,Lateral Movement,1849,1844,5,0,0
+thursday-pvt,tranalyzer,cicflowmeter-orig,ALL,2199,58,14,0,2127
+thursday-pvt,tranalyzer,cicflowmeter-orig,BENIGN,350,32,7,0,311
+thursday-pvt,tranalyzer,cicflowmeter-orig,Lateral Movement,1849,26,7,0,1816
+thursday-pvt,tranalyzer,argus,ALL,2199,2021,0,96,82
+thursday-pvt,tranalyzer,argus,BENIGN,350,187,0,81,82
+thursday-pvt,tranalyzer,argus,Lateral Movement,1849,1834,0,15,0
+thursday-pvt,tranalyzer,go-flows,ALL,2199,571,73,0,1555
+thursday-pvt,tranalyzer,go-flows,BENIGN,350,142,6,0,202
+thursday-pvt,tranalyzer,go-flows,Lateral Movement,1849,429,67,0,1353
+thursday-pvt,tranalyzer,yaf,ALL,2199,566,67,0,1566
+thursday-pvt,tranalyzer,yaf,BENIGN,350,132,5,0,213
+thursday-pvt,tranalyzer,yaf,Lateral Movement,1849,434,62,0,1353
+thursday-pvt,tranalyzer,joy,ALL,2199,1976,58,0,165
+thursday-pvt,tranalyzer,joy,BENIGN,350,143,42,0,165
+thursday-pvt,tranalyzer,joy,Lateral Movement,1849,1833,16,0,0
+thursday-pvt,cicflowmeter-orig,nfstream,ALL,4088,67,43,1012,2966
+thursday-pvt,cicflowmeter-orig,nfstream,BENIGN,1780,32,43,998,707
+thursday-pvt,cicflowmeter-orig,nfstream,Lateral Movement,2308,35,0,14,2259
+thursday-pvt,cicflowmeter-orig,zeek,ALL,4088,55,3,1070,2960
+thursday-pvt,cicflowmeter-orig,zeek,BENIGN,1780,27,2,1049,702
+thursday-pvt,cicflowmeter-orig,zeek,Lateral Movement,2308,28,1,21,2258
+thursday-pvt,cicflowmeter-orig,tranalyzer,ALL,4088,58,0,1070,2960
+thursday-pvt,cicflowmeter-orig,tranalyzer,BENIGN,1780,29,0,1049,702
+thursday-pvt,cicflowmeter-orig,tranalyzer,Lateral Movement,2308,29,0,21,2258
+thursday-pvt,cicflowmeter-orig,argus,ALL,4088,40,0,799,3249
+thursday-pvt,cicflowmeter-orig,argus,BENIGN,1780,21,0,766,993
+thursday-pvt,cicflowmeter-orig,argus,Lateral Movement,2308,19,0,33,2256
+thursday-pvt,cicflowmeter-orig,go-flows,ALL,4088,67,43,1012,2966
+thursday-pvt,cicflowmeter-orig,go-flows,BENIGN,1780,32,43,998,707
+thursday-pvt,cicflowmeter-orig,go-flows,Lateral Movement,2308,35,0,14,2259
+thursday-pvt,cicflowmeter-orig,yaf,ALL,4088,58,43,1027,2960
+thursday-pvt,cicflowmeter-orig,yaf,BENIGN,1780,29,43,1006,702
+thursday-pvt,cicflowmeter-orig,yaf,Lateral Movement,2308,29,0,21,2258
+thursday-pvt,cicflowmeter-orig,joy,ALL,4088,49,1065,4,2970
+thursday-pvt,cicflowmeter-orig,joy,BENIGN,1780,18,1051,0,711
+thursday-pvt,cicflowmeter-orig,joy,Lateral Movement,2308,31,14,4,2259
+thursday-pvt,argus,nfstream,ALL,2038,599,17,0,1422
+thursday-pvt,argus,nfstream,BENIGN,199,118,11,0,70
+thursday-pvt,argus,nfstream,Lateral Movement,1839,481,6,0,1352
+thursday-pvt,argus,zeek,ALL,2038,2012,23,0,3
+thursday-pvt,argus,zeek,BENIGN,199,178,18,0,3
+thursday-pvt,argus,zeek,Lateral Movement,1839,1834,5,0,0
+thursday-pvt,argus,tranalyzer,ALL,2038,2021,14,0,3
+thursday-pvt,argus,tranalyzer,BENIGN,199,187,9,0,3
+thursday-pvt,argus,tranalyzer,Lateral Movement,1839,1834,5,0,0
+thursday-pvt,argus,cicflowmeter-orig,ALL,2038,40,12,0,1986
+thursday-pvt,argus,cicflowmeter-orig,BENIGN,199,21,6,0,172
+thursday-pvt,argus,cicflowmeter-orig,Lateral Movement,1839,19,6,0,1814
+thursday-pvt,argus,go-flows,ALL,2038,529,87,0,1422
+thursday-pvt,argus,go-flows,BENIGN,199,110,19,0,70
+thursday-pvt,argus,go-flows,Lateral Movement,1839,419,68,0,1352
+thursday-pvt,argus,yaf,ALL,2038,530,83,0,1425
+thursday-pvt,argus,yaf,BENIGN,199,110,16,0,73
+thursday-pvt,argus,yaf,Lateral Movement,1839,420,67,0,1352
+thursday-pvt,argus,joy,ALL,2038,1998,38,0,2
+thursday-pvt,argus,joy,BENIGN,199,169,28,0,2
+thursday-pvt,argus,joy,Lateral Movement,1839,1829,10,0,0
+thursday-pvt,go-flows,nfstream,ALL,2294,2123,8,142,21
+thursday-pvt,go-flows,nfstream,BENIGN,390,329,8,32,21
+thursday-pvt,go-flows,nfstream,Lateral Movement,1904,1794,0,110,0
+thursday-pvt,go-flows,zeek,ALL,2294,572,8,200,1514
+thursday-pvt,go-flows,zeek,BENIGN,390,136,7,94,153
+thursday-pvt,go-flows,zeek,Lateral Movement,1904,436,1,106,1361
+thursday-pvt,go-flows,tranalyzer,ALL,2294,571,0,219,1504
+thursday-pvt,go-flows,tranalyzer,BENIGN,390,143,0,96,151
+thursday-pvt,go-flows,tranalyzer,Lateral Movement,1904,428,0,123,1353
+thursday-pvt,go-flows,cicflowmeter-orig,ALL,2294,67,81,1,2145
+thursday-pvt,go-flows,cicflowmeter-orig,BENIGN,390,36,74,1,279
+thursday-pvt,go-flows,cicflowmeter-orig,Lateral Movement,1904,31,7,0,1866
+thursday-pvt,go-flows,argus,ALL,2294,529,0,298,1467
+thursday-pvt,go-flows,argus,BENIGN,390,110,0,165,115
+thursday-pvt,go-flows,argus,Lateral Movement,1904,419,0,133,1352
+thursday-pvt,go-flows,yaf,ALL,2294,1725,99,40,430
+thursday-pvt,go-flows,yaf,BENIGN,390,280,22,10,78
+thursday-pvt,go-flows,yaf,Lateral Movement,1904,1445,77,30,352
+thursday-pvt,go-flows,joy,ALL,2294,464,111,125,1594
+thursday-pvt,go-flows,joy,BENIGN,390,40,95,15,240
+thursday-pvt,go-flows,joy,Lateral Movement,1904,424,16,110,1354
+thursday-pvt,yaf,nfstream,ALL,2279,1716,15,117,431
+thursday-pvt,yaf,nfstream,BENIGN,383,268,11,28,76
+thursday-pvt,yaf,nfstream,Lateral Movement,1896,1448,4,89,355
+thursday-pvt,yaf,zeek,ALL,2279,570,7,178,1524
+thursday-pvt,yaf,zeek,BENIGN,383,129,6,85,163
+thursday-pvt,yaf,zeek,Lateral Movement,1896,441,1,93,1361
+thursday-pvt,yaf,tranalyzer,ALL,2279,566,0,198,1515
+thursday-pvt,yaf,tranalyzer,BENIGN,383,133,0,88,162
+thursday-pvt,yaf,tranalyzer,Lateral Movement,1896,433,0,110,1353
+thursday-pvt,yaf,cicflowmeter-orig,ALL,2279,58,82,1,2138
+thursday-pvt,yaf,cicflowmeter-orig,BENIGN,383,33,75,1,274
+thursday-pvt,yaf,cicflowmeter-orig,Lateral Movement,1896,25,7,0,1864
+thursday-pvt,yaf,argus,ALL,2279,530,0,253,1496
+thursday-pvt,yaf,argus,BENIGN,383,110,0,129,144
+thursday-pvt,yaf,argus,Lateral Movement,1896,420,0,124,1352
+thursday-pvt,yaf,go-flows,ALL,2279,1725,108,14,432
+thursday-pvt,yaf,go-flows,BENIGN,383,280,24,2,77
+thursday-pvt,yaf,go-flows,Lateral Movement,1896,1445,84,12,355
+thursday-pvt,yaf,joy,ALL,2279,451,104,125,1599
+thursday-pvt,yaf,joy,BENIGN,383,29,93,15,246
+thursday-pvt,yaf,joy,Lateral Movement,1896,422,11,110,1353
+thursday-pvt,joy,nfstream,ALL,6507,526,29,4318,1634
+thursday-pvt,joy,nfstream,BENIGN,4620,40,29,4277,274
+thursday-pvt,joy,nfstream,Lateral Movement,1887,486,0,41,1360
+thursday-pvt,joy,zeek,ALL,6507,2117,2,4359,29
+thursday-pvt,joy,zeek,BENIGN,4620,276,2,4313,29
+thursday-pvt,joy,zeek,Lateral Movement,1887,1841,0,46,0
+thursday-pvt,joy,tranalyzer,ALL,6507,1976,0,4425,106
+thursday-pvt,joy,tranalyzer,BENIGN,4620,144,0,4370,106
+thursday-pvt,joy,tranalyzer,Lateral Movement,1887,1832,0,55,0
+thursday-pvt,joy,cicflowmeter-orig,ALL,6507,49,510,3492,2456
+thursday-pvt,joy,cicflowmeter-orig,BENIGN,4620,22,507,3462,629
+thursday-pvt,joy,cicflowmeter-orig,Lateral Movement,1887,27,3,30,1827
+thursday-pvt,joy,argus,ALL,6507,1998,0,3420,1089
+thursday-pvt,joy,argus,BENIGN,4620,169,0,3362,1089
+thursday-pvt,joy,argus,Lateral Movement,1887,1829,0,58,0
+thursday-pvt,joy,go-flows,ALL,6507,464,92,4317,1634
+thursday-pvt,joy,go-flows,BENIGN,4620,40,30,4276,274
+thursday-pvt,joy,go-flows,Lateral Movement,1887,424,62,41,1360
+thursday-pvt,joy,yaf,ALL,6507,451,92,4321,1643
+thursday-pvt,joy,yaf,BENIGN,4620,29,30,4277,284
+thursday-pvt,joy,yaf,Lateral Movement,1887,422,62,44,1359
+friday-pub,nfstream,zeek,ALL,5341,4331,10,108,892
+friday-pub,nfstream,zeek,BENIGN,5339,4331,10,106,892
+friday-pub,nfstream,zeek,Data Exfiltration,2,0,0,2,0
+friday-pub,nfstream,tranalyzer,ALL,5341,4328,1,131,881
+friday-pub,nfstream,tranalyzer,BENIGN,5339,4328,1,129,881
+friday-pub,nfstream,tranalyzer,Data Exfiltration,2,0,0,2,0
+friday-pub,nfstream,cicflowmeter-orig,ALL,5341,328,389,0,4624
+friday-pub,nfstream,cicflowmeter-orig,BENIGN,5339,328,389,0,4622
+friday-pub,nfstream,cicflowmeter-orig,Data Exfiltration,2,0,0,0,2
+friday-pub,nfstream,cicflowmeter-fixed,ALL,5341,4276,164,0,901
+friday-pub,nfstream,cicflowmeter-fixed,BENIGN,5339,4274,164,0,901
+friday-pub,nfstream,cicflowmeter-fixed,Data Exfiltration,2,2,0,0,0
+friday-pub,nfstream,argus,ALL,5341,3986,0,498,857
+friday-pub,nfstream,argus,BENIGN,5339,3986,0,496,857
+friday-pub,nfstream,argus,Data Exfiltration,2,0,0,2,0
+friday-pub,nfstream,go-flows,ALL,5341,5068,253,0,20
+friday-pub,nfstream,go-flows,BENIGN,5339,5066,253,0,20
+friday-pub,nfstream,go-flows,Data Exfiltration,2,2,0,0,0
+friday-pub,nfstream,yaf,ALL,5341,4776,233,52,280
+friday-pub,nfstream,yaf,BENIGN,5339,4774,233,52,280
+friday-pub,nfstream,yaf,Data Exfiltration,2,2,0,0,0
+friday-pub,nfstream,joy,ALL,5341,1951,366,0,3024
+friday-pub,nfstream,joy,BENIGN,5339,1949,366,0,3024
+friday-pub,nfstream,joy,Data Exfiltration,2,2,0,0,0
+friday-pub,zeek,nfstream,ALL,5302,4331,19,25,927
+friday-pub,zeek,nfstream,BENIGN,5302,4331,19,25,927
+friday-pub,zeek,tranalyzer,ALL,5302,5167,1,112,22
+friday-pub,zeek,tranalyzer,BENIGN,5302,5167,1,112,22
+friday-pub,zeek,cicflowmeter-orig,ALL,5302,307,326,7,4662
+friday-pub,zeek,cicflowmeter-orig,BENIGN,5302,307,326,7,4662
+friday-pub,zeek,cicflowmeter-fixed,ALL,5302,5046,102,49,105
+friday-pub,zeek,cicflowmeter-fixed,BENIGN,5302,5046,102,49,105
+friday-pub,zeek,argus,ALL,5302,4785,0,494,23
+friday-pub,zeek,argus,BENIGN,5302,4785,0,494,23
+friday-pub,zeek,go-flows,ALL,5302,4201,154,21,926
+friday-pub,zeek,go-flows,BENIGN,5302,4201,154,21,926
+friday-pub,zeek,yaf,ALL,5302,4193,142,31,936
+friday-pub,zeek,yaf,BENIGN,5302,4193,142,31,936
+friday-pub,zeek,joy,ALL,5302,4960,300,12,30
+friday-pub,zeek,joy,BENIGN,5302,4960,300,12,30
+friday-pub,tranalyzer,nfstream,ALL,5385,4328,23,4,1030
+friday-pub,tranalyzer,nfstream,BENIGN,5385,4328,23,4,1030
+friday-pub,tranalyzer,zeek,ALL,5385,5167,48,2,168
+friday-pub,tranalyzer,zeek,BENIGN,5385,5167,48,2,168
+friday-pub,tranalyzer,cicflowmeter-orig,ALL,5385,307,327,0,4751
+friday-pub,tranalyzer,cicflowmeter-orig,BENIGN,5385,307,327,0,4751
+friday-pub,tranalyzer,cicflowmeter-fixed,ALL,5385,4847,106,0,432
+friday-pub,tranalyzer,cicflowmeter-fixed,BENIGN,5385,4847,106,0,432
+friday-pub,tranalyzer,argus,ALL,5385,4810,0,406,169
+friday-pub,tranalyzer,argus,BENIGN,5385,4810,0,406,169
+friday-pub,tranalyzer,go-flows,ALL,5385,4195,161,0,1029
+friday-pub,tranalyzer,go-flows,BENIGN,5385,4195,161,0,1029
+friday-pub,tranalyzer,yaf,ALL,5385,4192,149,4,1040
+friday-pub,tranalyzer,yaf,BENIGN,5385,4192,149,4,1040
+friday-pub,tranalyzer,joy,ALL,5385,1784,316,5,3280
+friday-pub,tranalyzer,joy,BENIGN,5385,1784,316,5,3280
+friday-pub,cicflowmeter-orig,nfstream,ALL,7091,328,42,1661,5060
+friday-pub,cicflowmeter-orig,nfstream,BENIGN,7089,328,42,1661,5058
+friday-pub,cicflowmeter-orig,nfstream,Data Exfiltration,2,0,0,0,2
+friday-pub,cicflowmeter-orig,zeek,ALL,7091,307,2,1722,5060
+friday-pub,cicflowmeter-orig,zeek,BENIGN,7089,307,2,1720,5060
+friday-pub,cicflowmeter-orig,zeek,Data Exfiltration,2,0,0,2,0
+friday-pub,cicflowmeter-orig,tranalyzer,ALL,7091,307,0,1739,5045
+friday-pub,cicflowmeter-orig,tranalyzer,BENIGN,7089,307,0,1737,5045
+friday-pub,cicflowmeter-orig,tranalyzer,Data Exfiltration,2,0,0,2,0
+friday-pub,cicflowmeter-orig,cicflowmeter-fixed,ALL,7091,1389,79,745,4878
+friday-pub,cicflowmeter-orig,cicflowmeter-fixed,BENIGN,7089,1389,79,745,4876
+friday-pub,cicflowmeter-orig,cicflowmeter-fixed,Data Exfiltration,2,0,0,0,2
+friday-pub,cicflowmeter-orig,argus,ALL,7091,420,0,1497,5174
+friday-pub,cicflowmeter-orig,argus,BENIGN,7089,420,0,1495,5174
+friday-pub,cicflowmeter-orig,argus,Data Exfiltration,2,0,0,2,0
+friday-pub,cicflowmeter-orig,go-flows,ALL,7091,328,43,1656,5064
+friday-pub,cicflowmeter-orig,go-flows,BENIGN,7089,328,43,1656,5062
+friday-pub,cicflowmeter-orig,go-flows,Data Exfiltration,2,0,0,0,2
+friday-pub,cicflowmeter-orig,yaf,ALL,7091,318,43,1678,5052
+friday-pub,cicflowmeter-orig,yaf,BENIGN,7089,318,43,1678,5050
+friday-pub,cicflowmeter-orig,yaf,Data Exfiltration,2,0,0,0,2
+friday-pub,cicflowmeter-orig,joy,ALL,7091,257,1211,468,5155
+friday-pub,cicflowmeter-orig,joy,BENIGN,7089,257,1211,468,5153
+friday-pub,cicflowmeter-orig,joy,Data Exfiltration,2,0,0,0,2
+friday-pub,cicflowmeter-fixed,nfstream,ALL,6410,4276,45,1063,1026
+friday-pub,cicflowmeter-fixed,nfstream,BENIGN,6410,4276,45,1063,1026
+friday-pub,cicflowmeter-fixed,zeek,ALL,6410,5046,22,1132,210
+friday-pub,cicflowmeter-fixed,zeek,BENIGN,6410,5046,22,1132,210
+friday-pub,cicflowmeter-fixed,tranalyzer,ALL,6410,4847,0,1155,408
+friday-pub,cicflowmeter-fixed,tranalyzer,BENIGN,6410,4847,0,1155,408
+friday-pub,cicflowmeter-fixed,cicflowmeter-orig,ALL,6410,1389,385,43,4593
+friday-pub,cicflowmeter-fixed,cicflowmeter-orig,BENIGN,6410,1389,385,43,4593
+friday-pub,cicflowmeter-fixed,argus,ALL,6410,4693,0,1224,493
+friday-pub,cicflowmeter-fixed,argus,BENIGN,6410,4693,0,1224,493
+friday-pub,cicflowmeter-fixed,go-flows,ALL,6410,4078,297,1009,1026
+friday-pub,cicflowmeter-fixed,go-flows,BENIGN,6410,4078,297,1009,1026
+friday-pub,cicflowmeter-fixed,yaf,ALL,6410,4042,297,1045,1026
+friday-pub,cicflowmeter-fixed,yaf,BENIGN,6410,4042,297,1045,1026
+friday-pub,cicflowmeter-fixed,joy,ALL,6410,4699,1280,16,415
+friday-pub,cicflowmeter-fixed,joy,BENIGN,6410,4699,1280,16,415
+friday-pub,argus,nfstream,ALL,4978,3986,175,0,817
+friday-pub,argus,nfstream,BENIGN,4978,3986,175,0,817
+friday-pub,argus,zeek,ALL,4978,4785,188,0,5
+friday-pub,argus,zeek,BENIGN,4978,4785,188,0,5
+friday-pub,argus,tranalyzer,ALL,4978,4810,163,0,5
+friday-pub,argus,tranalyzer,BENIGN,4978,4810,163,0,5
+friday-pub,argus,cicflowmeter-orig,ALL,4978,420,333,0,4225
+friday-pub,argus,cicflowmeter-orig,BENIGN,4978,420,333,0,4225
+friday-pub,argus,cicflowmeter-fixed,ALL,4978,4693,254,0,31
+friday-pub,argus,cicflowmeter-fixed,BENIGN,4978,4693,254,0,31
+friday-pub,argus,go-flows,ALL,4978,3734,428,0,816
+friday-pub,argus,go-flows,BENIGN,4978,3734,428,0,816
+friday-pub,argus,yaf,ALL,4978,3741,417,0,820
+friday-pub,argus,yaf,BENIGN,4978,3741,417,0,820
+friday-pub,argus,joy,ALL,4978,4527,447,2,2
+friday-pub,argus,joy,BENIGN,4978,4527,447,2,2
+friday-pub,go-flows,nfstream,ALL,5711,5068,0,619,24
+friday-pub,go-flows,nfstream,BENIGN,5709,5066,0,619,24
+friday-pub,go-flows,nfstream,Data Exfiltration,2,2,0,0,0
+friday-pub,go-flows,zeek,ALL,5711,4201,9,403,1098
+friday-pub,go-flows,zeek,BENIGN,5709,4201,9,401,1098
+friday-pub,go-flows,zeek,Data Exfiltration,2,0,0,2,0
+friday-pub,go-flows,tranalyzer,ALL,5711,4195,0,428,1088
+friday-pub,go-flows,tranalyzer,BENIGN,5709,4195,0,426,1088
+friday-pub,go-flows,tranalyzer,Data Exfiltration,2,0,0,2,0
+friday-pub,go-flows,cicflowmeter-orig,ALL,5711,328,388,2,4993
+friday-pub,go-flows,cicflowmeter-orig,BENIGN,5709,328,388,2,4991
+friday-pub,go-flows,cicflowmeter-orig,Data Exfiltration,2,0,0,0,2
+friday-pub,go-flows,cicflowmeter-fixed,ALL,5711,4078,162,566,905
+friday-pub,go-flows,cicflowmeter-fixed,BENIGN,5709,4076,162,566,905
+friday-pub,go-flows,cicflowmeter-fixed,Data Exfiltration,2,2,0,0,0
+friday-pub,go-flows,argus,ALL,5711,3734,0,1117,860
+friday-pub,go-flows,argus,BENIGN,5709,3734,0,1115,860
+friday-pub,go-flows,argus,Data Exfiltration,2,0,0,2,0
+friday-pub,go-flows,yaf,ALL,5711,4866,420,85,340
+friday-pub,go-flows,yaf,BENIGN,5709,4864,420,85,340
+friday-pub,go-flows,yaf,Data Exfiltration,2,2,0,0,0
+friday-pub,go-flows,joy,ALL,5711,1866,366,417,3062
+friday-pub,go-flows,joy,BENIGN,5709,1864,366,417,3062
+friday-pub,go-flows,joy,Data Exfiltration,2,2,0,0,0
+friday-pub,yaf,nfstream,ALL,5677,4776,19,568,314
+friday-pub,yaf,nfstream,BENIGN,5675,4774,19,568,314
+friday-pub,yaf,nfstream,Data Exfiltration,2,2,0,0,0
+friday-pub,yaf,zeek,ALL,5677,4193,14,363,1107
+friday-pub,yaf,zeek,BENIGN,5675,4193,14,361,1107
+friday-pub,yaf,zeek,Data Exfiltration,2,0,0,2,0
+friday-pub,yaf,tranalyzer,ALL,5677,4192,2,385,1098
+friday-pub,yaf,tranalyzer,BENIGN,5675,4192,2,383,1098
+friday-pub,yaf,tranalyzer,Data Exfiltration,2,0,0,2,0
+friday-pub,yaf,cicflowmeter-orig,ALL,5677,318,383,2,4974
+friday-pub,yaf,cicflowmeter-orig,BENIGN,5675,318,383,2,4972
+friday-pub,yaf,cicflowmeter-orig,Data Exfiltration,2,0,0,0,2
+friday-pub,yaf,cicflowmeter-fixed,ALL,5677,4042,164,566,905
+friday-pub,yaf,cicflowmeter-fixed,BENIGN,5675,4040,164,566,905
+friday-pub,yaf,cicflowmeter-fixed,Data Exfiltration,2,2,0,0,0
+friday-pub,yaf,argus,ALL,5677,3741,0,1048,888
+friday-pub,yaf,argus,BENIGN,5675,3741,0,1046,888
+friday-pub,yaf,argus,Data Exfiltration,2,0,0,2,0
+friday-pub,yaf,go-flows,ALL,5677,4866,433,47,331
+friday-pub,yaf,go-flows,BENIGN,5675,4864,433,47,331
+friday-pub,yaf,go-flows,Data Exfiltration,2,2,0,0,0
+friday-pub,yaf,joy,ALL,5677,1834,358,417,3068
+friday-pub,yaf,joy,BENIGN,5675,1832,358,417,3068
+friday-pub,yaf,joy,Data Exfiltration,2,2,0,0,0
+friday-pub,joy,nfstream,ALL,9728,1951,38,4671,3068
+friday-pub,joy,nfstream,BENIGN,9726,1949,38,4671,3068
+friday-pub,joy,nfstream,Data Exfiltration,2,2,0,0,0
+friday-pub,joy,zeek,ALL,9728,4960,3,4734,31
+friday-pub,joy,zeek,BENIGN,9726,4960,3,4732,31
+friday-pub,joy,zeek,Data Exfiltration,2,0,0,2,0
+friday-pub,joy,tranalyzer,ALL,9728,1784,1,4801,3142
+friday-pub,joy,tranalyzer,BENIGN,9726,1784,1,4799,3142
+friday-pub,joy,tranalyzer,Data Exfiltration,2,0,0,2,0
+friday-pub,joy,cicflowmeter-orig,ALL,9728,257,682,3782,5007
+friday-pub,joy,cicflowmeter-orig,BENIGN,9726,257,682,3782,5005
+friday-pub,joy,cicflowmeter-orig,Data Exfiltration,2,0,0,0,2
+friday-pub,joy,cicflowmeter-fixed,ALL,9728,4699,560,4144,325
+friday-pub,joy,cicflowmeter-fixed,BENIGN,9726,4697,560,4144,325
+friday-pub,joy,cicflowmeter-fixed,Data Exfiltration,2,2,0,0,0
+friday-pub,joy,argus,ALL,9728,4527,1,4170,1030
+friday-pub,joy,argus,BENIGN,9726,4527,1,4168,1030
+friday-pub,joy,argus,Data Exfiltration,2,0,0,2,0
+friday-pub,joy,go-flows,ALL,9728,1866,269,4525,3068
+friday-pub,joy,go-flows,BENIGN,9726,1864,269,4525,3068
+friday-pub,joy,go-flows,Data Exfiltration,2,2,0,0,0
+friday-pub,joy,yaf,ALL,9728,1834,269,4548,3077
+friday-pub,joy,yaf,BENIGN,9726,1832,269,4548,3077
+friday-pub,joy,yaf,Data Exfiltration,2,2,0,0,0
+friday-pvt,nfstream,zeek,ALL,1091,250,618,105,118
+friday-pvt,nfstream,zeek,BENIGN,1091,250,618,105,118
+friday-pvt,nfstream,tranalyzer,ALL,1091,861,1,110,119
+friday-pvt,nfstream,tranalyzer,BENIGN,1091,861,1,110,119
+friday-pvt,nfstream,cicflowmeter-orig,ALL,1091,701,121,0,269
+friday-pvt,nfstream,cicflowmeter-orig,BENIGN,1091,701,121,0,269
+friday-pvt,nfstream,cicflowmeter-fixed,ALL,1091,874,88,0,129
+friday-pvt,nfstream,cicflowmeter-fixed,BENIGN,1091,874,88,0,129
+friday-pvt,nfstream,argus,ALL,1091,822,0,177,92
+friday-pvt,nfstream,argus,BENIGN,1091,822,0,177,92
+friday-pvt,nfstream,go-flows,ALL,1091,1050,22,0,19
+friday-pvt,nfstream,go-flows,BENIGN,1091,1050,22,0,19
+friday-pvt,nfstream,yaf,ALL,1091,971,20,27,73
+friday-pvt,nfstream,yaf,BENIGN,1091,971,20,27,73
+friday-pvt,nfstream,joy,ALL,1091,797,106,0,188
+friday-pvt,nfstream,joy,BENIGN,1091,797,106,0,188
+friday-pvt,zeek,nfstream,ALL,2268,250,16,1243,759
+friday-pvt,zeek,nfstream,BENIGN,2268,250,16,1243,759
+friday-pvt,zeek,tranalyzer,ALL,2268,328,2,1918,20
+friday-pvt,zeek,tranalyzer,BENIGN,2268,328,2,1918,20
+friday-pvt,zeek,cicflowmeter-orig,ALL,2268,67,51,1239,911
+friday-pvt,zeek,cicflowmeter-orig,BENIGN,2268,67,51,1239,911
+friday-pvt,zeek,cicflowmeter-fixed,ALL,2268,283,20,1770,195
+friday-pvt,zeek,cicflowmeter-fixed,BENIGN,2268,283,20,1770,195
+friday-pvt,zeek,argus,ALL,2268,251,0,1994,23
+friday-pvt,zeek,argus,BENIGN,2268,251,0,1994,23
+friday-pvt,zeek,go-flows,ALL,2268,237,30,1241,760
+friday-pvt,zeek,go-flows,BENIGN,2268,237,30,1241,760
+friday-pvt,zeek,yaf,ALL,2268,234,22,1241,771
+friday-pvt,zeek,yaf,BENIGN,2268,234,22,1241,771
+friday-pvt,zeek,joy,ALL,2268,356,33,1855,24
+friday-pvt,zeek,joy,BENIGN,2268,356,33,1855,24
+friday-pvt,tranalyzer,nfstream,ALL,1064,861,16,4,183
+friday-pvt,tranalyzer,nfstream,BENIGN,1064,861,16,4,183
+friday-pvt,tranalyzer,zeek,ALL,1064,328,648,5,83
+friday-pvt,tranalyzer,zeek,BENIGN,1064,328,648,5,83
+friday-pvt,tranalyzer,cicflowmeter-orig,ALL,1064,681,49,0,334
+friday-pvt,tranalyzer,cicflowmeter-orig,BENIGN,1064,681,49,0,334
+friday-pvt,tranalyzer,cicflowmeter-fixed,ALL,1064,894,18,0,152
+friday-pvt,tranalyzer,cicflowmeter-fixed,BENIGN,1064,894,18,0,152
+friday-pvt,tranalyzer,argus,ALL,1064,871,0,107,86
+friday-pvt,tranalyzer,argus,BENIGN,1064,871,0,107,86
+friday-pvt,tranalyzer,go-flows,ALL,1064,847,30,0,187
+friday-pvt,tranalyzer,go-flows,BENIGN,1064,847,30,0,187
+friday-pvt,tranalyzer,yaf,ALL,1064,840,26,0,198
+friday-pvt,tranalyzer,yaf,BENIGN,1064,840,26,0,198
+friday-pvt,tranalyzer,joy,ALL,1064,822,54,4,184
+friday-pvt,tranalyzer,joy,BENIGN,1064,822,54,4,184
+friday-pvt,cicflowmeter-orig,nfstream,ALL,2572,701,35,1175,661
+friday-pvt,cicflowmeter-orig,nfstream,BENIGN,2572,701,35,1175,661
+friday-pvt,cicflowmeter-orig,zeek,ALL,2572,67,617,1226,662
+friday-pvt,cicflowmeter-orig,zeek,BENIGN,2572,67,617,1226,662
+friday-pvt,cicflowmeter-orig,tranalyzer,ALL,2572,681,0,1229,662
+friday-pvt,cicflowmeter-orig,tranalyzer,BENIGN,2572,681,0,1229,662
+friday-pvt,cicflowmeter-orig,cicflowmeter-fixed,ALL,2572,1875,136,155,406
+friday-pvt,cicflowmeter-orig,cicflowmeter-fixed,BENIGN,2572,1875,136,155,406
+friday-pvt,cicflowmeter-orig,argus,ALL,2572,660,0,967,945
+friday-pvt,cicflowmeter-orig,argus,BENIGN,2572,660,0,967,945
+friday-pvt,cicflowmeter-orig,go-flows,ALL,2572,701,35,1171,665
+friday-pvt,cicflowmeter-orig,go-flows,BENIGN,2572,701,35,1171,665
+friday-pvt,cicflowmeter-orig,yaf,ALL,2572,686,35,1187,664
+friday-pvt,cicflowmeter-orig,yaf,BENIGN,2572,686,35,1187,664
+friday-pvt,cicflowmeter-orig,joy,ALL,2572,686,1137,83,666
+friday-pvt,cicflowmeter-orig,joy,BENIGN,2572,686,1137,83,666
+friday-pvt,cicflowmeter-fixed,nfstream,ALL,2327,874,42,1090,321
+friday-pvt,cicflowmeter-fixed,nfstream,BENIGN,2327,874,42,1090,321
+friday-pvt,cicflowmeter-fixed,zeek,ALL,2327,283,628,1153,263
+friday-pvt,cicflowmeter-fixed,zeek,BENIGN,2327,283,628,1153,263
+friday-pvt,cicflowmeter-fixed,tranalyzer,ALL,2327,894,0,1153,280
+friday-pvt,cicflowmeter-fixed,tranalyzer,BENIGN,2327,894,0,1153,280
+friday-pvt,cicflowmeter-fixed,cicflowmeter-orig,ALL,2327,1875,192,31,229
+friday-pvt,cicflowmeter-fixed,cicflowmeter-orig,BENIGN,2327,1875,192,31,229
+friday-pvt,cicflowmeter-fixed,argus,ALL,2327,852,0,922,553
+friday-pvt,cicflowmeter-fixed,argus,BENIGN,2327,852,0,922,553
+friday-pvt,cicflowmeter-fixed,go-flows,ALL,2327,854,63,1085,325
+friday-pvt,cicflowmeter-fixed,go-flows,BENIGN,2327,854,63,1085,325
+friday-pvt,cicflowmeter-fixed,yaf,ALL,2327,836,63,1103,325
+friday-pvt,cicflowmeter-fixed,yaf,BENIGN,2327,836,63,1103,325
+friday-pvt,cicflowmeter-fixed,joy,ALL,2327,896,1153,7,271
+friday-pvt,cicflowmeter-fixed,joy,BENIGN,2327,896,1153,7,271
+friday-pvt,argus,nfstream,ALL,894,822,22,0,50
+friday-pvt,argus,nfstream,BENIGN,894,822,22,0,50
+friday-pvt,argus,zeek,ALL,894,251,638,0,5
+friday-pvt,argus,zeek,BENIGN,894,251,638,0,5
+friday-pvt,argus,tranalyzer,ALL,894,871,18,0,5
+friday-pvt,argus,tranalyzer,BENIGN,894,871,18,0,5
+friday-pvt,argus,cicflowmeter-orig,ALL,894,660,47,0,187
+friday-pvt,argus,cicflowmeter-orig,BENIGN,894,660,47,0,187
+friday-pvt,argus,cicflowmeter-fixed,ALL,894,852,20,0,22
+friday-pvt,argus,cicflowmeter-fixed,BENIGN,894,852,20,0,22
+friday-pvt,argus,go-flows,ALL,894,801,43,0,50
+friday-pvt,argus,go-flows,BENIGN,894,801,43,0,50
+friday-pvt,argus,yaf,ALL,894,801,40,0,53
+friday-pvt,argus,yaf,BENIGN,894,801,40,0,53
+friday-pvt,argus,joy,ALL,894,860,29,0,5
+friday-pvt,argus,joy,BENIGN,894,860,29,0,5
+friday-pvt,go-flows,nfstream,ALL,1128,1050,0,59,19
+friday-pvt,go-flows,nfstream,BENIGN,1128,1050,0,59,19
+friday-pvt,go-flows,zeek,ALL,1128,237,617,134,140
+friday-pvt,go-flows,zeek,BENIGN,1128,237,617,134,140
+friday-pvt,go-flows,tranalyzer,ALL,1128,847,0,151,130
+friday-pvt,go-flows,tranalyzer,BENIGN,1128,847,0,151,130
+friday-pvt,go-flows,cicflowmeter-orig,ALL,1128,701,120,0,307
+friday-pvt,go-flows,cicflowmeter-orig,BENIGN,1128,701,120,0,307
+friday-pvt,go-flows,cicflowmeter-fixed,ALL,1128,854,87,53,134
+friday-pvt,go-flows,cicflowmeter-fixed,BENIGN,1128,854,87,53,134
+friday-pvt,go-flows,argus,ALL,1128,801,0,234,93
+friday-pvt,go-flows,argus,BENIGN,1128,801,0,234,93
+friday-pvt,go-flows,yaf,ALL,1128,993,21,35,79
+friday-pvt,go-flows,yaf,BENIGN,1128,993,21,35,79
+friday-pvt,go-flows,joy,ALL,1128,782,106,45,195
+friday-pvt,go-flows,joy,BENIGN,1128,782,106,45,195
+friday-pvt,yaf,nfstream,ALL,1113,971,13,52,77
+friday-pvt,yaf,nfstream,BENIGN,1113,971,13,52,77
+friday-pvt,yaf,zeek,ALL,1113,234,617,111,151
+friday-pvt,yaf,zeek,BENIGN,1113,234,617,111,151
+friday-pvt,yaf,tranalyzer,ALL,1113,840,0,132,141
+friday-pvt,yaf,tranalyzer,BENIGN,1113,840,0,132,141
+friday-pvt,yaf,cicflowmeter-orig,ALL,1113,686,122,0,305
+friday-pvt,yaf,cicflowmeter-orig,BENIGN,1113,686,122,0,305
+friday-pvt,yaf,cicflowmeter-fixed,ALL,1113,836,90,53,134
+friday-pvt,yaf,cicflowmeter-fixed,BENIGN,1113,836,90,53,134
+friday-pvt,yaf,argus,ALL,1113,801,0,191,121
+friday-pvt,yaf,argus,BENIGN,1113,801,0,191,121
+friday-pvt,yaf,go-flows,ALL,1113,993,36,2,82
+friday-pvt,yaf,go-flows,BENIGN,1113,993,36,2,82
+friday-pvt,yaf,joy,ALL,1113,759,103,45,206
+friday-pvt,yaf,joy,BENIGN,1113,759,103,45,206
+friday-pvt,joy,nfstream,ALL,5246,797,37,4192,220
+friday-pvt,joy,nfstream,BENIGN,5246,797,37,4192,220
+friday-pvt,joy,zeek,ALL,5246,356,618,4248,24
+friday-pvt,joy,zeek,BENIGN,5246,356,618,4248,24
+friday-pvt,joy,tranalyzer,ALL,5246,822,1,4303,120
+friday-pvt,joy,tranalyzer,BENIGN,5246,822,1,4303,120
+friday-pvt,joy,cicflowmeter-orig,ALL,5246,686,435,3515,610
+friday-pvt,joy,cicflowmeter-orig,BENIGN,5246,686,435,3515,610
+friday-pvt,joy,cicflowmeter-fixed,ALL,5246,896,678,3563,109
+friday-pvt,joy,cicflowmeter-fixed,BENIGN,5246,896,678,3563,109
+friday-pvt,joy,argus,ALL,5246,860,0,3362,1024
+friday-pvt,joy,argus,BENIGN,5246,860,0,3362,1024
+friday-pvt,joy,go-flows,ALL,5246,782,53,4191,220
+friday-pvt,joy,go-flows,BENIGN,5246,782,53,4191,220
+friday-pvt,joy,yaf,ALL,5246,759,53,4202,232
+friday-pvt,joy,yaf,BENIGN,5246,759,53,4202,232

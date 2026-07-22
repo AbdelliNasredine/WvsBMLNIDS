@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "etbert",
+    "regime": "embedding",
+    "model": "rf",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 1,
+    "dataset": "dapt20",
+    "n_features": 768,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "c42a07fd482cc6cb",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.5022507444610865,
+    "weighted_f1": 0.8458143862136345,
+    "balanced_accuracy": 0.4661144012886155,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.8714543883083209,
+        "recall": 0.9547215287940087,
+        "f1-score": 0.9111896155110089,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9355828220858896,
+        "recall": 0.6926570779712339,
+        "f1-score": 0.7959982601130926,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.11796246648793565,
+        "recall": 0.0757314974182444,
+        "f1-score": 0.09224318658280922,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.8594795539033457,
+        "recall": 0.6074619022595901,
+        "f1-score": 0.7118226600985221,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        11091,
+        0,
+        33,
+        329,
+        164
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        382,
+        0,
+        915,
+        0,
+        24
+      ],
+      [
+        530,
+        0,
+        6,
+        44,
+        1
+      ],
+      [
+        723,
+        0,
+        24,
+        0,
+        1156
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 17.8
+}

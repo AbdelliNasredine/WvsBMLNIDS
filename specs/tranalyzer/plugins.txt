@@ -1,0 +1,15 @@
+# Tranalyzer2 plugin set for the study.
+# The current image (env/docker/tranalyzer) builds the DEFAULT plugin set via
+# autogen.sh, which provides basicFlow, basicStats, tcpFlags, pktSIATHisto
+# (confirmed present in _flows.txt output).
+#
+# Plan v2 §5 additionally requests tcpStates and icmpDecode. If those are not in
+# the default set, build them explicitly with:
+#   t2build basicFlow basicStats tcpFlags tcpStates pktSIATHisto icmpDecode
+# and record the exact plugin versions here.
+basicFlow
+basicStats
+tcpFlags
+tcpStates
+pktSIATHisto
+icmpDecode

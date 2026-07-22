@@ -45,6 +45,7 @@ def run(
     out_dir: Path,
     workdir: str = "/work",
     extra_mounts: list[tuple[Path, str, str]] | None = None,
+    env: dict[str, str] | None = None,
     timeout: int | None = None,
 ) -> subprocess.CompletedProcess:
     """Run ``container_cmd`` in ``image`` with the pcap dir + out dir mounted.
@@ -69,5 +70,9 @@ def run(
     for host, cont, mode in (extra_mounts or []):
         mounts += ["-v", f"{_win_mount(host)}:{cont}:{mode}"]
 
-    cmd = ["docker", "run", "--rm", "-w", workdir, *mounts, image, *container_cmd]
+    env_flags = []
+    for k, v in (env or {}).items():
+        env_flags += ["-e", f"{k}={v}"]
+
+    cmd = ["docker", "run", "--rm", "-w", workdir, *mounts, *env_flags, image, *container_cmd]
     return subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)

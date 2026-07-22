@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "yatc",
+    "regime": "embedding",
+    "model": "mlp",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 1,
+    "dataset": "dapt20",
+    "n_features": 192,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "a39b089a120525c9",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.7049620567965309,
+    "weighted_f1": 0.9488687875132292,
+    "balanced_accuracy": 0.7414777622878823,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9793183028581572,
+        "recall": 0.9497288456572265,
+        "f1-score": 0.9642966394266486,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9923896499238964,
+        "recall": 0.9871309613928841,
+        "f1-score": 0.989753320683112,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.5305466237942122,
+        "recall": 0.8519793459552496,
+        "f1-score": 0.6538969616908851,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.9151832460732985,
+        "recall": 0.9185496584340515,
+        "f1-score": 0.9168633621820089,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        11033,
+        0,
+        4,
+        425,
+        155
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        1304,
+        4,
+        6
+      ],
+      [
+        81,
+        0,
+        4,
+        495,
+        1
+      ],
+      [
+        144,
+        0,
+        2,
+        9,
+        1748
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 9.3
+}

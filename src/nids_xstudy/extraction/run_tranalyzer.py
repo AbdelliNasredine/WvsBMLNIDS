@@ -24,15 +24,20 @@ from . import _docker
 from .base import RunMeta, pcap_fingerprint, write_outputs
 
 TOOL = "tranalyzer"
-IMAGE = "nids-xstudy/tranalyzer:0.9.2"
+IMAGE = "nids-xstudy/tranalyzer:0.9.4"
 
-# Tranalyzer column name -> canonical core column
+# Tranalyzer column name -> canonical core column. The 'A' record is the
+# initiator-oriented bidirectional flow (pktsSnt=fwd, pktsRcvd=bwd); Tranalyzer
+# also emits a duplicate 'B' reverse record per bidirectional connection, which
+# we drop (see to_canonical) to get one flow per connection like the other
+# tools. Bytes are L7/payload bytes (l7Bytes*) — a documented byte-semantics
+# divergence vs NFStream/Zeek IP-layer bytes.
 _MAP = {
     "srcIP": "src_ip", "dstIP": "dst_ip",
     "srcPort": "src_port", "dstPort": "dst_port", "l4Proto": "proto",
     "timeFirst": "t_start", "timeLast": "t_end", "duration": "duration",
-    "numPktsSnt": "pkts_fwd", "numPktsRcvd": "pkts_bwd",
-    "numBytesSnt": "bytes_fwd", "numBytesRcvd": "bytes_bwd",
+    "pktsSnt": "pkts_fwd", "pktsRcvd": "pkts_bwd",
+    "l7BytesSnt": "bytes_fwd", "l7BytesRcvd": "bytes_bwd",
     "flowInd": "flow_id",
 }
 
@@ -46,6 +51,12 @@ def parse_flows_txt(path: Path | str) -> pd.DataFrame:
 
 
 def to_canonical(t: pd.DataFrame, *, dataset: str, capture: str) -> pd.DataFrame:
+    # Keep only the initiator-oriented 'A' records; drop Tranalyzer's duplicate
+    # 'B' reverse records so there is one flow per connection. Records with no
+    # direction column (non-bidirectional) are kept.
+    if "dir" in t.columns:
+        t = t[t["dir"].astype("string").str.strip().isin(["A", ""]) | t["dir"].isna()]
+        t = t.reset_index(drop=True)
     n = len(t)
     out = pd.DataFrame(index=range(n))
     for src, canon in _MAP.items():

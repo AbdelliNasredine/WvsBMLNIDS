@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "raw-cnn",
+    "regime": "embedding",
+    "model": "rf",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 2,
+    "dataset": "dapt20",
+    "n_features": 128,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "b33758c7b4d8e584",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.5863070546306355,
+    "weighted_f1": 0.904774135892472,
+    "balanced_accuracy": 0.586658055854753,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9398167965071483,
+        "recall": 0.9449944047516571,
+        "f1-score": 0.9423984891406988,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9461883408071748,
+        "recall": 0.9583648750946253,
+        "f1-score": 0.9522376833396013,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.1963882618510158,
+        "recall": 0.14974182444061962,
+        "f1-score": 0.169921875,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.8541560428352881,
+        "recall": 0.8801891749868629,
+        "f1-score": 0.8669772256728778,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        10978,
+        0,
+        8,
+        356,
+        275
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        46,
+        0,
+        1266,
+        0,
+        9
+      ],
+      [
+        491,
+        0,
+        1,
+        87,
+        2
+      ],
+      [
+        165,
+        0,
+        63,
+        0,
+        1675
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 3.6
+}

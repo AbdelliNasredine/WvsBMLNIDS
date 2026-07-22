@@ -1,0 +1,102 @@
+{
+  "config": {
+    "tool": "argus",
+    "regime": "native",
+    "model": "xgb",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 2,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 7,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "8788ae372f060ef6",
+  "git_commit": null,
+  "n_train": 33183,
+  "n_test": 14222,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_StartTime",
+    "tool_LastTime",
+    "tool_Dur",
+    "tool_SrcPkts",
+    "tool_DstPkts",
+    "tool_SrcBytes",
+    "tool_DstBytes"
+  ],
+  "metrics": {
+    "macro_f1": 0.9550797457729668,
+    "weighted_f1": 0.9853384770605306,
+    "balanced_accuracy": 0.9515804405349526,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9889973210868733,
+        "recall": 0.9911784447214498,
+        "f1-score": 0.9900866816723337,
+        "support": 10429.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9954372623574145,
+        "recall": 0.996953541507997,
+        "f1-score": 0.9961948249619482,
+        "support": 1313.0
+      },
+      "Lateral Movement": {
+        "precision": 0.8525179856115108,
+        "recall": 0.8229166666666666,
+        "f1-score": 0.8374558303886925,
+        "support": 576.0
+      },
+      "Reconnaissance": {
+        "precision": 0.9978936282253817,
+        "recall": 0.9952731092436975,
+        "f1-score": 0.996581646068893,
+        "support": 1904.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        10337,
+        6,
+        82,
+        4
+      ],
+      [
+        4,
+        1309,
+        0,
+        0
+      ],
+      [
+        102,
+        0,
+        474,
+        0
+      ],
+      [
+        9,
+        0,
+        0,
+        1895
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "feature_importances": {
+    "tool_SrcBytes": 0.3621310591697693,
+    "tool_DstBytes": 0.21967212855815887,
+    "tool_LastTime": 0.14213064312934875,
+    "tool_StartTime": 0.08593346178531647,
+    "tool_SrcPkts": 0.07639794796705246,
+    "tool_Dur": 0.06628155708312988,
+    "tool_DstPkts": 0.04745316877961159
+  },
+  "wall_seconds": 1.9
+}

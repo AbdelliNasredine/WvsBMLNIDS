@@ -1,0 +1,16 @@
+# Flow-assembly configs for the black-box study (plan §3, §8).
+# The "reference" config is the primary; the others are Phase-B3 ablations.
+reference:
+  idle_timeout: 120.0
+  active_timeout: 1800.0
+  max_pkts: 32          # superset image; per-model builders/ablations truncate down
+  max_bytes: 128
+  name: reference
+
+# Phase-B3 assembly ablations (RQ-B3)
+idle15:
+  idle_timeout: 15.0
+  active_timeout: 1800.0
+  max_pkts: 32
+  max_bytes: 128
+  name: idle15

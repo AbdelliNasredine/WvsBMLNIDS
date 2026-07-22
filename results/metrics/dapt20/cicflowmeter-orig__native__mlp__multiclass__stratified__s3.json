@@ -1,0 +1,177 @@
+{
+  "config": {
+    "tool": "cicflowmeter-orig",
+    "regime": "native",
+    "model": "mlp",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 3,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 72,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "0894fc3b41abe5b1",
+  "git_commit": null,
+  "n_train": 57226,
+  "n_test": 24526,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_Src Port",
+    "tool_Dst Port",
+    "tool_Protocol",
+    "tool_Flow Duration",
+    "tool_Total Fwd Packet",
+    "tool_Total Bwd packets",
+    "tool_Total Length of Fwd Packet",
+    "tool_Total Length of Bwd Packet",
+    "tool_Fwd Packet Length Max",
+    "tool_Fwd Packet Length Min",
+    "tool_Fwd Packet Length Mean",
+    "tool_Fwd Packet Length Std",
+    "tool_Bwd Packet Length Max",
+    "tool_Bwd Packet Length Min",
+    "tool_Bwd Packet Length Mean",
+    "tool_Bwd Packet Length Std",
+    "tool_Flow Bytes/s",
+    "tool_Flow Packets/s",
+    "tool_Flow IAT Mean",
+    "tool_Flow IAT Std",
+    "tool_Flow IAT Max",
+    "tool_Flow IAT Min",
+    "tool_Fwd IAT Total",
+    "tool_Fwd IAT Mean",
+    "tool_Fwd IAT Std",
+    "tool_Fwd IAT Max",
+    "tool_Fwd IAT Min",
+    "tool_Bwd IAT Total",
+    "tool_Bwd IAT Mean",
+    "tool_Bwd IAT Std",
+    "tool_Bwd IAT Max",
+    "tool_Bwd IAT Min",
+    "tool_Fwd PSH Flags",
+    "tool_Fwd Header Length",
+    "tool_Bwd Header Length",
+    "tool_Fwd Packets/s",
+    "tool_Bwd Packets/s",
+    "tool_Packet Length Min",
+    "tool_Packet Length Max",
+    "tool_Packet Length Mean",
+    "tool_Packet Length Std",
+    "tool_Packet Length Variance",
+    "tool_FIN Flag Count",
+    "tool_SYN Flag Count",
+    "tool_RST Flag Count",
+    "tool_PSH Flag Count",
+    "tool_ACK Flag Count",
+    "tool_CWR Flag Count",
+    "tool_ECE Flag Count",
+    "tool_Down/Up Ratio",
+    "tool_Average Packet Size",
+    "tool_Fwd Segment Size Avg",
+    "tool_Bwd Segment Size Avg",
+    "tool_Bwd Bytes/Bulk Avg",
+    "tool_Bwd Packet/Bulk Avg",
+    "tool_Bwd Bulk Rate Avg",
+    "tool_Subflow Fwd Packets",
+    "tool_Subflow Fwd Bytes",
+    "tool_Subflow Bwd Packets",
+    "tool_Subflow Bwd Bytes",
+    "tool_FWD Init Win Bytes",
+    "tool_Bwd Init Win Bytes",
+    "tool_Fwd Act Data Pkts",
+    "tool_Fwd Seg Size Min",
+    "tool_Active Mean",
+    "tool_Active Std",
+    "tool_Active Max",
+    "tool_Active Min",
+    "tool_Idle Mean",
+    "tool_Idle Std",
+    "tool_Idle Max",
+    "tool_Idle Min"
+  ],
+  "metrics": {
+    "macro_f1": 0.7566490231573199,
+    "weighted_f1": 0.9765976801330247,
+    "balanced_accuracy": 0.762598449636694,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9856523940809092,
+        "recall": 0.983991462113127,
+        "f1-score": 0.9848212277940185,
+        "support": 17803.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9883132060771328,
+        "recall": 0.981431334622824,
+        "f1-score": 0.984860248447205,
+        "support": 2585.0
+      },
+      "Lateral Movement": {
+        "precision": 0.8284625158831004,
+        "recall": 0.8968363136176066,
+        "f1-score": 0.8612945838837517,
+        "support": 727.0
+      },
+      "Reconnaissance": {
+        "precision": 0.9538099441012062,
+        "recall": 0.950733137829912,
+        "f1-score": 0.9522690556616243,
+        "support": 3410.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        17518,
+        0,
+        19,
+        121,
+        145
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        28,
+        0,
+        2537,
+        13,
+        7
+      ],
+      [
+        63,
+        0,
+        7,
+        652,
+        5
+      ],
+      [
+        163,
+        0,
+        4,
+        1,
+        3242
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "feature_importances": null,
+  "wall_seconds": 10.7
+}

@@ -1,0 +1,57 @@
+{
+  "config": {
+    "tool": "raw-cnn",
+    "regime": "embedding",
+    "model": "mlp",
+    "task": "binary",
+    "split": "temporal",
+    "seed": 0,
+    "dataset": "dapt20",
+    "n_features": 128,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "ded25fea3053ffcc",
+  "git_commit": null,
+  "n_train": 36075,
+  "n_test": 15335,
+  "metrics": {
+    "macro_f1": 0.563511997344558,
+    "weighted_f1": 0.8334562948664013,
+    "balanced_accuracy": 0.5526137327331013,
+    "per_class": {
+      "0": {
+        "precision": 0.8857377161210962,
+        "recall": 0.9675276201851299,
+        "f1-score": 0.9248278568625352,
+        "support": 13396.0
+      },
+      "1": {
+        "precision": 0.3803418803418803,
+        "recall": 0.1376998452810727,
+        "f1-score": 0.20219613782658083,
+        "support": 1939.0
+      }
+    },
+    "fpr": 0.03247237981487011,
+    "attack_recall": 0.1376998452810727,
+    "attack_precision": 0.3803418803418803,
+    "auc_pr": 0.3058216607844616,
+    "confusion_matrix": [
+      [
+        12961,
+        435
+      ],
+      [
+        1672,
+        267
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "wall_seconds": 8.6
+}

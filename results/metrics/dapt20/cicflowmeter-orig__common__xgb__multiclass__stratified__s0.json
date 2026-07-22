@@ -1,0 +1,124 @@
+{
+  "config": {
+    "tool": "cicflowmeter-orig",
+    "regime": "common",
+    "model": "xgb",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 0,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 9,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "53eed5579c472608",
+  "git_commit": null,
+  "n_train": 57226,
+  "n_test": 24526,
+  "n_test_unseen_class": 0,
+  "features": [
+    "duration",
+    "pkts_fwd",
+    "pkts_bwd",
+    "bytes_fwd",
+    "bytes_bwd",
+    "tot_pkts",
+    "tot_bytes",
+    "is_tcp",
+    "is_udp"
+  ],
+  "metrics": {
+    "macro_f1": 0.60302916531509,
+    "weighted_f1": 0.9107089729684112,
+    "balanced_accuracy": 0.5976574182064527,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9575668660422074,
+        "recall": 0.9532101331236309,
+        "f1-score": 0.9553835327234342,
+        "support": 17803.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.8393174546747245,
+        "recall": 0.9133462282398452,
+        "f1-score": 0.8747684327528714,
+        "support": 2585.0
+      },
+      "Lateral Movement": {
+        "precision": 0.5347593582887701,
+        "recall": 0.2751031636863824,
+        "f1-score": 0.36330608537693004,
+        "support": 727.0
+      },
+      "Reconnaissance": {
+        "precision": 0.7981752833840199,
+        "recall": 0.8466275659824047,
+        "f1-score": 0.8216877757222143,
+        "support": 3410.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        16970,
+        0,
+        118,
+        171,
+        544
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        62,
+        0,
+        2361,
+        1,
+        161
+      ],
+      [
+        381,
+        0,
+        121,
+        200,
+        25
+      ],
+      [
+        308,
+        0,
+        213,
+        2,
+        2887
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "feature_importances": {
+    "is_tcp": 0.69161456823349,
+    "is_udp": 0.1729651242494583,
+    "bytes_bwd": 0.038162220269441605,
+    "tot_pkts": 0.03439879044890404,
+    "duration": 0.016652628779411316,
+    "tot_bytes": 0.0146853132173419,
+    "pkts_fwd": 0.012681626714766026,
+    "bytes_fwd": 0.01049709226936102,
+    "pkts_bwd": 0.008342674002051353
+  },
+  "wall_seconds": 2.7
+}

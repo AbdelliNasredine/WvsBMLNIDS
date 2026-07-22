@@ -1,0 +1,888 @@
+# DAPT2020 labeling rules (DERIVED; see scripts/derive_dapt20_rules.py).
+#
+# HYBRID labeling (approved): the clean-separable stages below are matched
+# by the time+IP+port engine on attack-EXCLUSIVE source IPs. The
+# Reconnaissance stage is NOT here -- it is not separable by 5-tuple+time
+# and is projected from DAPT's per-flow label (data/labels/dapt20/
+# recon_flows.parquet) at label time by nids_xstudy.labeling.dapt_recon.
+#
+# Times are UTC (tz +00:00). CSV local time is Arizona MST; measured
+# offset UTC = local + 7 h (verified across all captures).
+
+dataset: dapt20
+benign_label: BENIGN
+
+timezone:
+  capture_tz: America/Phoenix   # Arizona MST, UTC-7, no DST
+  windows_tz: UTC
+  note: >
+    Windows in UTC. corrected_UTC = MST_local + 7. Reconnaissance is
+    projected per-flow (hybrid), not a window rule.
+
+attacks:
+  - name: 'wednesday-pub Establish Foothold 214510'
+    label: 'Establish Foothold'
+    date: 2019-07-17
+    start_local: "21:45:10"
+    end_local:   "22:25:13"
+    tz: "+00:00"
+    attackers: [206.207.50.50, 209.147.138.211]
+    victims:   [192.168.3.29]
+    dst_ports: [9000, 9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 223433'
+    label: 'Establish Foothold'
+    date: 2019-07-17
+    start_local: "22:34:33"
+    end_local:   "22:59:27"
+    tz: "+00:00"
+    attackers: [206.207.50.50, 209.147.138.211]
+    victims:   [192.168.3.29]
+    dst_ports: [80, 9000, 9002, 9003]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 235245'
+    label: 'Establish Foothold'
+    date: 2019-07-17
+    start_local: "23:52:45"
+    end_local:   "23:55:46"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002, 43186]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 000547'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "00:05:47"
+    end_local:   "00:06:47"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 001553'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "00:15:53"
+    end_local:   "00:16:53"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 002559'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "00:25:59"
+    end_local:   "00:26:59"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 003605'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "00:36:05"
+    end_local:   "00:47:12"
+    tz: "+00:00"
+    attackers: [206.207.50.50, 209.147.138.11]
+    victims:   [192.168.3.29]
+    dst_ports: [9000, 9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 005618'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "00:56:18"
+    end_local:   "01:07:24"
+    tz: "+00:00"
+    attackers: [206.207.50.50, 209.147.138.211, 209.147.138.38]
+    victims:   [192.168.3.29]
+    dst_ports: [9000, 9002, 9003]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 011630'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "01:16:30"
+    end_local:   "01:17:30"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 012636'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "01:26:36"
+    end_local:   "01:27:36"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 013643'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "01:36:43"
+    end_local:   "01:37:43"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 014649'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "01:46:49"
+    end_local:   "01:57:25"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 020701'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "02:07:01"
+    end_local:   "02:08:01"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 021708'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "02:17:08"
+    end_local:   "02:18:08"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 022714'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "02:27:14"
+    end_local:   "02:28:14"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 023720'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "02:37:20"
+    end_local:   "02:38:20"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 024726'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "02:47:26"
+    end_local:   "02:48:26"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 025732'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "02:57:32"
+    end_local:   "02:58:32"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 030739'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "03:07:39"
+    end_local:   "03:08:39"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 031745'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "03:17:45"
+    end_local:   "03:18:45"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 032751'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "03:27:51"
+    end_local:   "03:28:51"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 033757'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "03:37:57"
+    end_local:   "03:38:57"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 034803'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "03:48:03"
+    end_local:   "03:57:34"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 040816'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "04:08:16"
+    end_local:   "04:26:10"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002, 47448]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pub Establish Foothold 050147'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "05:01:47"
+    end_local:   "05:18:47"
+    tz: "+00:00"
+    attackers: [206.207.50.50, 72.201.228.135]
+    victims:   [192.168.3.29]
+    dst_ports: [9000, 9002, 53192, 54362, 54492, 54712, 56524]
+    proto: [6]
+    directional: true
+    capture: wednesday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pvt Establish Foothold 012233'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "01:22:33"
+    end_local:   "01:23:43"
+    tz: "+00:00"
+    attackers: [206.207.50.35]
+    victims:   [192.168.3.30]
+    dst_ports: [34570, 34574]
+    proto: [6]
+    directional: true
+    capture: wednesday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pvt Establish Foothold 052813'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "05:28:13"
+    end_local:   "05:29:13"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.30]
+    dst_ports: [53368]
+    proto: [6]
+    directional: true
+    capture: wednesday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'wednesday-pvt Establish Foothold 054131'
+    label: 'Establish Foothold'
+    date: 2019-07-18
+    start_local: "05:41:31"
+    end_local:   "05:42:31"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.30]
+    dst_ports: [53374]
+    proto: [6]
+    directional: true
+    capture: wednesday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pub Lateral Movement 212137'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "21:21:37"
+    end_local:   "21:26:23"
+    tz: "+00:00"
+    attackers: [209.147.138.38]
+    victims:   [192.168.3.29]
+    dst_ports: [9000, 9002, 9003]
+    proto: [6]
+    directional: true
+    capture: thursday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pub Lateral Movement 213747'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "21:37:47"
+    end_local:   "21:44:10"
+    tz: "+00:00"
+    attackers: [209.147.138.11, 209.147.138.38]
+    victims:   [192.168.3.29]
+    dst_ports: [9000]
+    proto: [6]
+    directional: true
+    capture: thursday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pub Lateral Movement 215730'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "21:57:30"
+    end_local:   "21:59:55"
+    tz: "+00:00"
+    attackers: [209.147.138.38]
+    victims:   [192.168.3.29]
+    dst_ports: [9000]
+    proto: [6]
+    directional: true
+    capture: thursday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pub Lateral Movement 222641'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "22:26:41"
+    end_local:   "22:27:41"
+    tz: "+00:00"
+    attackers: [209.147.138.11]
+    victims:   [192.168.3.29]
+    dst_ports: [9000]
+    proto: [6]
+    directional: true
+    capture: thursday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pub Lateral Movement 224033'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "22:40:33"
+    end_local:   "22:41:35"
+    tz: "+00:00"
+    attackers: [209.147.138.211]
+    victims:   [192.168.3.29]
+    dst_ports: [9000]
+    proto: [6]
+    directional: true
+    capture: thursday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pub Lateral Movement 225741'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "22:57:41"
+    end_local:   "23:03:41"
+    tz: "+00:00"
+    attackers: [209.147.138.11]
+    victims:   [192.168.3.29]
+    dst_ports: [9000, 9003]
+    proto: [6]
+    directional: true
+    capture: thursday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pub Lateral Movement 234419'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "23:44:19"
+    end_local:   "23:45:19"
+    tz: "+00:00"
+    attackers: [209.147.138.11]
+    victims:   [192.168.3.29]
+    dst_ports: [9000]
+    proto: [6]
+    directional: true
+    capture: thursday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pub Lateral Movement 033553'
+    label: 'Lateral Movement'
+    date: 2019-07-19
+    start_local: "03:35:53"
+    end_local:   "03:37:38"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: thursday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pub Lateral Movement 035947'
+    label: 'Lateral Movement'
+    date: 2019-07-19
+    start_local: "03:59:47"
+    end_local:   "04:01:11"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: thursday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pub Lateral Movement 041115'
+    label: 'Lateral Movement'
+    date: 2019-07-19
+    start_local: "04:11:15"
+    end_local:   "04:17:01"
+    tz: "+00:00"
+    attackers: [206.207.50.50, 72.201.228.135]
+    victims:   [192.168.3.29]
+    dst_ports: [9002]
+    proto: [6]
+    directional: true
+    capture: thursday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 192824'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "19:28:24"
+    end_local:   "19:29:24"
+    tz: "+00:00"
+    attackers: [192.168.3.29]
+    victims:   []
+    dst_ports: [5353]
+    proto: [17]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 194644'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "19:46:44"
+    end_local:   "19:57:04"
+    tz: "+00:00"
+    attackers: [192.168.3.29, 192.168.3.34]
+    victims:   [192.168.3.30]
+    proto: [0, 6]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 200657'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "20:06:57"
+    end_local:   "20:08:56"
+    tz: "+00:00"
+    attackers: [192.168.3.34]
+    victims:   [192.168.3.30]
+    dst_ports: [80]
+    proto: [6]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 202824'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "20:28:24"
+    end_local:   "20:29:24"
+    tz: "+00:00"
+    attackers: [192.168.3.29]
+    victims:   []
+    dst_ports: [5353]
+    proto: [17]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 211357'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "21:13:57"
+    end_local:   "21:15:10"
+    tz: "+00:00"
+    attackers: [192.168.3.34]
+    victims:   [192.168.3.30]
+    dst_ports: [22]
+    proto: [6]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 212630'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "21:26:30"
+    end_local:   "21:27:30"
+    tz: "+00:00"
+    attackers: [192.168.3.29]
+    victims:   []
+    dst_ports: [5353]
+    proto: [17]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 215645'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "21:56:45"
+    end_local:   "22:02:11"
+    tz: "+00:00"
+    attackers: [192.168.3.29]
+    victims:   [192.168.3.30]
+    dst_ports: [3306]
+    proto: [6]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 221413'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "22:14:13"
+    end_local:   "22:16:37"
+    tz: "+00:00"
+    attackers: [192.168.3.29]
+    victims:   [192.168.3.30]
+    dst_ports: [53]
+    proto: [6]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 222824'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "22:28:24"
+    end_local:   "22:29:24"
+    tz: "+00:00"
+    attackers: [192.168.3.29]
+    victims:   []
+    dst_ports: [5353]
+    proto: [17]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 231022'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "23:10:22"
+    end_local:   "23:16:58"
+    tz: "+00:00"
+    attackers: [192.168.3.29, 192.168.3.34]
+    victims:   [192.168.3.30]
+    dst_ports: [22, 5353]
+    proto: [6, 17]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 232824'
+    label: 'Lateral Movement'
+    date: 2019-07-18
+    start_local: "23:28:24"
+    end_local:   "23:29:24"
+    tz: "+00:00"
+    attackers: [192.168.3.29]
+    victims:   []
+    dst_ports: [5353]
+    proto: [17]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 000112'
+    label: 'Lateral Movement'
+    date: 2019-07-19
+    start_local: "00:01:12"
+    end_local:   "00:02:12"
+    tz: "+00:00"
+    attackers: [192.168.3.29]
+    victims:   [192.168.3.30]
+    dst_ports: [3306]
+    proto: [6]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 002824'
+    label: 'Lateral Movement'
+    date: 2019-07-19
+    start_local: "00:28:24"
+    end_local:   "00:29:51"
+    tz: "+00:00"
+    attackers: [192.168.3.29]
+    victims:   [192.168.3.30]
+    dst_ports: [22, 5353]
+    proto: [6, 17]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 011402'
+    label: 'Lateral Movement'
+    date: 2019-07-19
+    start_local: "01:14:02"
+    end_local:   "01:41:12"
+    tz: "+00:00"
+    attackers: [192.168.3.29, 192.168.3.34]
+    victims:   [192.168.3.30]
+    dst_ports: [22, 139, 445, 5353]
+    proto: [6, 17]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 020118'
+    label: 'Lateral Movement'
+    date: 2019-07-19
+    start_local: "02:01:18"
+    end_local:   "02:12:28"
+    tz: "+00:00"
+    attackers: [192.168.3.29, 192.168.3.34]
+    victims:   [192.168.3.30]
+    dst_ports: [445, 3306]
+    proto: [6]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 022809'
+    label: 'Lateral Movement'
+    date: 2019-07-19
+    start_local: "02:28:09"
+    end_local:   "02:34:30"
+    tz: "+00:00"
+    attackers: [192.168.3.29, 192.168.3.34]
+    victims:   [192.168.3.30]
+    dst_ports: [445, 5353]
+    proto: [6, 17]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 032731'
+    label: 'Lateral Movement'
+    date: 2019-07-19
+    start_local: "03:27:31"
+    end_local:   "03:29:24"
+    tz: "+00:00"
+    attackers: [192.168.3.29, 192.168.3.34]
+    victims:   [192.168.3.30]
+    dst_ports: [22, 5353]
+    proto: [6, 17]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 035321'
+    label: 'Lateral Movement'
+    date: 2019-07-19
+    start_local: "03:53:21"
+    end_local:   "04:02:27"
+    tz: "+00:00"
+    attackers: [192.168.3.29, 192.168.3.34]
+    victims:   [192.168.3.30]
+    dst_ports: [445, 3306]
+    proto: [6]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 041521'
+    label: 'Lateral Movement'
+    date: 2019-07-19
+    start_local: "04:15:21"
+    end_local:   "04:18:46"
+    tz: "+00:00"
+    attackers: [192.168.3.29]
+    victims:   [192.168.3.30]
+    dst_ports: [22]
+    proto: [6]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'thursday-pvt Lateral Movement 042747'
+    label: 'Lateral Movement'
+    date: 2019-07-19
+    start_local: "04:27:47"
+    end_local:   "04:32:41"
+    tz: "+00:00"
+    attackers: [192.168.3.29, 192.168.3.34]
+    victims:   [192.168.3.30]
+    dst_ports: [445, 3306, 5353]
+    proto: [6, 17]
+    directional: true
+    capture: thursday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'friday-pub Data Exfiltration 235135'
+    label: 'Data Exfiltration'
+    date: 2019-07-19
+    start_local: "23:51:35"
+    end_local:   "23:59:59"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [36018, 40310, 45004]
+    proto: [6]
+    directional: true
+    capture: friday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'friday-pub Data Exfiltration 033241'
+    label: 'Data Exfiltration'
+    date: 2019-07-20
+    start_local: "03:32:41"
+    end_local:   "03:40:36"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [46400, 47274]
+    proto: [6]
+    directional: true
+    capture: friday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'friday-pub Data Exfiltration 052002'
+    label: 'Data Exfiltration'
+    date: 2019-07-20
+    start_local: "05:20:02"
+    end_local:   "05:26:02"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.29]
+    dst_ports: [57472, 58938, 59430, 59622]
+    proto: [6]
+    directional: true
+    capture: friday-pub
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'
+
+  - name: 'friday-pvt Data Exfiltration 233117'
+    label: 'Data Exfiltration'
+    date: 2019-07-19
+    start_local: "23:31:17"
+    end_local:   "23:42:23"
+    tz: "+00:00"
+    attackers: [206.207.50.50]
+    victims:   [192.168.3.30]
+    dst_ports: [39840, 43196, 45164, 47046, 60674]
+    proto: [6]
+    directional: true
+    capture: friday-pvt
+    source: 'derived from DAPT CSV (attack-exclusive src IP + window)'

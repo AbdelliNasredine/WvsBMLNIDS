@@ -1,0 +1,56 @@
+{
+  "config": {
+    "tool": "nfstream-native",
+    "regime": "embedding",
+    "model": "xgb",
+    "task": "binary",
+    "split": "stratified",
+    "seed": 1,
+    "dataset": "cicids2017",
+    "n_features": 58,
+    "extractor_family": "nfm",
+    "cfg_name": "sample"
+  },
+  "config_hash": "240307c85e095ef4",
+  "git_commit": null,
+  "n_train": 99665,
+  "n_test": 42714,
+  "metrics": {
+    "macro_f1": 0.99875151470312,
+    "weighted_f1": 0.9987824806367726,
+    "balanced_accuracy": 0.9986536578457554,
+    "per_class": {
+      "0": {
+        "precision": 0.9992767330588628,
+        "recall": 0.9978333333333333,
+        "f1-score": 0.9985545115917052,
+        "support": 18000.0
+      },
+      "1": {
+        "precision": 0.9984236054971706,
+        "recall": 0.9994739823581775,
+        "f1-score": 0.9989485178145348,
+        "support": 24714.0
+      }
+    },
+    "fpr": 0.0021666666666666666,
+    "attack_recall": 0.9994739823581775,
+    "attack_precision": 0.9984236054971706,
+    "auc_pr": 0.999903603476187,
+    "confusion_matrix": [
+      [
+        17961,
+        39
+      ],
+      [
+        13,
+        24701
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "wall_seconds": 2.5
+}

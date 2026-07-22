@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "netfound",
+    "regime": "embedding",
+    "model": "logreg",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 4,
+    "dataset": "dapt20",
+    "n_features": 1024,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "ae1ec75ff2d1a478",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.7323741093734364,
+    "weighted_f1": 0.9320044578788249,
+    "balanced_accuracy": 0.9685708386934255,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9978170083523159,
+        "recall": 0.904966858913661,
+        "f1-score": 0.9491265291382657,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.125,
+        "recall": 1.0,
+        "f1-score": 0.2222222222222222,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9679582712369598,
+        "recall": 0.9833459500378501,
+        "f1-score": 0.9755914382275629,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.4598360655737705,
+        "recall": 0.9655765920826161,
+        "f1-score": 0.6229872293170461,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.8122572291756581,
+        "recall": 0.9889647924330005,
+        "f1-score": 0.8919431279620853,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        10513,
+        5,
+        27,
+        640,
+        432
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        1,
+        1299,
+        16,
+        2
+      ],
+      [
+        7,
+        1,
+        11,
+        561,
+        1
+      ],
+      [
+        13,
+        0,
+        5,
+        3,
+        1882
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 55.2
+}

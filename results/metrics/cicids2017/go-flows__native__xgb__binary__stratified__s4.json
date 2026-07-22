@@ -1,0 +1,88 @@
+{
+  "config": {
+    "tool": "go-flows",
+    "regime": "native",
+    "model": "xgb",
+    "task": "binary",
+    "split": "stratified",
+    "seed": 4,
+    "include_port": false,
+    "dataset": "cicids2017",
+    "n_features": 13,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "17558793db279704",
+  "git_commit": null,
+  "n_train": 400000,
+  "n_test": 715708,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_flowStartMilliseconds",
+    "tool_flowEndMilliseconds",
+    "tool_sourceTransportPort",
+    "tool_destinationTransportPort",
+    "tool_protocolIdentifier",
+    "tool_packetTotalCount",
+    "tool_octetTotalCount",
+    "tool_tcpSynTotalCount",
+    "tool_tcpFinTotalCount",
+    "tool_tcpRstTotalCount",
+    "tool_tcpPshTotalCount",
+    "tool_tcpAckTotalCount",
+    "tool_tcpUrgTotalCount"
+  ],
+  "metrics": {
+    "macro_f1": 0.9997209284138809,
+    "weighted_f1": 0.9997932192976754,
+    "balanced_accuracy": 0.999757381418897,
+    "per_class": {
+      "0": {
+        "precision": 0.9998981404143648,
+        "recall": 0.9998277768209823,
+        "f1-score": 0.9998629573797451,
+        "support": 539997.0
+      },
+      "1": {
+        "precision": 0.9994708362494239,
+        "recall": 0.9996869860168117,
+        "f1-score": 0.9995788994480168,
+        "support": 175711.0
+      }
+    },
+    "fpr": 0.0001722231790176612,
+    "attack_recall": 0.9996869860168117,
+    "attack_precision": 0.9994708362494239,
+    "auc_pr": 0.9999943533150205,
+    "confusion_matrix": [
+      [
+        539904,
+        93
+      ],
+      [
+        55,
+        175656
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "feature_importances": {
+    "tool_tcpRstTotalCount": 0.8078145384788513,
+    "tool_protocolIdentifier": 0.08417175710201263,
+    "tool_tcpPshTotalCount": 0.021513227373361588,
+    "tool_destinationTransportPort": 0.020266931504011154,
+    "tool_flowEndMilliseconds": 0.014118092134594917,
+    "tool_octetTotalCount": 0.011903580278158188,
+    "tool_flowStartMilliseconds": 0.009322039783000946,
+    "tool_tcpSynTotalCount": 0.008802453987300396,
+    "tool_tcpAckTotalCount": 0.00792611576616764,
+    "tool_packetTotalCount": 0.005892000161111355,
+    "tool_tcpFinTotalCount": 0.005144444759935141,
+    "tool_sourceTransportPort": 0.003124898299574852,
+    "tool_tcpUrgTotalCount": 0.0
+  },
+  "wall_seconds": 7.4
+}

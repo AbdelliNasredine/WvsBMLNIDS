@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "nfstream-native",
+    "regime": "embedding",
+    "model": "logreg",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 1,
+    "dataset": "dapt20",
+    "n_features": 53,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "2f2ab65d242ef0f7",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.6340701233024769,
+    "weighted_f1": 0.8418491005146972,
+    "balanced_accuracy": 0.9074351470826238,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9953785211267606,
+        "recall": 0.7786864078505639,
+        "f1-score": 0.8737985993721323,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.2857142857142857,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.8089456869009585,
+        "recall": 0.9583648750946253,
+        "f1-score": 0.8773388773388774,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.22687681459975115,
+        "recall": 0.9414802065404475,
+        "f1-score": 0.36564171122994654,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.6944326391840204,
+        "recall": 0.8586442459274829,
+        "f1-score": 0.7678571428571429,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        9046,
+        4,
+        68,
+        1816,
+        683
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        11,
+        1,
+        1266,
+        18,
+        25
+      ],
+      [
+        13,
+        0,
+        10,
+        547,
+        11
+      ],
+      [
+        18,
+        0,
+        221,
+        30,
+        1634
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 2.5
+}

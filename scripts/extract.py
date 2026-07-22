@@ -23,6 +23,9 @@ TOOLS = {
     "cicflowmeter-fixed": ("nids_xstudy.extraction.run_cicflowmeter", {"variant": "fixed"}),
     "argus": ("nids_xstudy.extraction.run_argus", {}),
     "tranalyzer": ("nids_xstudy.extraction.run_tranalyzer", {}),
+    "go-flows": ("nids_xstudy.extraction.run_goflows", {}),
+    "joy": ("nids_xstudy.extraction.run_joy", {}),
+    "yaf": ("nids_xstudy.extraction.run_yaf", {}),
 }
 
 

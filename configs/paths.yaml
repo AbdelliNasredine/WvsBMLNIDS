@@ -8,6 +8,8 @@
 # Raw input PCAPs, per dataset.                    [NIDS_PCAP_ROOT overrides cicids2017]
 pcaps:
   cicids2017: "E:/CIC-IDS-2017/PCAPs"
+  dapt20: "E:/DAPT20/pcap-data"
+  dapt20: "E:/DAPT20/pcap-data"
 
 # Root for generated data (extracted/, canonical/). [NIDS_DATA_ROOT]
 data_root: "E:/CIC-IDS-2017/study_outputs"

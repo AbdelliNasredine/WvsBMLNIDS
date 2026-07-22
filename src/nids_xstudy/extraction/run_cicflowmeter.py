@@ -78,14 +78,26 @@ def to_canonical(raw: pd.DataFrame, *, dataset: str, capture: str, tool: str) ->
     out["dst_ip"] = out["dst_ip"].astype("string")
     out["proto"] = out["proto"].map(C.proto_to_number)
 
-    # timestamp (flow start) -> UTC epoch; duration is microseconds
+    # timestamp (flow start) -> UTC epoch; duration is microseconds.
+    # The original fork prints dd/MM/yyyy (12h, AM/PM) -> dayfirst=True; the
+    # DistriNet fixed fork prints ISO yyyy-MM-dd HH:MM:SS.ffffff -> dayfirst
+    # would flip month/day (July 4 -> April 7). Detect the format from a sample.
     ts_col = norm2orig.get("timestamp")
-    t_start = (pd.to_datetime(raw[ts_col], dayfirst=True, utc=True, errors="coerce")
-               .astype("int64") / 1e9) if ts_col else pd.Series([pd.NA] * n)
+    if ts_col:
+        s = raw[ts_col].astype("string")
+        sample = s.dropna().iloc[0] if s.notna().any() else ""
+        iso = bool(re.match(r"^\s*\d{4}-", str(sample)))
+        t_start = pd.to_datetime(s, dayfirst=not iso, utc=True,
+                                 errors="coerce").astype("int64") / 1e9
+    else:
+        t_start = pd.Series([pd.NA] * n)
     dur_col = norm2orig.get("flowduration")
     dur_us = pd.to_numeric(raw[dur_col], errors="coerce") if dur_col else pd.Series([0.0] * n)
     out["t_start"] = t_start
-    out["duration"] = dur_us / 1e6
+    # CICFlowMeter can emit a few negative flow durations (a timestamp/ordering
+    # artifact); clip to 0 so t_end >= t_start. The raw value is kept in
+    # tool_flow_duration for anyone studying the artifact.
+    out["duration"] = (dur_us / 1e6).clip(lower=0)
     out["t_end"] = out["t_start"] + out["duration"]
 
     # SYN/FIN/RST/ACK/CWR/ECE: only flow totals available -> per-direction <NA>

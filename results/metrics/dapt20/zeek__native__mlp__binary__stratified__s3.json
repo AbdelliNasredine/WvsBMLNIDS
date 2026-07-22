@@ -1,0 +1,80 @@
+{
+  "config": {
+    "tool": "zeek",
+    "regime": "native",
+    "model": "mlp",
+    "task": "binary",
+    "split": "stratified",
+    "seed": 3,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 19,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "fcf39e2b11e3e1f7",
+  "git_commit": null,
+  "n_train": 37337,
+  "n_test": 16002,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_ts",
+    "tool_id.orig_p",
+    "tool_id.resp_p",
+    "tool_duration",
+    "tool_orig_bytes",
+    "tool_resp_bytes",
+    "tool_missed_bytes",
+    "tool_orig_pkts",
+    "tool_resp_pkts",
+    "tool_s_syn",
+    "tool_s_fin",
+    "tool_s_rst",
+    "tool_s_psh",
+    "tool_s_ack",
+    "tool_r_syn",
+    "tool_r_fin",
+    "tool_r_rst",
+    "tool_r_psh",
+    "tool_r_ack"
+  ],
+  "metrics": {
+    "macro_f1": 0.9324055990595301,
+    "weighted_f1": 0.950371936816434,
+    "balanced_accuracy": 0.9401316842435703,
+    "per_class": {
+      "0": {
+        "precision": 0.9748684979544127,
+        "recall": 0.9589356110381078,
+        "f1-score": 0.9668364178362936,
+        "support": 12176.0
+      },
+      "1": {
+        "precision": 0.8757763975155279,
+        "recall": 0.921327757449033,
+        "f1-score": 0.8979747802827666,
+        "support": 3826.0
+      }
+    },
+    "fpr": 0.04106438896189225,
+    "attack_recall": 0.921327757449033,
+    "attack_precision": 0.8757763975155279,
+    "auc_pr": 0.9768128980625769,
+    "confusion_matrix": [
+      [
+        11676,
+        500
+      ],
+      [
+        301,
+        3525
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "feature_importances": null,
+  "wall_seconds": 6.2
+}

@@ -1,0 +1,57 @@
+{
+  "config": {
+    "tool": "netfound",
+    "regime": "embedding",
+    "model": "mlp",
+    "task": "binary",
+    "split": "stratified",
+    "seed": 1,
+    "dataset": "dapt20",
+    "n_features": 1024,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "7cfeb09025033748",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.9162689557339566,
+    "weighted_f1": 0.9353835547422612,
+    "balanced_accuracy": 0.9482033098701863,
+    "per_class": {
+      "0": {
+        "precision": 0.9920989031418479,
+        "recall": 0.9187397779116812,
+        "f1-score": 0.9540111731843576,
+        "support": 11617.0
+      },
+      "1": {
+        "precision": 0.797642015005359,
+        "recall": 0.9776668418286916,
+        "f1-score": 0.8785267382835557,
+        "support": 3806.0
+      }
+    },
+    "fpr": 0.08126022208831885,
+    "attack_recall": 0.9776668418286916,
+    "attack_precision": 0.797642015005359,
+    "auc_pr": 0.9539564015368285,
+    "confusion_matrix": [
+      [
+        10673,
+        944
+      ],
+      [
+        85,
+        3721
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "wall_seconds": 12.5
+}

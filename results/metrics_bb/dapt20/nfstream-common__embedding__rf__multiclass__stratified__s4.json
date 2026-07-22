@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "nfstream-common",
+    "regime": "embedding",
+    "model": "rf",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 4,
+    "dataset": "dapt20",
+    "n_features": 9,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "3d5d35cad1541fd2",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.8392816573713807,
+    "weighted_f1": 0.8964085051588045,
+    "balanced_accuracy": 0.9277632455569943,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9743340462764923,
+        "recall": 0.8627012137384867,
+        "f1-score": 0.9151257818563667,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9696279422930904,
+        "recall": 0.9666919000757003,
+        "f1-score": 0.9681576952236542,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.2909189777052746,
+        "recall": 0.9208261617900172,
+        "f1-score": 0.44214876033057854,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.854040404040404,
+        "recall": 0.8885969521807672,
+        "f1-score": 0.8709760494463044,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        10022,
+        0,
+        26,
+        1293,
+        276
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        27,
+        0,
+        1277,
+        10,
+        7
+      ],
+      [
+        33,
+        0,
+        7,
+        535,
+        6
+      ],
+      [
+        204,
+        0,
+        7,
+        1,
+        1691
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 1.1
+}

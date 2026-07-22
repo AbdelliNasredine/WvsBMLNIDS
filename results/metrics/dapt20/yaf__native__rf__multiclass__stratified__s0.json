@@ -1,0 +1,134 @@
+{
+  "config": {
+    "tool": "yaf",
+    "regime": "native",
+    "model": "rf",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 0,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 14,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "f8e99cce6451c9f6",
+  "git_commit": null,
+  "n_train": 40410,
+  "n_test": 17319,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_flowDurationMicroseconds",
+    "tool_flowDurationMilliseconds",
+    "tool_reverseFlowDeltaMicroseconds",
+    "tool_reverseFlowDeltaMilliseconds",
+    "tool_protocolIdentifier",
+    "tool_sourceTransportPort",
+    "tool_packetTotalCount",
+    "tool_octetTotalCount",
+    "tool_flowAttributes",
+    "tool_destinationTransportPort",
+    "tool_reversePacketTotalCount",
+    "tool_reverseOctetTotalCount",
+    "tool_reverseFlowAttributes",
+    "tool_silkAppLabel"
+  ],
+  "metrics": {
+    "macro_f1": 0.7889858865168045,
+    "weighted_f1": 0.9930829207197847,
+    "balanced_accuracy": 0.7866714484225877,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9941461911730725,
+        "recall": 0.9976039573349822,
+        "f1-score": 0.9958720728366961,
+        "support": 12938.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9900062460961899,
+        "recall": 0.9912445278298937,
+        "f1-score": 0.990625,
+        "support": 1599.0
+      },
+      "Lateral Movement": {
+        "precision": 0.979557069846678,
+        "recall": 0.96964586846543,
+        "f1-score": 0.9745762711864406,
+        "support": 593.0
+      },
+      "Reconnaissance": {
+        "precision": 0.9930167597765364,
+        "recall": 0.9748628884826326,
+        "f1-score": 0.9838560885608856,
+        "support": 2188.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        12907,
+        0,
+        7,
+        12,
+        12
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        11,
+        0,
+        1585,
+        0,
+        3
+      ],
+      [
+        17,
+        0,
+        1,
+        575,
+        0
+      ],
+      [
+        47,
+        0,
+        8,
+        0,
+        2133
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "feature_importances": {
+    "tool_destinationTransportPort": 0.19536388011720499,
+    "tool_sourceTransportPort": 0.15468793038965922,
+    "tool_reverseFlowDeltaMicroseconds": 0.12612292076792972,
+    "tool_reverseOctetTotalCount": 0.10349280960005548,
+    "tool_octetTotalCount": 0.08055504970812837,
+    "tool_silkAppLabel": 0.07687980222787366,
+    "tool_reverseFlowDeltaMilliseconds": 0.07360804937072656,
+    "tool_reversePacketTotalCount": 0.050050369991349625,
+    "tool_flowDurationMicroseconds": 0.04235745596341124,
+    "tool_flowDurationMilliseconds": 0.033642940239278156,
+    "tool_packetTotalCount": 0.02887332585400864,
+    "tool_protocolIdentifier": 0.024268132625573865,
+    "tool_flowAttributes": 0.01009733314480058,
+    "tool_reverseFlowAttributes": 0.0
+  },
+  "wall_seconds": 1.7
+}

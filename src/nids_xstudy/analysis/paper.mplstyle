@@ -1,0 +1,62 @@
+# paper.mplstyle — house style for all paper figures (PLOT_STYLE.md R3/R4/R8).
+# Load via nids_xstudy.analysis.plotting.use_style() (absolute path).
+
+# ---- Figure geometry (single IEEE column = 3.5 in, single panel ~2.0 in) ----
+figure.figsize        : 3.5, 2.0
+figure.dpi            : 150
+savefig.dpi           : 300
+savefig.bbox          : tight
+savefig.pad_inches    : 0.02
+
+# ---- R8 typography: sans-serif, base 8 pt ----
+font.family           : sans-serif
+font.sans-serif       : DejaVu Sans, Helvetica, Arial
+font.size             : 8
+axes.labelsize        : 8
+axes.titlesize        : 8
+xtick.labelsize       : 7.5
+ytick.labelsize       : 7.5
+legend.fontsize       : 7.5
+legend.title_fontsize : 7.5
+mathtext.fontset      : dejavusans
+
+# ---- Axes / R4 grid: horizontal dashed light-gray gridlines behind artists ----
+axes.linewidth        : 0.8
+axes.edgecolor        : black
+axes.axisbelow        : True
+axes.grid             : True
+axes.grid.axis        : y
+grid.color            : 0.78
+grid.linestyle        : --
+grid.linewidth        : 0.6
+axes.spines.top       : True
+axes.spines.right     : True
+
+# ---- Ticks ----
+xtick.direction       : out
+ytick.direction       : out
+xtick.major.size      : 3
+ytick.major.size      : 3
+xtick.major.width     : 0.8
+ytick.major.width     : 0.8
+
+# ---- R5 lines / markers (encodings assigned per-series in plotting.py) ----
+lines.linewidth       : 1.4
+lines.markersize      : 5.5
+lines.markeredgewidth : 0.8
+
+# ---- R4 bars: every patch gets a thin black edge ----
+patch.edgecolor       : black
+patch.linewidth       : 0.8
+patch.force_edgecolor : True
+
+# ---- R3 legend: frameless (outside-above placement set by top_legend()) ----
+legend.frameon        : False
+legend.handlelength   : 1.6
+legend.handletextpad  : 0.5
+legend.columnspacing  : 1.0
+legend.borderaxespad  : 0.2
+
+# ---- Hatches ----
+hatch.linewidth       : 0.8
+hatch.color           : black

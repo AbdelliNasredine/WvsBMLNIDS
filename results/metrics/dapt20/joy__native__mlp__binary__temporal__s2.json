@@ -1,0 +1,85 @@
+{
+  "config": {
+    "tool": "joy",
+    "regime": "native",
+    "model": "mlp",
+    "task": "binary",
+    "split": "temporal",
+    "seed": 2,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 24,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "c1270827900b673d",
+  "git_commit": null,
+  "n_train": 63191,
+  "n_test": 33234,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_pr",
+    "tool_sp",
+    "tool_dp",
+    "tool_bytes_out",
+    "tool_num_pkts_out",
+    "tool_bytes_in",
+    "tool_num_pkts_in",
+    "tool_byte_dist_mean",
+    "tool_byte_dist_std",
+    "tool_derived_fwd_pktsize_mean",
+    "tool_derived_fwd_pktsize_std",
+    "tool_derived_fwd_pktsize_min",
+    "tool_derived_fwd_pktsize_max",
+    "tool_derived_fwd_pktsize_n",
+    "tool_derived_bwd_pktsize_mean",
+    "tool_derived_bwd_pktsize_std",
+    "tool_derived_bwd_pktsize_min",
+    "tool_derived_bwd_pktsize_max",
+    "tool_derived_bwd_pktsize_n",
+    "tool_derived_iat_ms_mean",
+    "tool_derived_iat_ms_std",
+    "tool_derived_iat_ms_min",
+    "tool_derived_iat_ms_max",
+    "tool_derived_iat_ms_n"
+  ],
+  "metrics": {
+    "macro_f1": 0.5070643919657263,
+    "weighted_f1": 0.9127482211448834,
+    "balanced_accuracy": 0.5103229076990244,
+    "per_class": {
+      "0": {
+        "precision": 0.9416752468051602,
+        "recall": 0.9948491537895512,
+        "f1-score": 0.9675321644705114,
+        "support": 31257.0
+      },
+      "1": {
+        "precision": 0.24056603773584906,
+        "recall": 0.025796661608497723,
+        "f1-score": 0.04659661946094107,
+        "support": 1977.0
+      }
+    },
+    "fpr": 0.0051508462104488595,
+    "attack_recall": 0.025796661608497723,
+    "attack_precision": 0.24056603773584906,
+    "auc_pr": 0.2773630308360807,
+    "confusion_matrix": [
+      [
+        31096,
+        161
+      ],
+      [
+        1926,
+        51
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "feature_importances": null,
+  "wall_seconds": 10.4
+}

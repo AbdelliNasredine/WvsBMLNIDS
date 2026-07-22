@@ -79,6 +79,20 @@ def labeled_dir(dataset: str, tool: str) -> Path:
     return d
 
 
+def assembled_dir(dataset: str, cfg_name: str = "reference") -> Path:
+    """Black-box study: per-flow assembled packet sequences (large) under data_root (E:)."""
+    d = data_root() / "assembled" / dataset / cfg_name
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
+def embeddings_dir(dataset: str, model: str, cfg_name: str = "reference") -> Path:
+    """Black-box study: cached frozen embeddings (large) under data_root (E:)."""
+    d = data_root() / "embeddings" / dataset / model / cfg_name
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
 @lru_cache(maxsize=None)
 def dataset_spec(dataset: str) -> dict:
     """Load configs/datasets/<dataset>.yaml (capture -> pcap filename map)."""

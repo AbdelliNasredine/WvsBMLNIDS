@@ -1,0 +1,78 @@
+{
+  "config": {
+    "tool": "go-flows",
+    "regime": "common",
+    "model": "xgb",
+    "task": "binary",
+    "split": "stratified",
+    "seed": 4,
+    "include_port": false,
+    "dataset": "cicids2017",
+    "n_features": 9,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "00c78a69bef7be46",
+  "git_commit": null,
+  "n_train": 400000,
+  "n_test": 715708,
+  "n_test_unseen_class": 0,
+  "features": [
+    "duration",
+    "pkts_fwd",
+    "pkts_bwd",
+    "bytes_fwd",
+    "bytes_bwd",
+    "tot_pkts",
+    "tot_bytes",
+    "is_tcp",
+    "is_udp"
+  ],
+  "metrics": {
+    "macro_f1": 0.9349043294218946,
+    "weighted_f1": 0.9527894766018208,
+    "balanced_accuracy": 0.9165756521627711,
+    "per_class": {
+      "0": {
+        "precision": 0.9510115630076275,
+        "recall": 0.9898517954729378,
+        "f1-score": 0.9700430471268039,
+        "support": 539997.0
+      },
+      "1": {
+        "precision": 0.964336151298021,
+        "recall": 0.8432995088526045,
+        "f1-score": 0.8997656117169852,
+        "support": 175711.0
+      }
+    },
+    "fpr": 0.010148204527062188,
+    "attack_recall": 0.8432995088526045,
+    "attack_precision": 0.964336151298021,
+    "auc_pr": 0.9636080877261057,
+    "confusion_matrix": [
+      [
+        534517,
+        5480
+      ],
+      [
+        27534,
+        148177
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "feature_importances": {
+    "tot_pkts": 0.5902518033981323,
+    "tot_bytes": 0.3477650284767151,
+    "bytes_fwd": 0.02839186228811741,
+    "pkts_bwd": 0.012528320774435997,
+    "pkts_fwd": 0.010692846029996872,
+    "bytes_bwd": 0.008859389461576939,
+    "duration": 0.0015107813524082303
+  },
+  "wall_seconds": 5.1
+}

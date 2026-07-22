@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "raw-cnn",
+    "regime": "embedding",
+    "model": "mlp",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 3,
+    "dataset": "dapt20",
+    "n_features": 128,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "1b83b70c901e0c08",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.658991090078775,
+    "weighted_f1": 0.9269391022014073,
+    "balanced_accuracy": 0.6618825713159056,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9544316906878398,
+        "recall": 0.9519669449944047,
+        "f1-score": 0.9531977245302534,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.958904109589041,
+        "recall": 0.9538228614685844,
+        "f1-score": 0.9563567362428842,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.4936102236421725,
+        "recall": 0.53184165232358,
+        "f1-score": 0.512013256006628,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.875,
+        "recall": 0.8717813977929585,
+        "f1-score": 0.8733877336141089,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        11059,
+        0,
+        16,
+        316,
+        226
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        51,
+        0,
+        1260,
+        0,
+        10
+      ],
+      [
+        270,
+        0,
+        1,
+        309,
+        1
+      ],
+      [
+        206,
+        0,
+        37,
+        1,
+        1659
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 6.6
+}

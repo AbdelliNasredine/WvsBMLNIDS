@@ -1,0 +1,96 @@
+{
+  "config": {
+    "tool": "argus",
+    "regime": "common",
+    "model": "logreg",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 1,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 9,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "e1b5e751d5ef0c1f",
+  "git_commit": null,
+  "n_train": 33183,
+  "n_test": 14222,
+  "n_test_unseen_class": 0,
+  "features": [
+    "duration",
+    "pkts_fwd",
+    "pkts_bwd",
+    "bytes_fwd",
+    "bytes_bwd",
+    "tot_pkts",
+    "tot_bytes",
+    "is_tcp",
+    "is_udp"
+  ],
+  "metrics": {
+    "macro_f1": 0.5463107008867387,
+    "weighted_f1": 0.6990957963301431,
+    "balanced_accuracy": 0.7218084792680763,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9984862246442628,
+        "recall": 0.6324671588838815,
+        "f1-score": 0.7744056354564133,
+        "support": 10429.0
+      },
+      "Establish Foothold": {
+        "precision": 0.7559055118110236,
+        "recall": 0.9504950495049505,
+        "f1-score": 0.8421052631578947,
+        "support": 1313.0
+      },
+      "Lateral Movement": {
+        "precision": 0.13850687622789784,
+        "recall": 0.9791666666666666,
+        "f1-score": 0.24268502581755594,
+        "support": 576.0
+      },
+      "Reconnaissance": {
+        "precision": 0.3269941891178024,
+        "recall": 0.32510504201680673,
+        "f1-score": 0.32604687911509084,
+        "support": 1904.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        6596,
+        141,
+        2447,
+        1245
+      ],
+      [
+        0,
+        1248,
+        46,
+        19
+      ],
+      [
+        2,
+        0,
+        564,
+        10
+      ],
+      [
+        8,
+        262,
+        1015,
+        619
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "feature_importances": null,
+  "wall_seconds": 1.7
+}

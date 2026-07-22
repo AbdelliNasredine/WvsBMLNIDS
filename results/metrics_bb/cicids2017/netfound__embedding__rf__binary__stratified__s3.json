@@ -1,0 +1,56 @@
+{
+  "config": {
+    "tool": "netfound",
+    "regime": "embedding",
+    "model": "rf",
+    "task": "binary",
+    "split": "stratified",
+    "seed": 3,
+    "dataset": "cicids2017",
+    "n_features": 1024,
+    "extractor_family": "nfm",
+    "cfg_name": "sample"
+  },
+  "config_hash": "c22eb544b5288c78",
+  "git_commit": null,
+  "n_train": 99665,
+  "n_test": 42714,
+  "metrics": {
+    "macro_f1": 0.9983434187850252,
+    "weighted_f1": 0.9983844761603372,
+    "balanced_accuracy": 0.9982644452537024,
+    "per_class": {
+      "0": {
+        "precision": 0.9986651092941765,
+        "recall": 0.9975,
+        "f1-score": 0.9980822146251981,
+        "support": 18000.0
+      },
+      "1": {
+        "precision": 0.9981807155852032,
+        "recall": 0.9990288905074047,
+        "f1-score": 0.9986046229448523,
+        "support": 24714.0
+      }
+    },
+    "fpr": 0.0025,
+    "attack_recall": 0.9990288905074047,
+    "attack_precision": 0.9981807155852032,
+    "auc_pr": 0.9998665155239779,
+    "confusion_matrix": [
+      [
+        17955,
+        45
+      ],
+      [
+        24,
+        24690
+      ]
+    ],
+    "class_order": [
+      "0",
+      "1"
+    ]
+  },
+  "wall_seconds": 41.5
+}

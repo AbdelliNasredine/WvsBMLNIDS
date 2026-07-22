@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "nfstream-native",
+    "regime": "embedding",
+    "model": "logreg",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 3,
+    "dataset": "dapt20",
+    "n_features": 53,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "284db0eeb4b01af9",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.6768480843298377,
+    "weighted_f1": 0.8413791042567327,
+    "balanced_accuracy": 0.9112422613781185,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9962526176567839,
+        "recall": 0.7780838426444004,
+        "f1-score": 0.8737554374093766,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1-score": 0.5,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.8013827781269641,
+        "recall": 0.9651778955336866,
+        "f1-score": 0.8756868131868132,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.22951487973909498,
+        "recall": 0.9690189328743546,
+        "f1-score": 0.3711272247857614,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.6973512809379071,
+        "recall": 0.8439306358381503,
+        "f1-score": 0.7636709462672373,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        9039,
+        2,
+        69,
+        1841,
+        666
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        1275,
+        18,
+        21
+      ],
+      [
+        3,
+        0,
+        5,
+        563,
+        10
+      ],
+      [
+        24,
+        0,
+        242,
+        31,
+        1606
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 2.3
+}

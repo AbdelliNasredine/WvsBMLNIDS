@@ -1,0 +1,160 @@
+{
+  "config": {
+    "tool": "tranalyzer",
+    "regime": "native",
+    "model": "logreg",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 2,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 73,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "f4f39f1d56036d8b",
+  "git_commit": null,
+  "n_train": 35729,
+  "n_test": 15313,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_timeFirst",
+    "tool_timeLast",
+    "tool_duration",
+    "tool_numHdrs",
+    "tool_srcIPCC",
+    "tool_srcPort",
+    "tool_dstPort",
+    "tool_l4Proto",
+    "tool_macPairs",
+    "tool_dstPortClassN",
+    "tool_pktsSnt",
+    "tool_pktsRcvd",
+    "tool_padBytesSnt",
+    "tool_l7BytesSnt",
+    "tool_l7BytesRcvd",
+    "tool_minL7PktSz",
+    "tool_maxL7PktSz",
+    "tool_avgL7PktSz",
+    "tool_stdL7PktSz",
+    "tool_minIAT",
+    "tool_maxIAT",
+    "tool_avgIAT",
+    "tool_stdIAT",
+    "tool_pktps",
+    "tool_bytps",
+    "tool_pktAsm",
+    "tool_bytAsm",
+    "tool_ipMindIPID",
+    "tool_ipMaxdIPID",
+    "tool_ipMinTTL",
+    "tool_ipMaxTTL",
+    "tool_ipTTLChg",
+    "tool_tcpISeqN",
+    "tool_tcpPSeqCnt",
+    "tool_tcpSeqSntBytes",
+    "tool_tcpSeqFaultCnt",
+    "tool_tcpPAckCnt",
+    "tool_tcpFlwLssAckRcvdBytes",
+    "tool_tcpAckFaultCnt",
+    "tool_tcpBFlgtMx",
+    "tool_tcpInitWinSz",
+    "tool_tcpAvgWinSz",
+    "tool_tcpMinWinSz",
+    "tool_tcpMaxWinSz",
+    "tool_tcpWinSzDwnCnt",
+    "tool_tcpWinSzUpCnt",
+    "tool_tcpWinSzChgDirCnt",
+    "tool_tcpWinSzThRt",
+    "tool_tcpOptPktCnt",
+    "tool_tcpOptCnt",
+    "tool_tcpMSS",
+    "tool_tcpWS",
+    "tool_tcpTmS",
+    "tool_tcpTmER",
+    "tool_tcpEcI",
+    "tool_tcpUtm",
+    "tool_tcpBtm",
+    "tool_tcpSSASAATrip",
+    "tool_tcpRTTAckTripMin",
+    "tool_tcpRTTAckTripMax",
+    "tool_tcpRTTAckTripAvg",
+    "tool_tcpRTTAckTripJitAvg",
+    "tool_tcpRTTSseqAA",
+    "tool_icmpTCcnt",
+    "tool_icmpEchoSuccRatio",
+    "tool_connSip",
+    "tool_connDip",
+    "tool_connSipDip",
+    "tool_connSipDprt",
+    "tool_connF",
+    "tool_connG",
+    "tool_connNumPCnt",
+    "tool_connNumBCnt"
+  ],
+  "metrics": {
+    "macro_f1": 0.9474493494984572,
+    "weighted_f1": 0.9650807024927447,
+    "balanced_accuracy": 0.979856219708654,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9979100408905043,
+        "recall": 0.9552887961029923,
+        "f1-score": 0.9761343940269321,
+        "support": 11496.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9785025945144552,
+        "recall": 0.9887640449438202,
+        "f1-score": 0.9836065573770492,
+        "support": 1335.0
+      },
+      "Lateral Movement": {
+        "precision": 0.8932496075353218,
+        "recall": 0.9827288428324698,
+        "f1-score": 0.9358552631578947,
+        "support": 579.0
+      },
+      "Reconnaissance": {
+        "precision": 0.8135228251507322,
+        "recall": 0.9926431949553337,
+        "f1-score": 0.8942011834319527,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        10982,
+        18,
+        65,
+        431
+      ],
+      [
+        10,
+        1320,
+        3,
+        2
+      ],
+      [
+        4,
+        6,
+        569,
+        0
+      ],
+      [
+        9,
+        5,
+        0,
+        1889
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "feature_importances": null,
+  "wall_seconds": 4.5
+}

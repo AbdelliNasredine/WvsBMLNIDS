@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "yatc",
+    "regime": "embedding",
+    "model": "logreg",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 3,
+    "dataset": "dapt20",
+    "n_features": 192,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "ecdba6a476540022",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.6911674493238775,
+    "weighted_f1": 0.9333540423187621,
+    "balanced_accuracy": 0.7731277718614165,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.997160704145372,
+        "recall": 0.9069467160196264,
+        "f1-score": 0.949916602803949,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.9618488628026413,
+        "recall": 0.9924299772899319,
+        "f1-score": 0.9769001490312966,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.46890343698854337,
+        "recall": 0.9862306368330465,
+        "f1-score": 0.6356073211314476,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.820862676056338,
+        "recall": 0.9800315291644771,
+        "f1-score": 0.8934131736526946,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        10536,
+        0,
+        43,
+        637,
+        401
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1311,
+        4,
+        5
+      ],
+      [
+        4,
+        0,
+        3,
+        573,
+        1
+      ],
+      [
+        25,
+        0,
+        6,
+        7,
+        1865
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 10.9
+}

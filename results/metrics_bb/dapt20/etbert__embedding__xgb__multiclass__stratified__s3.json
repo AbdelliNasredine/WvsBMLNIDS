@@ -1,0 +1,101 @@
+{
+  "config": {
+    "tool": "etbert",
+    "regime": "embedding",
+    "model": "xgb",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 3,
+    "dataset": "dapt20",
+    "n_features": 768,
+    "extractor_family": "nfm",
+    "cfg_name": "sample",
+    "max_train": null
+  },
+  "config_hash": "af4bd7139ab84aa2",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "metrics": {
+    "macro_f1": 0.5922677461111782,
+    "weighted_f1": 0.905818716462802,
+    "balanced_accuracy": 0.5872901257539227,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9366658165433988,
+        "recall": 0.9484376345011621,
+        "f1-score": 0.9425149700598803,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.938366718027735,
+        "recall": 0.9220287660862982,
+        "f1-score": 0.9301260022909508,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.23617021276595745,
+        "recall": 0.19104991394148021,
+        "f1-score": 0.21122740247383445,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.8800211416490487,
+        "recall": 0.8749343142406726,
+        "f1-score": 0.8774703557312253,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        11018,
+        0,
+        51,
+        353,
+        195
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        76,
+        0,
+        1218,
+        2,
+        25
+      ],
+      [
+        457,
+        0,
+        6,
+        111,
+        7
+      ],
+      [
+        211,
+        0,
+        23,
+        4,
+        1665
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "wall_seconds": 82.3
+}

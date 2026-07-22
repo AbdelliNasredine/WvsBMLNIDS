@@ -1,0 +1,179 @@
+{
+  "config": {
+    "tool": "nfstream",
+    "regime": "native",
+    "model": "xgb",
+    "task": "multiclass",
+    "split": "stratified",
+    "seed": 4,
+    "include_port": false,
+    "dataset": "dapt20",
+    "n_features": 53,
+    "subsample_benign": null,
+    "max_train": 400000
+  },
+  "config_hash": "47c943c52bf3885d",
+  "git_commit": null,
+  "n_train": 35987,
+  "n_test": 15423,
+  "n_test_unseen_class": 0,
+  "features": [
+    "tool_protocol",
+    "tool_bidirectional_duration_ms",
+    "tool_bidirectional_packets",
+    "tool_bidirectional_bytes",
+    "tool_src2dst_duration_ms",
+    "tool_src2dst_packets",
+    "tool_src2dst_bytes",
+    "tool_dst2src_duration_ms",
+    "tool_dst2src_packets",
+    "tool_dst2src_bytes",
+    "tool_bidirectional_min_ps",
+    "tool_bidirectional_mean_ps",
+    "tool_bidirectional_stddev_ps",
+    "tool_bidirectional_max_ps",
+    "tool_src2dst_min_ps",
+    "tool_src2dst_mean_ps",
+    "tool_src2dst_stddev_ps",
+    "tool_src2dst_max_ps",
+    "tool_dst2src_min_ps",
+    "tool_dst2src_mean_ps",
+    "tool_dst2src_stddev_ps",
+    "tool_dst2src_max_ps",
+    "tool_bidirectional_min_piat_ms",
+    "tool_bidirectional_mean_piat_ms",
+    "tool_bidirectional_stddev_piat_ms",
+    "tool_bidirectional_max_piat_ms",
+    "tool_src2dst_min_piat_ms",
+    "tool_src2dst_mean_piat_ms",
+    "tool_src2dst_stddev_piat_ms",
+    "tool_src2dst_max_piat_ms",
+    "tool_dst2src_min_piat_ms",
+    "tool_dst2src_mean_piat_ms",
+    "tool_dst2src_stddev_piat_ms",
+    "tool_dst2src_max_piat_ms",
+    "tool_bidirectional_syn_packets",
+    "tool_bidirectional_cwr_packets",
+    "tool_bidirectional_ece_packets",
+    "tool_bidirectional_ack_packets",
+    "tool_bidirectional_psh_packets",
+    "tool_bidirectional_rst_packets",
+    "tool_bidirectional_fin_packets",
+    "tool_src2dst_syn_packets",
+    "tool_src2dst_cwr_packets",
+    "tool_src2dst_ece_packets",
+    "tool_src2dst_ack_packets",
+    "tool_src2dst_psh_packets",
+    "tool_src2dst_rst_packets",
+    "tool_src2dst_fin_packets",
+    "tool_dst2src_syn_packets",
+    "tool_dst2src_ack_packets",
+    "tool_dst2src_psh_packets",
+    "tool_dst2src_rst_packets",
+    "tool_dst2src_fin_packets"
+  ],
+  "metrics": {
+    "macro_f1": 0.8135335356054926,
+    "weighted_f1": 0.9250898399374866,
+    "balanced_accuracy": 0.8033330525506438,
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.9463971143360457,
+        "recall": 0.9711629508478953,
+        "f1-score": 0.9586201036621633,
+        "support": 11617.0
+      },
+      "Data Exfiltration": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "Establish Foothold": {
+        "precision": 0.98145285935085,
+        "recall": 0.9613928841786525,
+        "f1-score": 0.97131931166348,
+        "support": 1321.0
+      },
+      "Lateral Movement": {
+        "precision": 0.5170454545454546,
+        "recall": 0.1566265060240964,
+        "f1-score": 0.2404227212681638,
+        "support": 581.0
+      },
+      "Reconnaissance": {
+        "precision": 0.8690300344657804,
+        "recall": 0.9274829217025748,
+        "f1-score": 0.8973055414336553,
+        "support": 1903.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        11282,
+        0,
+        8,
+        72,
+        255
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        38,
+        0,
+        1270,
+        5,
+        8
+      ],
+      [
+        479,
+        0,
+        8,
+        91,
+        3
+      ],
+      [
+        122,
+        0,
+        8,
+        8,
+        1765
+      ]
+    ],
+    "class_order": [
+      "BENIGN",
+      "Data Exfiltration",
+      "Establish Foothold",
+      "Lateral Movement",
+      "Reconnaissance"
+    ]
+  },
+  "feature_importances": {
+    "tool_src2dst_psh_packets": 0.3791508078575134,
+    "tool_dst2src_ack_packets": 0.10154382139444351,
+    "tool_dst2src_syn_packets": 0.09663564711809158,
+    "tool_dst2src_max_ps": 0.08649753034114838,
+    "tool_dst2src_stddev_ps": 0.034303564578294754,
+    "tool_bidirectional_ack_packets": 0.024097023531794548,
+    "tool_bidirectional_fin_packets": 0.021968254819512367,
+    "tool_dst2src_mean_ps": 0.021108798682689667,
+    "tool_dst2src_rst_packets": 0.01779237575829029,
+    "tool_src2dst_bytes": 0.016010155901312828,
+    "tool_bidirectional_psh_packets": 0.015738587826490402,
+    "tool_dst2src_bytes": 0.014805256389081478,
+    "tool_bidirectional_mean_ps": 0.013880540616810322,
+    "tool_src2dst_max_ps": 0.012485790066421032,
+    "tool_src2dst_mean_ps": 0.011782350018620491,
+    "tool_bidirectional_max_ps": 0.01159235741943121,
+    "tool_dst2src_duration_ms": 0.009238975122570992,
+    "tool_src2dst_min_ps": 0.008547471836209297,
+    "tool_bidirectional_stddev_ps": 0.0067378501407802105,
+    "tool_dst2src_max_piat_ms": 0.006689274683594704
+  },
+  "wall_seconds": 3.7
+}
