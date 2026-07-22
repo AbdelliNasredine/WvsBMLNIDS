@@ -1,0 +1,34 @@
+# Pinned Python environment for the NIDS feature-extractor study.
+# Target: Python 3.11 (NFStream wheel compatibility). Install into the
+# dedicated conda env `nids-xstudy` (see env/environment.yml).
+#
+#   conda activate nids-xstudy
+#   pip install -r env/requirements.txt
+#
+# NOTE: NFStream bundles nDPI; on Windows it installs from a prebuilt wheel.
+
+# --- Feature extraction (native, pure-python tool) ---
+nfstream==6.5.4
+
+# --- PCAP synthesis for the smoke-test fixture ---
+scapy==2.5.0
+
+# --- Data handling ---
+pandas==2.2.3
+pyarrow==17.0.0
+numpy==1.26.4
+pyyaml==6.0.2
+# IANA timezone DB (Windows lacks it) — required for ADT->UTC label conversion.
+tzdata==2024.1
+
+# --- ML pipeline (Phase 3+) ---
+scikit-learn==1.5.2
+xgboost==2.1.1
+
+# --- Stats / analysis (Phase 5) ---
+scipy==1.14.1
+statsmodels==0.14.4
+
+# --- Testing / tooling ---
+pytest==8.3.3
+tqdm==4.66.5

@@ -1,0 +1,247 @@
+# CICIDS2017 corrected ground-truth labeling rules.
+#
+# WINDOWS ARE IN UTC. Raw libpcap packet timestamps are absolute UTC epoch, so
+# NFStream/Zeek/CICFlowMeter/etc. all emit UTC flow times regardless of host
+# timezone -> we label against UTC directly and sidestep the classic
+# off-by-3-hours failure (the capture is Atlantic Daylight Time, ADT = UTC-3;
+# corrected_UTC = ADT + 3). ADT equivalents are noted per attack for auditing.
+#
+# Primary source for the corrected sub-second windows and effective/attempted
+# flow counts:
+#   Liu, Engelen, Lynar, Essam, Joosen, "Error Prevalence in NIDS datasets:
+#   A Case Study on CIC-IDS-2017 and CSE-CIC-IDS-2018", IEEE CNS 2022.
+#   https://intrusion-detection.distrinet-research.be/CNS2022/CICIDS2017.html
+#   Engelen, Rimmer, Joosen, "Troubleshooting an Intrusion Detection Dataset:
+#   the CICIDS2017 Case Study", WTMC 2021 (per-class corrected counts, Table I).
+# Topology: UNB CIC-IDS2017 page (Sharafaldin et al. 2018).
+#
+# NOTE (attempted vs effective): the windows below are the OUTER bound per
+# attack. Engelen's "X - Attempted" flows (attacker<->victim in-window but with
+# no forward payload) are NOT separated here; that refinement is applied as a
+# label-noise sensitivity pass (Phase 4) using label_confidence + a fwd-payload
+# filter. The counts in expected_counts.md are the *effective* counts.
+
+dataset: cicids2017
+benign_label: BENIGN
+
+timezone:
+  capture_tz: America/Halifax   # ADT (UTC-3) in July 2017
+  windows_tz: UTC
+  note: >
+    Corrected windows published in UTC by DistriNet CNS2022. corrected_UTC = ADT + 3.
+    Verify 2-3 windows against your own flow timestamps before freezing (see
+    expected_counts.md sanity check).
+
+# Reference topology (not used directly by the engine; documents the IPs below).
+topology:
+  firewall_nat_internal: 172.16.0.1      # Kali-via-firewall source for most attacks
+  firewall_nat_public: 205.174.165.80
+  attacker_kali_direct: 205.174.165.73   # Botnet C2 + Infiltration
+  victim_web_server: 192.168.10.50       # Ubuntu16 Apache (primary victim)
+  victim_heartbleed: 192.168.10.51       # Ubuntu12, port 444
+  victim_infiltration_vista: 192.168.10.8
+  victim_infiltration_mac: 192.168.10.25
+  victim_subnet: 192.168.10.0/24
+
+attacks:
+  # ---------------- Tuesday 2017-07-04 : Brute force ----------------
+  - name: FTP-Patator
+    label: FTP-Patator
+    date: 2017-07-04
+    start_local: "12:17:52.838"
+    end_local:   "13:20:16.931"
+    tz: UTC        # ADT 09:17:52-10:20:16
+    attackers: [172.16.0.1]
+    victims:   [192.168.10.50]
+    proto: [6]
+    dst_ports: [21]
+    source: "CNS2022"
+
+  - name: SSH-Patator
+    label: SSH-Patator
+    date: 2017-07-04
+    start_local: "17:09:01.049"
+    end_local:   "19:04:19.018"
+    tz: UTC        # ADT 14:09:01-16:04:19 (~1h longer than the documented 15:00 end)
+    attackers: [172.16.0.1]
+    victims:   [192.168.10.50]
+    proto: [6]
+    dst_ports: [22]
+    source: "CNS2022; Engelen WTMC2021 (extended window)"
+
+  # ---------------- Wednesday 2017-07-05 : DoS + Heartbleed ----------------
+  # Slowloris outer bound (12:48:46-14:20:08) overlaps the other DoS attacks;
+  # capped at Slowhttptest start to keep the four DoS windows disjoint & precise.
+  - name: DoS Slowloris
+    label: DoS slowloris
+    date: 2017-07-05
+    start_local: "12:48:46.211"
+    end_local:   "13:15:37.936"   # capped at Slowhttptest start (was 14:20:08 outer)
+    tz: UTC        # ADT 09:48:46-10:15:37
+    attackers: [172.16.0.1]
+    victims:   [192.168.10.50]
+    proto: [6]
+    dst_ports: [80]
+    source: "CNS2022 (end capped to avoid overlap; documented)"
+
+  - name: DoS Slowhttptest
+    label: DoS Slowhttptest
+    date: 2017-07-05
+    start_local: "13:15:37.936"
+    end_local:   "13:37:49.331"
+    tz: UTC        # ADT 10:15:37-10:37:49
+    attackers: [172.16.0.1]
+    victims:   [192.168.10.50]
+    proto: [6]
+    dst_ports: [80]
+    source: "CNS2022"
+
+  - name: DoS Hulk
+    label: DoS Hulk
+    date: 2017-07-05
+    start_local: "13:43:23.194"
+    end_local:   "14:07:21.326"
+    tz: UTC        # ADT 10:43:23-11:07:21
+    attackers: [172.16.0.1]
+    victims:   [192.168.10.50]
+    proto: [6]
+    dst_ports: [80]
+    source: "CNS2022"
+    notes: "Hulk misimplemented (Connection: Close) -> many attempted flows."
+
+  - name: DoS GoldenEye
+    label: DoS GoldenEye
+    date: 2017-07-05
+    start_local: "14:10:03.231"
+    end_local:   "14:20:08.915"
+    tz: UTC        # ADT 11:10:03-11:20:08
+    attackers: [172.16.0.1]
+    victims:   [192.168.10.50]
+    proto: [6]
+    dst_ports: [80]
+    source: "CNS2022"
+
+  - name: Heartbleed
+    label: Heartbleed
+    date: 2017-07-05
+    start_local: "18:12:15.650"
+    end_local:   "18:32:43.294"
+    tz: UTC        # ADT 15:12:15-15:32:43
+    attackers: [172.16.0.1]
+    victims:   [192.168.10.51]
+    proto: [6]
+    dst_ports: [444]     # NOTE: 444, not 443
+    source: "CNS2022 (clean, 11 flows)"
+
+  # ---------------- Thursday 2017-07-06 AM : Web attacks ----------------
+  - name: Web Attack Brute Force
+    label: Web Attack - Brute Force
+    date: 2017-07-06
+    start_local: "12:15:54.880"
+    end_local:   "13:00:11.622"
+    tz: UTC        # ADT 09:15:54-10:00:11
+    attackers: [172.16.0.1]
+    victims:   [192.168.10.50]
+    proto: [6]
+    dst_ports: [80]
+    source: "CNS2022"
+    notes: "Mostly attempted (no fwd payload); effective count only ~151."
+
+  - name: Web Attack XSS
+    label: Web Attack - XSS
+    date: 2017-07-06
+    start_local: "13:15:35.283"
+    end_local:   "13:35:21.341"
+    tz: UTC        # ADT 10:15:35-10:35:21
+    attackers: [172.16.0.1]
+    victims:   [192.168.10.50]
+    proto: [6]
+    dst_ports: [80]
+    source: "CNS2022"
+    notes: "Mostly attempted; effective count only ~27."
+
+  - name: Web Attack SQL Injection
+    label: Web Attack - Sql Injection
+    date: 2017-07-06
+    start_local: "13:35:27.852"
+    end_local:   "13:42:55.320"
+    tz: UTC        # ADT 10:35:27-10:42:55
+    attackers: [172.16.0.1]
+    victims:   [192.168.10.50]
+    proto: [6]
+    dst_ports: [80]
+    source: "CNS2022"
+
+  # ---------------- Thursday 2017-07-06 PM : Infiltration ----------------
+  # Three sub-activities, disambiguated by victim IP. Internal 2nd-stage portscan
+  # originates from the compromised host .8 and sweeps the whole victim subnet.
+  - name: Infiltration - Dropbox/Meterpreter (Vista)
+    label: Infiltration
+    date: 2017-07-06
+    start_local: "17:19:02.547"
+    end_local:   "18:46:09.364"
+    tz: UTC        # ADT 14:19:02-15:46:09
+    attackers: [205.174.165.73]
+    victims:   [192.168.10.8]
+    proto: [6]
+    source: "CNS2022"
+
+  - name: Infiltration - Cool Disk (Mac)
+    label: Infiltration
+    date: 2017-07-06
+    start_local: "17:53:36.453"
+    end_local:   "20:02:19.347"
+    tz: UTC        # ADT 14:53:36-17:02:19
+    attackers: [205.174.165.73]
+    victims:   [192.168.10.25]
+    proto: [6]
+    source: "CNS2022"
+
+  - name: Infiltration - Internal Portscan (2nd stage)
+    label: Infiltration
+    date: 2017-07-06
+    start_local: "17:00:31.706"
+    end_local:   "18:46:04.331"
+    tz: UTC        # ADT 14:00:31-15:46:04
+    attackers: [192.168.10.8, 172.16.0.1]
+    victim_cidr: [192.168.10.0/24]
+    proto: [6]
+    source: "CNS2022"
+    notes: "Compromised .8 scans the internal subnet; victim is any 192.168.10.x."
+
+  # ---------------- Friday 2017-07-07 : Botnet, PortScan, DDoS ----------------
+  - name: Botnet ARES
+    label: Bot
+    date: 2017-07-07
+    start_local: "13:04:13.990"
+    end_local:   "20:01:24.606"
+    tz: UTC        # ADT 10:04:13-17:01:24 (all-day, NOT 10:02-11:02)
+    attackers: [205.174.165.73]
+    victims:   [192.168.10.15, 192.168.10.9, 192.168.10.14, 192.168.10.5, 192.168.10.8]
+    proto: [6]
+    source: "CNS2022; Engelen WTMC2021 (all-day window)"
+    notes: "~2/3 of C2 connection attempts rejected -> many attempted flows (~738 effective)."
+
+  - name: PortScan
+    label: PortScan
+    date: 2017-07-07
+    start_local: "16:55:32.117"
+    end_local:   "18:24:01.699"
+    tz: UTC        # ADT 13:55:32-15:24:01 (covers all firewall-on/off sub-windows)
+    attackers: [172.16.0.1]
+    victims:   [192.168.10.50]
+    proto: [6]
+    # no dst_ports: an Nmap sweep hits all ports
+    source: "CNS2022"
+
+  - name: DDoS LOIC-HTTP
+    label: DDoS
+    date: 2017-07-07
+    start_local: "18:56:31.796"
+    end_local:   "19:16:12.216"
+    tz: UTC        # ADT 15:56:31-16:16:12
+    attackers: [172.16.0.1]
+    victims:   [192.168.10.50]
+    proto: [6]
+    dst_ports: [80]
+    source: "CNS2022"

@@ -1,0 +1,18 @@
+# Filesystem layout for the study. Edit these to match the machine.
+# Every path may be overridden by an environment variable (shown in brackets).
+#
+# Big intermediate artifacts (raw tool output + canonical parquet) live off-repo
+# on the E: drive next to the PCAPs, because CICIDS2017 extraction is many GB.
+# Small human-authored inputs (label rules, configs) live in the repo.
+
+# Raw input PCAPs, per dataset.                    [NIDS_PCAP_ROOT overrides cicids2017]
+pcaps:
+  cicids2017: "E:/CIC-IDS-2017/PCAPs"
+
+# Root for generated data (extracted/, canonical/). [NIDS_DATA_ROOT]
+data_root: "E:/CIC-IDS-2017/study_outputs"
+
+# In-repo directories (resolved relative to repo root; do not make absolute).
+labels_dir: "data/labels"
+results_dir: "results"
+configs_dir: "configs"

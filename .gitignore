@@ -1,0 +1,43 @@
+# --- Data & large artifacts (never committed; regenerated from PCAPs) ---
+data/raw/
+data/extracted/
+data/canonical/
+data/labels/**/*.parquet
+data/labels/**/*.feather
+*.pcap
+*.pcapng
+*.parquet
+*.feather
+*.csv.gz
+
+# Keep small, human-authored config/label rules even though *.parquet is ignored
+!data/labels/**/rules.yaml
+!configs/**/*.yaml
+
+# --- Results: keep JSON metrics + generated tables/figures out of git by default ---
+results/metrics/*.json
+results/figures/*
+!results/figures/.gitkeep
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# --- Env / OS / IDE ---
+.env
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- Docker build context leftovers ---
+env/docker/**/vendor/
+env/docker/**/*.jar
