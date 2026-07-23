@@ -1,6 +1,3 @@
-# YAF + super_mediator + libfixbuf (CERT NetSA) — standards IPFIX probe.
-# Matched 2.x stack (fixbuf major must match yaf & super_mediator).
-#   docker build -t nids-xstudy/yaf:2.19.3 env/docker/yaf
 FROM ubuntu:24.04
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PKG_CONFIG_PATH=/usr/local/lib/pkgconfig LD_LIBRARY_PATH=/usr/local/lib
@@ -11,8 +8,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt
-# libfixbuf -> yaf -> super_mediator (build + install order matters; ldconfig
-# after libfixbuf is essential).
 RUN curl -fsSLO https://tools.netsa.cert.org/releases/libfixbuf-2.5.4.tar.gz \
     && tar xzf libfixbuf-2.5.4.tar.gz && cd libfixbuf-2.5.4 \
     && ./configure && make -j"$(nproc)" && make install && ldconfig

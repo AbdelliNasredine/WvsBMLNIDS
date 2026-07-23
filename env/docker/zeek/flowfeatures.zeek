@@ -1,12 +1,3 @@
-##! Per-connection TCP flag counts, appended to conn.log.
-##!
-##! Zeek's conn.log reports per-direction packet/byte counts and a `history`
-##! string, but not per-direction flag COUNTS. This script tallies them from the
-##! tcp_packet event so the canonical schema can be populated for Zeek on equal
-##! footing with NFStream / CICFlowMeter. ECE/CWR are not exposed by the flags
-##! string here and are left unset (-> <NA> in canonical), which is itself a
-##! documented cross-tool divergence.
-
 @load base/protocols/conn
 
 module FlowFeat;

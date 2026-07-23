@@ -1,12 +1,6 @@
-# Dedicated conda env for the NIDS feature-extractor study.
-#   conda env create -f env/environment.yml
-#   conda activate nids-xstudy
-#   pip install -r env/requirements.txt   # (pip deps not mirrored here)
 name: nids-xstudy
 channels:
   - conda-forge
 dependencies:
   - python=3.11
   - pip
-  # Python deps are installed via pip (env/requirements.txt) to keep versions
-  # identical to the pinned wheel set used across machines.

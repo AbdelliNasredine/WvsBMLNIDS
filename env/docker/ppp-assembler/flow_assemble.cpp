@@ -1,24 +1,20 @@
-// flow_assemble.cpp
+// abdou.nasredine@gmail.com / abdelli@estin.dz
+// 
+// Fast PcapPlusPlus-based flow assembler.
 //
-// Fast PcapPlusPlus-based flow assembler. A byte-for-byte reimplementation of the
-// Python reference assembler `src/nids_xstudy/assembly/assembler.py`.
-//
-// Design note: PcapPlusPlus is used ONLY as a fast, format-agnostic (pcap +
-// pcapng) raw-packet reader -- it hands us the raw link-layer frame bytes, the
+// PcapPlusPlus is used as a fast, format-agnostic (pcap +
+// pcapng) raw-packet reader. it hands us the raw link-layer frame bytes, the
 // timestamp, and the original wire length. ALL L2/L3/L4 parsing, flow keying,
 // segmentation and IP-address string formatting replicate read_packets() /
 // _Flow / assemble() exactly, using libc inet_ntop() so address strings are
 // identical to Python's socket.inet_ntoa / socket.inet_ntop (same glibc call).
-//
-// This keeps the semantics independent of PcapPlusPlus's own protocol dissector,
-// so the output matches the scapy reference rather than PcapPlusPlus's opinions.
-//
+// 
 // CLI:  flow_assemble <in.pcap> <out_prefix>
 //                     [--idle 120] [--active 1800]
 //                     [--max-pkts 32] [--max-bytes 128]
 // Writes:
 //   <out_prefix>.meta.csv    one row per flow (see header below)
-//   <out_prefix>.images.bin  raw uint8, n_flows * max_pkts * max_bytes, row-major
+//   <out_prefix>.images.bin  raw uint8, n_flows * max_pkts * max_bytes
 //   <out_prefix>.info.json   {n_flows,max_pkts,max_bytes,idle,active,ppp_version}
 
 #include <arpa/inet.h>
@@ -38,14 +34,8 @@
 #include "PcapPlusPlusVersion.h"
 #include "RawPacket.h"
 
-// round(x, 6) with round-half-to-even, matching Python's round(). The default
-// floating-point rounding mode (FE_TONEAREST) breaks exact .5 ties to even, as
-// Python does.
 static inline double round6(double x) { return std::nearbyint(x * 1e6) / 1e6; }
 
-// Print a double with up to 6 decimals, trailing zeros trimmed. round6()'d
-// values print as e.g. 0.0 -> "0", 0.01 -> "0.01", 150.0 -> "150". Re-parsed by
-// Python float() this reproduces the reference's rounded floats exactly.
 static void write_trimmed(FILE* f, double v) {
 	char buf[64];
 	int m = std::snprintf(buf, sizeof buf, "%.6f", v);

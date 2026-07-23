@@ -1,6 +1,3 @@
-# go-flows (CN-TU/go-flows, TU Wien) — spec-driven IPFIX feature exporter.
-# Only backend is libpcap (cgo). Feature specs are mounted at /specs at runtime.
-#   docker build -t nids-xstudy/go-flows:9f5628c env/docker/go-flows
 FROM golang:1.22-bookworm AS build
 RUN apt-get update && apt-get install -y --no-install-recommends \
         gcc libpcap-dev ca-certificates git && rm -rf /var/lib/apt/lists/*

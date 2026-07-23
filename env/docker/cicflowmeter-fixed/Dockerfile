@@ -1,9 +1,3 @@
-# CICFlowMeter (DistriNet FIXED fork, GintsEngelen) — RQ4 comparison target.
-# Corrects TCP flag counting, FIN/RST flow termination (eliminates the "TCP
-# appendix" flows), duplicate + timeout handling (Engelen et al., WTMC 2021).
-# IDENTICAL build recipe to cicflowmeter-orig to isolate the code delta.
-#   docker build -t nids-xstudy/cicflowmeter-fixed:distrinet \
-#     --build-arg CFM_REF=<sha> env/docker/cicflowmeter-fixed
 FROM eclipse-temurin:8-jdk-jammy
 
 ARG CFM_REPO=https://github.com/GintsEngelen/CICFlowMeter.git

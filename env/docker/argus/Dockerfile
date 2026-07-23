@@ -1,13 +1,8 @@
-# Argus built from OFFICIAL openargus source (argus-server + argus-clients).
-# Replaces the Ubuntu argus 3.0.8.2 package, which emitted count-less INT records
-# for multi-packet flows in batch pcap mode (plan v2 §5). Bidirectional biflows.
-#   docker build -t nids-xstudy/argus:5 env/docker/argus
 FROM debian:bookworm-slim
 ENV DEBIAN_FRONTEND=noninteractive TZ=UTC
 
 ARG ARGUS_REPO=https://github.com/openargus/argus.git
 ARG CLIENTS_REPO=https://github.com/openargus/clients.git
-# empty ref = use the repo default branch (pin to a tag/commit for real runs)
 ARG ARGUS_REF=
 ARG CLIENTS_REF=
 
@@ -24,7 +19,8 @@ RUN git clone "${CLIENTS_REPO}" clients \
 
 # argus-server
 RUN cd /opt/argus && ./configure && make && make install
-# argus-clients (ra, racluster, ...)
+
+# argus-clients
 RUN cd /opt/clients && ./configure && make && make install
 RUN ldconfig || true
 

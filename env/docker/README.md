@@ -1,8 +1,6 @@
-# Extractor Docker images (v2 tool matrix)
+# Extractor Docker images
 
-One image per feature extractor. NFStream is NOT here — it runs natively
-(pure Python, `env/requirements.txt`). Pinned build recipes + parser field maps:
-[BUILD_RECIPES.md](BUILD_RECIPES.md).
+One image per feature extractor. NFStream is NOT here as it runs natively in python.
 
 Build all (Docker Desktop must be running):
 
@@ -11,7 +9,7 @@ docker build -t nids-xstudy/zeek:6.0.0                    env/docker/zeek
 docker build -t nids-xstudy/cicflowmeter-orig:v4          env/docker/cicflowmeter-orig
 docker build -t nids-xstudy/cicflowmeter-fixed:distrinet  env/docker/cicflowmeter-fixed
 docker build -t nids-xstudy/argus:5                       env/docker/argus
-env/docker/tranalyzer/fetch_tarball.sh   # one-time (slow server)
+env/docker/tranalyzer/fetch_tarball.sh   # one-time
 docker build -t nids-xstudy/tranalyzer:0.9.4             env/docker/tranalyzer
 docker build -t nids-xstudy/go-flows:9f5628c             env/docker/go-flows
 docker build -t nids-xstudy/yaf:2.19.3                   env/docker/yaf
@@ -19,7 +17,7 @@ docker build -t nids-xstudy/joy:4.4.1                    env/docker/joy
 docker build -t nids-xstudy/nprobe:demo                  env/docker/nprobe
 ```
 
-## Status (smoke-PCAP validated)
+## Status 
 
 | # | Image | Status | Notes |
 |---|---|---|---|
@@ -39,7 +37,7 @@ docker build -t nids-xstudy/nprobe:demo                  env/docker/nprobe
 **Reproducibility:** pin `CFM_REF`/`ARGUS_REF`/`CLIENTS_REF`/`NTL_REF` to commit
 SHAs before the real runs (currently default branches — see BUILD_RECIPES.md pins).
 
-## Smoke-testing
+## Testing
 
 `pytest tests/test_docker_extractors.py` runs every built image on the synthetic
 PCAP and asserts a schema-valid canonical frame + correct HTTP flow (skips any

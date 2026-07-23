@@ -1,16 +1,5 @@
-# Extractor build recipes — pinned versions, commands, field mappings
+# Extractors
 
-Verified upstream build/run recipes for the v2 tool matrix. Pins go in each
-Dockerfile; this is the human-readable index + the parser field maps.
-
-> **Dropped from the final tool set** (recipes kept for reference only):
-> **flowtbag** (2015 cgo incompatible with modern Go + no start-time),
-> **nProbe** (requires an ntop license file to run in-container), and
-> **NTLFlowLyzer** (pure-Python; ~15 h to extract CICIDS2017 — impractically slow).
-> The active 9 tools are NFStream, Zeek, Tranalyzer, Argus, CICFlowMeter-orig,
-> CICFlowMeter-fixed, go-flows, YAF, Joy.
-
-## Pinned versions
 | Tool | Pin | Source |
 |---|---|---|
 | NTLFlowLyzer | tag `v0.2.0` (setup.py version string is wrong — trust the tag) | github.com/ahlashkari/NTLFlowLyzer |
@@ -38,7 +27,7 @@ Dockerfile; this is the human-readable index + the parser field maps.
   --csv-separator , --dont-nest-dump-dirs`. DEMO CAPS AT 25,000 FLOWS → needs
   academic license for full CICIDS2017.
 
-## Parser field maps (tool column -> canonical)
+## Parser field maps
 - **NTLFlowLyzer:** src_ip,dst_ip,src_port,dst_port; protocol (literal "TCP");
   timestamp (local→UTC str); duration (s); fwd_packets_count/bwd_packets_count;
   fwd_total_payload_bytes/bwd_total_payload_bytes; {fwd,bwd}_{syn,fin,rst,psh,ack,urg,cwr,ece}_flag_counts.
@@ -56,5 +45,3 @@ Dockerfile; this is the human-readable index + the parser field maps.
   initialTCPFlags/reverseInitialTCPFlags, unionTCPFlags/reverseUnionTCPFlags.
 - **Joy JSON:** sa,da,sp,dp,pr; time_start,time_end (epoch sec.µs);
   num_pkts_out/num_pkts_in, bytes_out/bytes_in; packets[]={b,dir(">"=out/sa→da,"<"=in),ipt(ms)}.
-
-See the git history of this file / each Dockerfile for provenance.
