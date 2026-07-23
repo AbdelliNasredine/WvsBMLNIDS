@@ -1,12 +1,11 @@
 dataset: cicids2017
-# Capture-day -> raw PCAP filename (under paths.yaml pcaps.cicids2017).
 captures:
   Monday:    Monday-WorkingHours.pcap      # benign only
   Tuesday:   Tuesday-WorkingHours.pcap     # FTP/SSH-Patator
   Wednesday: Wednesday-workingHours.pcap   # DoS + Heartbleed
   Thursday:  Thursday-WorkingHours.pcap    # Web attacks + Infiltration
   Friday:    Friday-WorkingHours.pcap      # Botnet + PortScan + DDoS
-# Temporal split policy for ML (plan §7): train Mon-Wed, test Thu-Fri.
+# Temporal split policy for ML: train Mon-Wed, test Thu-Fri.
 split:
   train: [Monday, Tuesday, Wednesday]
   test:  [Thursday, Friday]

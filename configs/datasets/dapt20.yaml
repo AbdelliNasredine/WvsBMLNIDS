@@ -1,11 +1,6 @@
-# DAPT 2020 (Myneni et al., MLHat 2020) — 5-day APT campaign, 2 capture
-# vantage points per day (public-facing / private-internal), week of
-# 2019-07-15 .. 2019-07-19. Classic libpcap, Ethernet, usec timestamps.
-# Day -> kill-chain stage: Mon benign only; Tue Reconnaissance; Wed Establish
-# Foothold; Thu Lateral Movement; Fri Data Exfiltration.
 dataset: dapt20
 
-captures:                      # capture name -> pcap filename (names on disk are inconsistent)
+captures:  
   monday-pub: enp0s3-monday.pcap
   monday-pvt: enp0s3-monday-pvt.pcap
   tuesday-pub: enp0s3-public-tuesday.pcap
@@ -17,17 +12,10 @@ captures:                      # capture name -> pcap filename (names on disk ar
   friday-pub: enp0s3-tcpdump-friday.pcap
   friday-pvt: enp0s3-tcpdump-pvt-friday.pcap
 
-# Temporal split (mirrors CICIDS semantics): train on the earlier stages, test
-# on the later ones. Train Mon-Wed (benign + Reconnaissance + Establish
-# Foothold), test Thu-Fri (Lateral Movement + Data Exfiltration). Train and test
-# therefore share no attack Stage, so binary+temporal measures cross-stage
-# generalization; multiclass (Stage) runs on the stratified split.
 split:
   train: [monday-pub, monday-pvt, tuesday-pub, tuesday-pvt, wednesday-pub, wednesday-pvt]
   test:  [thursday-pub, thursday-pvt, friday-pub, friday-pvt]
 
-# Multiclass target = the DAPT `Stage` column, normalized to these 5 classes.
-# `benign_label` (BENIGN) is set in data/labels/dapt20/rules.yaml.
 stage_labels:
   - Reconnaissance
   - Establish Foothold
