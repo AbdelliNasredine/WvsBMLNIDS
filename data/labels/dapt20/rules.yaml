@@ -1,10 +1,4 @@
-# DAPT2020 labeling rules (DERIVED; see scripts/derive_dapt20_rules.py).
-#
-# HYBRID labeling (approved): the clean-separable stages below are matched
-# by the time+IP+port engine on attack-EXCLUSIVE source IPs. The
-# Reconnaissance stage is NOT here -- it is not separable by 5-tuple+time
-# and is projected from DAPT's per-flow label (data/labels/dapt20/
-# recon_flows.parquet) at label time by nids_xstudy.labeling.dapt_recon.
+# DAPT2020 labeling rules
 #
 # Times are UTC (tz +00:00). CSV local time is Arizona MST; measured
 # offset UTC = local + 7 h (verified across all captures).

@@ -13,7 +13,6 @@
 #   https://intrusion-detection.distrinet-research.be/CNS2022/CICIDS2017.html
 #   Engelen, Rimmer, Joosen, "Troubleshooting an Intrusion Detection Dataset:
 #   the CICIDS2017 Case Study", WTMC 2021 (per-class corrected counts, Table I).
-# Topology: UNB CIC-IDS2017 page (Sharafaldin et al. 2018).
 #
 # NOTE (attempted vs effective): the windows below are the OUTER bound per
 # attack. Engelen's "X - Attempted" flows (attacker<->victim in-window but with
@@ -204,8 +203,7 @@ attacks:
   # Infiltration = 32 (only the direct Meterpreter/Dropbox + Cool-Disk flows
   # to/from the external attacker 205.174.165.73); it does NOT label the
   # internal scan as Infiltration. Including it inflates the class ~2000x and
-  # breaks comparability with prior work, so it is OFF by default. Re-enable
-  # (optionally under a distinct label) only for an explicit sensitivity study.
+  # breaks comparability with prior work, so it is OFF by default. 
   # - name: Infiltration - Internal Portscan (2nd stage)
   #   label: Infiltration-Portscan
   #   date: 2017-07-06
