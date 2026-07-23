@@ -1,5 +1,5 @@
-# paper.mplstyle — house style for all paper figures (PLOT_STYLE.md R3/R4/R8).
-# Load via nids_xstudy.analysis.plotting.use_style() (absolute path).
+# paper.mplstyle — style for all paper figures.
+# Load via analysis.plotting.use_style().
 
 # ---- Figure geometry (single IEEE column = 3.5 in, single panel ~2.0 in) ----
 figure.figsize        : 3.5, 2.0
